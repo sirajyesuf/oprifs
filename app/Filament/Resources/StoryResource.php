@@ -2,9 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\NewsResource\RelationManagers;
-use App\Models\News;
+use App\Filament\Resources\StoryResource\RelationManagers;
+use App\Models\Story;
 use Filament\Forms;
+use Filament\Forms\Components\Tabs\Tab;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -12,15 +13,17 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
-use Filament\Pages\SubNavigationPosition;
-use Filament\Resources\Pages\Page;
 use Filament\Infolists\Components;
 use Filament\Infolists\Infolist;
-use App\Filament\Resources\NewsResource\Pages;
+use Filament\Notifications\Notification;
+use Filament\Pages\SubNavigationPosition;
+use Filament\Resources\Pages\Page;
+use App\Filament\Resources\StoryResource\Pages;
 
-class NewsResource extends Resource
+
+class StoryResource extends Resource
 {
-    protected static ?string $model = News::class;
+    protected static ?string $model = Story::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
@@ -52,7 +55,7 @@ class NewsResource extends Resource
                         ->dehydrated()
                         ->required()
                         ->maxLength(255)
-                        ->unique(News::class, 'slug', ignoreRecord: true),
+                        ->unique(Story::class, 'slug', ignoreRecord: true),
 
 
                         Forms\Components\MarkdownEditor::make('content')
@@ -72,10 +75,11 @@ class NewsResource extends Resource
                 Forms\Components\Section::make()
                 ->schema([
                     Forms\Components\FileUpload::make('cover_image')
+                    ->required()
                     ->label('Cover Image')
                     ->directory('coverimages')
                     ->image()
-                    ->imageEditor()
+                    ->imageEditor(),
                 ])
             ])
         ])
@@ -89,21 +93,18 @@ class NewsResource extends Resource
                 Tables\Columns\ImageColumn::make('cover_image')
                 ->label('Cover Image'),
                 Tables\Columns\TextColumn::make('title')
-                ->sortable()
                 ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                ->sortable()
-                ->searchable()
-                ->toggleable(),
+                Tables\Columns\TextColumn::make('status')
+                ->badge()
+                ->colors([
+                    'success' => 'published',
+                    'danger' => 'draft',
+                ]),
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
             ])
-            ->actions([
-                Tables\Actions\ViewAction::make()
-                ->slideOver(),
-                Tables\Actions\EditAction::make()
-            ])
+            ->actions([])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
@@ -112,6 +113,7 @@ class NewsResource extends Resource
                 ]),
             ]);
     }
+
 
     public static function infolist(Infolist $infolist): Infolist
     {
@@ -147,10 +149,11 @@ class NewsResource extends Resource
     public static function getRecordSubNavigation(Page $page): array
     {
         return $page->generateNavigationItems([
-            Pages\ViewNews::class,
-            Pages\EditNews::class,
+            Pages\ViewStory::class,
+            Pages\EditStory::class,
         ]);
     }
+
 
     public static function getRelations(): array
     {
@@ -162,11 +165,10 @@ class NewsResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListNews::route('/'),
-            'create' => Pages\CreateNews::route('/create'),
-            'edit' => Pages\EditNews::route('/{record}/edit'),
-            'view' => Pages\ViewNews::route('/{record}'),
-
+            'index' => Pages\ListStories::route('/'),
+            'create' => Pages\CreateStory::route('/create'),
+            'edit' => Pages\EditStory::route('/{record}/edit'),
+            'view' => Pages\ViewStory::route('/{record}'),
         ];
     }
 

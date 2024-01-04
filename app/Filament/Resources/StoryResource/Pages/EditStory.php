@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Filament\Resources\NewsResource\Pages;
+namespace App\Filament\Resources\StoryResource\Pages;
 
-use App\Filament\Resources\NewsResource;
+use App\Filament\Resources\StoryResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Contracts\Support\Htmlable;
 
-class EditNews extends EditRecord
+
+class EditStory extends EditRecord
 {
-    protected static string $resource = NewsResource::class;
+    protected static string $resource = StoryResource::class;
 
     protected function getHeaderActions(): array
     {

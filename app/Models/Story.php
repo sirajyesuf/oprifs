@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Builder;
 use App\Enums\PostType;
-class News extends Model
+
+class Story extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -18,9 +19,8 @@ class News extends Model
 
     protected static function booted(): void
     {
-        static::addGlobalScope('onlyNews',function (Builder $builder) {
-            $builder->where('type',PostType::NEWS->value);
+        static::addGlobalScope('onlyStories', function (Builder $builder) {
+            $builder->where('type',PostType::STORIES->value);
         });
     }
-
 }
