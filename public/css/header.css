@@ -1,0 +1,93 @@
+.header {
+    background-color: var(--color-primary3);
+    height: 70vh;
+}
+
+.header__footer {
+    background-color: var(--color-primary1);
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 8%;
+}
+
+.header__footer__contact {
+    color: #126360;
+    display: flex;
+    gap: 3rem;
+}
+.header__footer__contact_call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+}
+
+.header__footer__contact_mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+}
+.header__footer__socialmeadia_box {
+    height: 100%;
+    background-color: #7abe77;
+    padding-inline: 20px;
+}
+
+.header__footer__socialmeadia {
+    list-style: none;
+    display: flex;
+    /* background-color: red; */
+    gap: 1rem;
+}
+
+.ionicon {
+    width: 17px;
+    height: 17px;
+    fill: #126360;
+}
+
+.header__navigation {
+    background-color: white;
+    height: 8rem;
+    padding-inline: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    width: 5rem;
+    height: 5rem;
+}
+
+.header__navigation__menu  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header__navigation__menu a {
+    text-decoration: none;
+    font-size: 2rem;
+    color:  #2E4049;
+    text-transform: capitalize;
+}
+
+.header__navigation__menu button {
+    width: 20rem;
+    height: 6rem;
+    cursor: pointer;
+    border-radius: 34px;
+    padding: 22px 36px 22px 36px;
+    background-color: #F06C51;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+
+}

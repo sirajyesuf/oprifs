@@ -1,0 +1,42 @@
+.actionsbuttons {
+    padding-top: 40rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+.actionsbuttons__volunterbox {
+    padding: 4rem;
+    background-color: #f06c51;
+}
+.actionsbuttons__blogbox {
+    padding: 4rem;
+    background-color: #d5dca2;
+}
+
+.box h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.box p {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.box button {
+    justify-self: start;
+    background-color: #2e4049;
+    border-radius: 34px;
+    padding: 22px 28px 22px 28px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+}

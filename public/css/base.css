@@ -1,0 +1,26 @@
+:root {
+    --color-primary1: #81d47e;
+    --color-primary2: #f06c51;
+    --color-primary3: #2e4049;
+    --color-primary4: #ffffff;
+
+    --font-primary: "Nunito" sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-primary4);
+}
