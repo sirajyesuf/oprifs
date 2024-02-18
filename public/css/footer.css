@@ -1,9 +1,19 @@
 .footer {
     background-color: #40535c;
     display: flex;
-    padding: 5% 10%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
+}
+
+.footer_info_box {
+
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .footer__socialmedia {
@@ -76,4 +86,12 @@
 .footer__links a {
     text-decoration: none;
     color: inherit;
+}
+
+
+.footer_copyright {
+    color: white;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
 }
