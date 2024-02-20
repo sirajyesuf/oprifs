@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../public/css/base.css" />
-        <link rel="stylesheet" href="../../public/css/header.css" />
-        <link rel="stylesheet" href="../../public/css/contactus.css" />
-        <link rel="stylesheet" href="../../public/css/footer.css" />
+        <link rel="stylesheet" href="{{asset('css/base.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/header.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/contactus.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/footer.css')}}" />
         <title>Document</title>
     </head>
     <body>
@@ -281,30 +281,31 @@
                     </div>
                 </div>
 
-                <div class="contactus__form_form">
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter Your Name*"
-                    />
-                    <input
-                        type="text"
-                        name="email"
-                        placeholder="Enter Your Email Address*"
-                    />
-                    <input
-                        type="text"
-                        name="subject"
-                        placeholder="Enter The Subject*"
-                    />
-                    <textarea
-                        name="message"
-                        cols="30"
-                        rows="10"
-                        placeholder="Your Message*"
-                    ></textarea>
-                    <button>submit</button>
-                </div>
+                    <form action="/contactus_via_email" method="POST" class="contactus__form_form">
+                        @csrf
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter Your Name*"
+                        />
+                        <input
+                            type="text"
+                            name="email"
+                            placeholder="Enter Your Email Address*"
+                        />
+                        <input
+                            type="text"
+                            name="subject"
+                            placeholder="Enter The Subject*"
+                        />
+                        <textarea
+                            name="message"
+                            cols="30"
+                            rows="10"
+                            placeholder="Your Message*"
+                        ></textarea>
+                        <button type="submit">submit</button>
+                    </form>
             </div>
         </section>
 
