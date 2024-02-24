@@ -1,5 +1,4 @@
 .actionsbuttons {
-    padding-top: 40rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }

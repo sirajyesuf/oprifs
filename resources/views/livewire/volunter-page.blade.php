@@ -1,8 +1,36 @@
 <div>
     <x-headersection></x-headersection>
 
-        <section class="contactus">
-            <div class="contactus__hero">get in touch</div>
+    <section class="volunterpage_herosection">
+        <div class="volunterpage_herosection__title">
+            <h1>Join Our Volunteer Team</h1>
+            <h2>Make a difference in the community by volunteering with us.</h2>
+        </div>
+        <div class="volunterpage_herosection__img">
+
+            <img src="{{asset("img/volunterpagehero.jpg")}}" alt="">
+
+        </div>
+    </section>
+
+    <section class="volunterpage_formsection">
+        <div class="volunterpage_formsection__title">
+            volunter with us
+        </div>
+        <form action="post" class="volunterpage_formsection_form">
+            <input type="text" name="name" placeholder="Your Full Name">
+            <input type="email" name="email" placeholder="Your Email Address">
+            <input type="tel" name="phonenumber" placeholder="Your PhoneNumber">
+            <button type="submit">
+                Submit
+            </button>
+        </form>
+    </section>
+
+        {{-- <section class="contactus">
+            <div class="contactus__hero">
+                Join The CommunityTo Give Education For Girls
+            </div>
 
             <div class="contactus__form">
                 <div class="contactus__form_info">
@@ -171,7 +199,7 @@
                         ></textarea>
                         <button type="submit">submit</button>
                     </form>
-            </div>
+            </div> --}}
         </section>
 
 <x-footersection></x-footersection>

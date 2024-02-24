@@ -3,13 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../public/css/base.css" />
-        <link rel="stylesheet" href="../../public/css/header.css" />
-        <link
-            rel="stylesheet"
-            href="../../public/css/volunterandblogactionbuttons.css"
-        />
-        <link rel="stylesheet" href="../../public/css/footer.css" />
+        <link rel="stylesheet" href="{{asset('css/base.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/header.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/contactus.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/footer.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/testimonials.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/ctabuttons.css')}}" />
         <title>Document</title>
     </head>
     <body>
@@ -146,15 +145,82 @@
             </div>
         </header>
 
-        <section class="volunters_section">
-            <p>meet our volunters</p>
-            <div class="volunters">
-                <div class="volunter">
-                    <img src="" alt="" />
-                    <p>martin luther</p>
+        <!-- <section class="testimonials_section">
+            <div class="testimonials__title">What people say about us</div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial__header">
+                        <div class="testimonial__name">
+                            <p class="testimonial__name_fn">john doe</p>
+                            <p class="testimonial__name_job">doctor</p>
+                        </div>
+                        <div class="testimonial__quote">&ldquo;</div>
+                    </div>
+                    <div class="testimonial__content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Labore inventore itaque, quam nesciunt esse
+                        officia nobis porro, tempora, cupiditate expedita atque
+                        dicta. Doloremque veniam libero asperiores explicabo,
+                        mollitia nemo quibusdam.
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial__header">
+                        <div class="testimonial__name">
+                            <p class="testimonial__name_fn">john doe</p>
+                            <p class="testimonial__name_job">doctor</p>
+                        </div>
+                        <div class="testimonial__quote">&ldquo;</div>
+                    </div>
+                    <div class="testimonial__content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Labore inventore itaque, quam nesciunt esse
+                        officia nobis porro, tempora, cupiditate expedita atque
+                        dicta. Doloremque veniam libero asperiores explicabo,
+                        mollitia nemo quibusdam.
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <div class="testimonials__pagination">
+                <div class="testimonials__pagination_back">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ionicon"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="48"
+                            d="M328 112L184 256l144 144"
+                        />
+                    </svg>
+                </div>
+                <div class="testimonials__pagination_line"></div>
+                <div class="testimonials__pagination_forward">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ionicon"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="48"
+                            d="M184 112l144 144-144 144"
+                        />
+                    </svg>
+                </div>
+            </div>
+        </section> -->
+
+        <livewire:testimonials></livewire:testimonials>
 
         <section class="actionsbuttons">
             <div class="actionsbuttons__volunterbox box">

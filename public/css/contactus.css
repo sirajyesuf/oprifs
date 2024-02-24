@@ -15,7 +15,8 @@
 }
 
 .contactus__form {
-    width: 120rem;
+    width: 90%;
+    height: 68rem;
     margin: 5rem auto;
     display: flex;
     gap: 3rem;
@@ -25,30 +26,44 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+}
+
+.contactus__form_info_header {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
-.contactus__form_info h1 {
+.contactus__form_info_header h1 {
     color: #ff6d6d;
     text-transform: capitalize;
     font-style: italic;
     font-size: 2rem;
 }
-.contactus__form_info h2 {
+.contactus__form_info_header h2 {
     text-transform: capitalize;
     font-size: 3rem;
     color: #2e4049;
 }
 
-.contactus__form_info p {
+.contactus__form_info_header p {
     color: #727272;
     font-size: 2rem;
 }
 
-.contactus__form_form {
-    background-color: #ffffff;
-    padding: 2rem;
-    border: 1px solid #e7e7e7;
+.contactus__form_info_icons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 1rem;
+}
+
+.contactus__form_info__mail,
+.contactus__form_info__call {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .contactus__form_info__mail svg,
@@ -58,13 +73,6 @@
     padding: 1rem;
     background-color: #f2f2f2;
     color: #ff6d6d;
-}
-
-.contactus__form_info__mail,
-.contactus__form_info__call {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
 }
 
 .contactus__form_info__follow {
@@ -84,6 +92,10 @@
 }
 
 .contactus__form_form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border: 1px solid #e7e7e7;
+    width: 50%;
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -93,16 +105,21 @@
 .contactus__form_form input,
 .contactus__form_form textarea {
     background-color: #f5f5f5;
-    border: 0px;
+    border: none;
     padding: 2rem;
 }
 
+.contactus__form_form input:focus,
+.contactus__form_form textarea:focus {
+    border: 1px solid red;
+}
+
 .contactus__form_form button {
-    padding: 2.2rem 6.6rem;
+    padding: 2rem 6rem;
     align-self: flex-start;
 
-    text-transform: capitalize;
-    font-size: 2rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
     background-color: #2e4049;
     border: none;
     border-radius: 34px;

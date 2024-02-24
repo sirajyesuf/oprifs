@@ -2,27 +2,25 @@
     background-color: #40535c;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
 }
 
 .footer_info_box {
-
-    padding: 4rem;
+    width: 50%;
+    margin: 10rem auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
 
 }
 
 .footer__socialmedia {
+    width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 2rem;
-    width: 40rem;
-    height: 35rem;
+  
+}
+.footer__socialmedia p{
+    color: white;
+    font-size: 1.5rem;
 }
 
 .footer__socialmedia img {
@@ -39,27 +37,24 @@
 }
 
 .footer__socialmedia a {
-    background-color: #384C56;
+    background-color: #384c56;
     padding: 1rem;
-    width: 6rem;
-    height: 6rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .footer__socialmedia a svg {
     fill: #ffffff;
 }
 
-
 .footer__links {
-    width: 80rem;
-    height: 35rem;
-    background-color: #495B63;
+    width: 100%;
+    background-color: #495b63;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -70,17 +65,14 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
     text-transform: capitalize;
     color: white;
-
 }
 .footer__links ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-
 }
 
 .footer__links a {
@@ -88,10 +80,12 @@
     color: inherit;
 }
 
-
 .footer_copyright {
+    background-color: #465a64;
     color: white;
-    padding-bottom: 2rem;
+    border-top: 1px solid white;
+    padding: 2rem;
     font-size: 1.5rem;
     text-transform: capitalize;
+    text-align: center;
 }

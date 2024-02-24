@@ -1,6 +1,5 @@
 .header {
     background-color: var(--color-primary3);
-    height: 70vh;
 }
 
 .header__footer {
@@ -65,7 +64,7 @@
     height: 5rem;
 }
 
-.header__navigation__menu  {
+.header__navigation__menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +74,7 @@
 .header__navigation__menu a {
     text-decoration: none;
     font-size: 2rem;
-    color:  #2E4049;
+    color: #2e4049;
     text-transform: capitalize;
 }
 
@@ -85,9 +84,8 @@
     cursor: pointer;
     border-radius: 34px;
     padding: 22px 36px 22px 36px;
-    background-color: #F06C51;
+    background-color: #f06c51;
     border: none;
     color: white;
     text-transform: uppercase;
-
 }
