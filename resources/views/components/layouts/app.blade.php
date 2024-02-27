@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="{{asset('css/gallery.css')}}" />
 
         <link rel="stylesheet" href="{{asset('css/volunterpage.css')}}" />
-
+        <link rel="stylesheet" href="{{asset('css/news.css')}}" />
         <title>{{ $title ?? 'Page Title' }}</title>
 
 

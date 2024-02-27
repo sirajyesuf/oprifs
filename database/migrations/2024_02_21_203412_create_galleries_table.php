@@ -9,17 +9,16 @@ return new class extends Migration
    
     public function up(): void
     {
-        Schema::create('testimonials', function (Blueprint $table) {
+        Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("job");
-            $table->text("content");
+            $table->string("path");
             $table->timestamps();
         });
     }
 
+   
     public function down(): void
     {
-        Schema::dropIfExists('testimonials');
+        Schema::dropIfExists('galleries');
     }
 };

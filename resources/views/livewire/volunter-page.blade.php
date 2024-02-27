@@ -1,4 +1,57 @@
 <div>
+
+
+
+<div class="success__notification">
+
+    <div class="success__notification_message">
+
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+        <polyline points="22 4 12 14.01 9 11.01" />
+      </svg>
+
+      <p> your form has been submitted successfully. </p>
+
+    </div>
+
+    <button class="success__notification_closebtn">
+
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+
+    </button>
+
+</div>
+
+
+
+
+
+
+
     <x-headersection></x-headersection>
 
     <section class="volunterpage_herosection">
@@ -13,18 +66,26 @@
         </div>
     </section>
 
-    <section class="volunterpage_formsection">
-        <div class="volunterpage_formsection__title">
-            volunter with us
+    <section class="volunterpage_formsection_box">
+
+        <div class="volunterpage_formsection__success">
+            success message!!!
         </div>
-        <form action="post" class="volunterpage_formsection_form">
-            <input type="text" name="name" placeholder="Your Full Name">
-            <input type="email" name="email" placeholder="Your Email Address">
-            <input type="tel" name="phonenumber" placeholder="Your PhoneNumber">
-            <button type="submit">
-                Submit
-            </button>
-        </form>
+
+        <div class="volunterpage_formsection">
+            <div class="volunterpage_formsection__title">
+                volunter with us
+            </div>
+            <form wire:submit="save" class="volunterpage_formsection_form">
+                <input type="text" name="name"   placeholder="Your Full Name" wire:model="name">
+                <input type="email" name="email" placeholder="Your Email Address" wire:model="email">
+                <textarea name="message" placeholder="Tell us about the skills and experience you can offer" wire:model="message"></textarea>
+                
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
     </section>
 
         {{-- <section class="contactus">
