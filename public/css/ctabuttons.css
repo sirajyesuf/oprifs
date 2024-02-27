@@ -1,26 +1,99 @@
 .actionsbuttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
 }
 
-.box {
+.actionsbuttons__newsletterbox {
+    padding: 10rem;
+    background-color: #f06c51;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     gap: 1rem;
 }
-
-.actionsbuttons__volunterbox {
-    padding: 4rem;
-    background-color: #f06c51;
+.actionsbuttons__newsletterbox_heading {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 120%;
+    color: #ffffff;
 }
+.actionsbuttons__newsletterbox_subheading {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 130%;
+    color: #ffffff;
+    text-align: left;
+    height: auto;
+}
+
+.actionsbuttons__newsletterbox__form {
+    /* width: 80%; */
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    align-items: center;
+    gap: 2rem;
+}
+.actionsbuttons__newsletterbox__form_inputtag {
+    /* width: 70%; */
+    border: none;
+    border-radius: 34px;
+    padding: 22px 36px 22px 36px;
+}
+
+.actionsbuttons__newsletterbox__form_inputtag::placeholder {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 130%;
+    color: #727272;
+}
+
+.actionsbuttons__newsletterbox__form_subscribebtn {
+    padding: 22px 36px 22px 36px;
+    border: none;
+    border-radius: 34px;
+    background-color: #2e4049;
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
 .actionsbuttons__blogbox {
     padding: 4rem;
     background-color: #d5dca2;
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(213, 220, 162, 0.9),
+            rgba(213, 220, 162, 0.9)
+        ),
+        url("../img/recentnewsbackground.png");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.box h1 {
+.actionsbuttons__blogbox_heading {
+    font-size: 4rem;
+    line-height: 120%;
+    font-weight: 500;
+    color: #2e4049;
+}
+
+.actionsbuttons__blogbox_ctabtn {
+    border: none;
+    border-radius: 34px;
+    background-color: #2e4049;
+    color: #ffffff;
+    padding: 22px 28px 22px 28px;
+    align-self: flex-start;
+}
+
+/* .box h1 {
     font-size: 3rem;
     text-transform: capitalize;
 }
@@ -38,4 +111,4 @@
     border: none;
     text-transform: uppercase;
     color: white;
-}
+} */

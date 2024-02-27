@@ -116,7 +116,7 @@
 
     <div class="header__navigation">
         <img
-            src="../../public/img/oprifs.jpg"
+            src="{{asset("img/logo.png")}}"
             alt="oprifs logo"
             class="header_logo"
         />

@@ -81,28 +81,24 @@
     background-color: #ffa858;
 }
 
-/* home page gallery css */
+/* HOMEPAGE GALLER SECTION  */
+
 .homepage__gallery_section {
     display: grid;
+    /* grid-template-columns: repeat(4, 48rem);
+    grid-template-rows: repeat(2, 44.3rem); */
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
     background-color: red;
 }
-/* .homepage__gallery_section_gallery-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-.homepage__gallery_section_gallery-item figure {
-    width: 100%;
-    height: 100%;
-}
-.homepage__gallery_section_gallery-item img {
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+
+.homepage__gallery_section_gallery-item {
+    /* width: 100%;
+    height: 100%; */
+
+    width: 48rem;
+    height: 44.3rem;
 }
 
 .homepage__gallery_section_cta {
@@ -114,14 +110,18 @@
     justify-content: center;
     gap: 1.5rem;
     color: white;
-    padding-inline: 6rem;
+    padding-inline: 20rem;
 }
 
 .homepage__gallery_section_cta h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 120%;
 }
 .homepage__gallery_section_cta p {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 130%;
 }
 
 .homepage__gallery_section_cta button {
@@ -129,15 +129,15 @@
     border: none;
     background-color: #ff6d6d;
     border-radius: 34px;
-    padding: 12px 30px 12px 30px;
-    background-color: #ff6d6d;
+    padding: 22px 30px 22px 30px;
+    color: #ffffff;
 }
 
 .homepage__gallery_section_cta a {
     text-decoration: none;
     color: white;
     font-size: 2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     cursor: pointer;
 }
 
@@ -146,8 +146,35 @@
     height: 100%;
     background-color: #ff6d6d;
     display: flex;
-    justify-content: start;
-    align-items: end;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    gap: 1rem;
+    padding: 4rem;
+}
+
+.homepage__gallery_section_gallery-item_info_tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.homepage__gallery_section_gallery-item_info_tags p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 130%;
+    text-transform: capitalize;
+    border-radius: 50px;
+    background-color: #e85353;
+    color: white;
+    padding: 1rem 2rem;
+}
+.homepage__gallery_section_gallery-item_info_text {
+    font-size: 3rem;
+    line-height: 120%;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .item1 {

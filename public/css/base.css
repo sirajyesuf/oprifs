@@ -4,7 +4,8 @@
     --color-primary3: #2e4049;
     --color-primary4: #ffffff;
 
-    --font-primary: "Nunito" sans-serif;
+    --font-primary: "IBM Plex Serif", serif;
+    ;
 }
 
 *,

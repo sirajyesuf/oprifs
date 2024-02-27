@@ -1,14 +1,14 @@
 .header {
-    background-color: var(--color-primary3);
+    background-color: var(--color-primary4);
 }
 
 .header__footer {
     background-color: var(--color-primary1);
-    height: 5rem;
+    height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 8%;
+    padding-inline: 5%;
 }
 
 .header__footer__contact {
@@ -40,7 +40,6 @@
 .header__footer__socialmeadia {
     list-style: none;
     display: flex;
-    /* background-color: red; */
     gap: 1rem;
 }
 
@@ -52,16 +51,15 @@
 
 .header__navigation {
     background-color: white;
-    height: 8rem;
-    padding-inline: 8%;
+    padding-inline: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .header_logo {
-    width: 5rem;
-    height: 5rem;
+    width: 319px;
+    height: 160px;
 }
 
 .header__navigation__menu {
@@ -78,7 +76,57 @@
     text-transform: capitalize;
 }
 
-.header__navigation__menu button {
+.header__navigation__menu button{
+    width: 20rem;
+    height: 6rem;
+    cursor: pointer;
+    border-radius: 34px;
+    padding: 22px 36px 22px 36px;
+    background-color: #f06c51;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* HEROSECTION */
+.herosection {
+    position: relative;
+    width: 96%;
+    margin: 0px auto;
+    padding-bottom: 100px;
+
+}
+
+.herosection_img {
+    width: 100%;
+    align-items: center;
+    border-radius: 32px;
+
+}
+
+
+.herosection__info {
+    position:absolute;
+    bottom: 25%;
+    left: 5%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 4rem;
+
+}
+
+.herosection__info_text {
+    color: white;
+    font-size: 6.9rem;
+    line-height: 96%;
+    font-weight: 600;
+
+}
+
+
+
+.herosection__info_cta {
     width: 20rem;
     height: 6rem;
     cursor: pointer;

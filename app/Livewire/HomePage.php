@@ -16,7 +16,7 @@ class HomePage extends Component
         return view('livewire.home-page')
         ->with([
             'testimonials' => Testimonial::paginate(2),
-            'galleries'   => Gallery::get()
+            'galleries'   => Gallery::take(5)->get()
         ]);
     }
 }

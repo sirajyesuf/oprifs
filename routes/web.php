@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactUsController;
 use App\Livewire\HomePage;
 use App\Livewire\ContactUs;
 use App\Livewire\GalleryPage;
+use App\Livewire\NewsDetailPage;
 use App\Livewire\NewsPage;
 use App\Livewire\VolunterPage;
 use Illuminate\Routing\Router;
@@ -18,3 +19,4 @@ Route::get("/gallery",GalleryPage::class);
 Route::get("/volunter",VolunterPage::class);
 
 Route::get("/news-stories",NewsPage::class);
+Route::get("/news-stories/{id}",NewsDetailPage::class);

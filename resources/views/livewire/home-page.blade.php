@@ -1,6 +1,31 @@
 <div>
 <x-headersection></x-headersection>
 
+<section class="herosection">
+        
+        <img src="{{asset("img/hero.jpg")}}" alt="" class="herosection_img">
+
+        <div class="herosection__info">
+
+
+            <button class="herosection__info_cta">
+                Donate
+            </button>
+
+            <p class="herosection__info_text">
+                Organization for Prevention,
+                <br>
+                Rehabilitation and Integration
+                <br>
+                of Female Street Children.
+            </p>
+
+
+        </div>
+
+
+</section>
+
 
 
 
@@ -14,25 +39,30 @@
                 </p>
                 <button>
                     <a href="/gallery">
-                        see more
+                        explore
                     </a>
                 </button>
             </div>
 
             @foreach ( $galleries as $gallery )
                             
-            <figure class="homepage__gallery_section_gallery-item item{{$loop->iteration}}">
-                <img src="{{ asset('storage/'.$gallery->path)}}" alt="" />
-            </figure>
+                <img src="{{ asset('storage/'.$gallery->path)}}" alt="gallery image"  class="homepage__gallery_section_gallery-item item{{$loop->iteration}}"/>
 
             @endforeach
 
 
             <div class="homepage__gallery_section_gallery-item_info">
-                <p>
-                More than thousands of lives<br />
-                changed.
-                </p>
+
+                <div class="homepage__gallery_section_gallery-item_info_tags">
+                    
+                    <p>Education</p>
+                    <p>Health</p>
+                </div>
+
+                <div class="homepage__gallery_section_gallery-item_info_text">
+                    More than one  life
+                    changed.
+                </div>
             </div>
 
         </section>
@@ -154,28 +184,36 @@
         </section>
 
         <!-- testimonials section end -->
+
+
+        {{-- cta start --}}
         <section class="actionsbuttons">
-            <div class="actionsbuttons__volunterbox box">
-                <h1>to become a volunter</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Sapiente aperiam qui illo tempore inventore doloribus, ipsa
-                    iusto nostrum provident? Accusantium aperiam quas ipsum
-                    autem rerum inventore minima neque veritatis vel?
+            <div class="actionsbuttons__newsletterbox">
+                <h1 class="actionsbuttons__newsletterbox_heading">Newsletter</h1>
+                <p class="actionsbuttons__newsletterbox_subheading">
+                    Sign up for our monthly newsletter to get the latest news, volunteer opportunities.
                 </p>
-                <button>join the community</button>
+                <form class="actionsbuttons__newsletterbox__form">
+                    <input type="email" name="email" placeholder="Enter Your Email Address"
+                    class="actionsbuttons__newsletterbox__form_inputtag"
+                    >
+
+                    <button
+                    class="actionsbuttons__newsletterbox__form_subscribebtn"
+                    >
+                    subscribe
+                    </button>
+                </form>
             </div>
-            <div class="actionsbuttons__blogbox box">
-                <h1>to read our blog</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odit nemo quaerat perspiciatis nam ipsa eaque rerum! Maiores
-                    officia tempore maxime asperiores ad saepe amet, ratione
-                    odit ducimus. Quaerat, fuga officia?
-                </p>
-                <button>read</button>
+            <div class="actionsbuttons__blogbox">
+                <h1 class="actionsbuttons__blogbox_heading">
+                    Take Look At Recent News
+                </h1>
+                <button class="actionsbuttons__blogbox_ctabtn">NEWS</button>
             </div>
         </section>
+
+        {{-- cta end --}}
 
         <x-footersection></x-footersection>
 
