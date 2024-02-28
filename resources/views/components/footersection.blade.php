@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer_info_box">
         <div class="footer__socialmedia">
-            <img src="../../public/img/oprifs.jpg" alt="" />
+            <img src="{{asset("img/logo.png")}}" alt="oprifs logo" />
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Hic at illo odio debitis similique ex ad, alias
@@ -71,46 +71,46 @@
             </ul>
         </div>
         <div class="footer__links">
-            <div class="footer__links_discover">
-                <h1>Discover</h1>
-                <ul>
-                    <li>
+            <div class="footer__link">
+                <h1 class="footer__link_heading">Discover</h1>
+                <ul class="footer__link_list">
+                    <li class="footer__link_list_item">
                         <a href="#">home</a>
                     </li>
-                    <li>
+                    <li class="footer__link_list_item">
                         <a href="#">About us</a>
                     </li>
-                    <li>
+                    <li class="footer__link_list_item">
                         <a href="#">programs</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="footer__links_engage">
-                <h1>engage</h1>
-                <ul>
-                    <li>
+            <div class="footer__link">
+                <h1 class="footer__link_heading">engage</h1>
+                <ul class="footer__link_list">
+                    <li class="footer__link_list_item">
                         <a href="#">volunter</a>
                     </li>
-                    <li>
+                    <li class="footer__link_list_item">
                         <a href="#">Donate</a>
                     </li>
-                    <li>
+                    <li class="footer__link_list_item">
                         <a href="#">Blog</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="footer__link_connect">
-                <h1>Connect</h1>
-                <ul>
-                    <li>
+            <div class="footer__link">
+                <h1 class="footer__link_heading">Connect</h1>
+                <ul class="footer__link_list">
+                    <li class="footer__link_list_item">
                         <a href="#">contact</a>
                     </li>
-                    <li>
+                    <li class="footer__link_list_item">
                         <a href="#">faq</a>
                     </li>
-                    <li>
+                    <li class="footer__link_list_item">
                         <a href="#">privacy policy</a>
                     </li>
                 </ul>
@@ -118,5 +118,7 @@
         </div>
     </div>
 
-    <div class="footer_copyright">copyright @oprifs.com</div>
+    <div class="footer_copyrightbox"> 
+    <div class="footer_copyright">copyright @oprifs.com</div>    
+    </div>
 </footer>

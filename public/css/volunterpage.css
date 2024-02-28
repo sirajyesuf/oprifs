@@ -1,3 +1,115 @@
+/* MEET OUR VOLUNTERS  START */
+
+.voluntersection {
+    width: 120rem;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: #faf9fd;
+}
+.voluntersection__heading {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 120%;
+    color: #2e4049;
+    text-align: center;
+}
+
+.voluntersection__volunters {
+    display: flex;
+    gap: 2.3rem;
+}
+
+.voluntersection__volunters_volunter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.voluntersection__volunters_volunter_img {
+    width: 283px;
+    height: 382px;
+}
+
+.voluntersection__volunters_volunter_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.voluntersection__volunters_volunter_detail__name {
+    font-size: 2rem;
+    line-height: 120%;
+    font-weight: 700;
+    color: #2e4049;
+}
+
+.become_avolunter {
+    background-color: #77d7d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 64px 21px 64px 21px;
+}
+
+.become_avolunter__imgbox {
+    width: 82px;
+    height: 82px;
+    color: white;
+    background-color: #2e4049;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.become_avolunter__imgbox img {
+    width: 46px;
+    height: 46px;
+}
+
+.become_avolunter__heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 120%;
+    color: #2e4049;
+    text-align: center;
+}
+
+.become_avolunter__subheading {
+    font-size: 2rem;
+    line-height: 130%;
+    font-weight: normal;
+    color: #2e4049;
+    text-align: center;
+}
+
+.become_avolunter_joinustoday {
+    width: 201px;
+    height: 65px;
+    background-color: #2e4049;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.become_avolunter_joinustoday a {
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #ffffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* MEET OUR VOLUNTERS  END */
+
 .volunterpage_herosection {
     padding: 5rem;
     background-color: #77d7d3;
@@ -94,10 +206,6 @@
     cursor: pointer;
 }
 
-
-
-
-
 .success__notification {
     background-color: #f3f4f6;
     padding-block: 1rem;
@@ -116,9 +224,7 @@
     font-size: 2rem;
 }
 
-
 .success__notification_closebtn {
-    
     background-color: white;
     border: 1px solid gainsboro;
     padding: 0.8rem;
@@ -126,28 +232,11 @@
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1200px) {
-
     .volunterpage_formsection {
         flex-direction: column;
     }
-    .volunterpage_formsection_form{
+    .volunterpage_formsection_form {
         width: 80%;
     }
 }

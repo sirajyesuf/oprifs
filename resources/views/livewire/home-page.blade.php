@@ -1,30 +1,87 @@
 <div>
 <x-headersection></x-headersection>
 
-<section class="herosection">
-        
-        <img src="{{asset("img/hero.jpg")}}" alt="" class="herosection_img">
 
-        <div class="herosection__info">
+        {{-- hero section start --}}
+        <section class="herosection">
+                
+                <img src="{{asset("img/hero.jpg")}}" alt="" class="herosection_img">
 
-
-            <button class="herosection__info_cta">
-                Donate
-            </button>
-
-            <p class="herosection__info_text">
-                Organization for Prevention,
-                <br>
-                Rehabilitation and Integration
-                <br>
-                of Female Street Children.
-            </p>
+                <div class="herosection__info">
 
 
-        </div>
+                    <button class="herosection__info_cta">
+                        Donate
+                    </button>
+
+                    <p class="herosection__info_text">
+                        Organization for Prevention,
+                        <br>
+                        Rehabilitation and Integration
+                        <br>
+                        of Female Street Children.
+                    </p>
 
 
-</section>
+                </div>
+
+
+        </section>
+
+        {{-- hero section end --}}
+
+
+        {{-- volunter section start --}}
+
+        <section class="voluntersection">
+            <div class="voluntersection__heading">
+                Meet Our Volunteers
+            </div>
+
+            <div class="voluntersection__volunters">
+
+                <div class="voluntersection__volunters_volunter">
+                    <img src="{{asset("img/volunter1.png")}}" alt="" class="voluntersection__volunters_volunter_img">
+                    <div class="voluntersection__volunters_volunter_detail">
+                        <p class="voluntersection__volunters_volunter_detail__name">
+                            john doe
+                        </p>
+                    </div>
+                </div>
+                <div class="voluntersection__volunters_volunter">
+                    <img src="{{asset("img/volunter2.png")}}" alt="" class="voluntersection__volunters_volunter_img">
+                    <div class="voluntersection__volunters_volunter_detail">
+                        <p class="voluntersection__volunters_volunter_detail__name">
+                            john doe
+                        </p>
+                    </div>
+                </div>
+                <div class="voluntersection__volunters_volunter">
+                    <img src="{{asset("img/volunter3.png")}}" alt="" class="voluntersection__volunters_volunter_img">
+                    <div class="voluntersection__volunters_volunter_detail">
+                        <p class="voluntersection__volunters_volunter_detail__name">
+                            john doe
+                        </p>
+                    </div>
+                </div>
+                <div class="become_avolunter">
+                    <div class="become_avolunter__imgbox">
+                        <img src="{{asset("img/volunterhand.png")}}" alt="">
+
+                    </div>
+                    <div class="become_avolunter__heading">Become a Volunteer</div>
+                    <div class="become_avolunter__subheading">Centuries but also the leap  electtypesetting, remaining </div>
+                    <div class="become_avolunter_joinustoday">
+                        <a href="#">Join Us Today</a>
+                    </div>
+          
+                </div>
+
+            </div>
+        </section>
+
+
+        {{-- volunter section end --}}
 
 
 
@@ -187,6 +244,7 @@
 
 
         {{-- cta start --}}
+
         <section class="actionsbuttons">
             <div class="actionsbuttons__newsletterbox">
                 <h1 class="actionsbuttons__newsletterbox_heading">Newsletter</h1>
