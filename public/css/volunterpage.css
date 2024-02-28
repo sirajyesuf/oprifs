@@ -235,7 +235,10 @@
 /* VOLUNTEER REGISTRATION SECTION START */
 
 .volunter_registration_section {
-    width: 100%;
+
+    /* margin-block: 40px; */
+
+    width: 192rem;
     height: 98.8rem;
     background-image: linear-gradient(
             to right bottom,
@@ -251,19 +254,24 @@
 }
 
 .volunter_registration_sectionbox {
-    width: 120rem;
-    /* height: 70.4rem; */
+    width: 1200px;
+    /* padding: 40px 60px 40px 60px; */
+    /* margin: 0px auto; */
+    height: 70.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5.6rem;
 }
 
-/* .volunter_registration_section__hero  {
-    width: 100%;
+.volunter_registration_section__hero  {
+    width: 50%;
     height: 100%;
-} */
+    background-color: rebeccapurple;
+    z-index: 3;
+}
 .volunter_registration_section__form {
+    height: 70.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -289,7 +297,7 @@
 }
 
 .volunter_registration_section__form__inputs input {
-    padding: 4rem;
+    /* padding: 4rem; */
     width: 443px;
     height: 65px;
     background-color: transparent;
@@ -297,20 +305,43 @@
 }
 
 .volunter_registration_section__form__inputs textarea {
+    width: 443px;
+    height: 156px;
     background-color: transparent;
     border: 1px solid white;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 
-.volunter_registration_section__form__inputs input::placeholder,
 .volunter_registration_section__form__inputs textarea::placeholder {
+    padding: 2rem;
     color: white;
     font-size: 1.8rem;
+    line-height: 130%;
     font-weight: bold;
     text-transform: uppercase;
-    text-align: start;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
+.volunter_registration_section__form__inputs input::placeholder{
+    padding-left: 2rem;
+    color: white;
+    font-size: 1.8rem;
+    line-height: 130%;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.volunter_registration_section__form__inputs input:focus,
+.volunter_registration_section__form__inputs textarea:focus {
+
+    /* border: 1px solid red; */
+    /* border: none; */
+}
 .volunter_registration_section__form_submit {
     align-self: flex-start;
     padding: 22px 41px 22px 41px;
@@ -325,11 +356,11 @@
 
 /* VOLUNTEER REGISTRATION SECTION END */
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .volunterpage_formsection {
         flex-direction: column;
     }
     .volunterpage_formsection_form {
         width: 80%;
     }
-}
+} */
