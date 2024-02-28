@@ -84,7 +84,40 @@
         {{-- volunter section end --}}
 
 
+        <section class="volunter_registration_section">
 
+
+            <div class="volunter_registration_sectionbox">
+
+                <div class="volunter_registration_section__hero">
+                        <img src="{{asset("img/2.jpg")}}" alt="">
+                </div>
+        
+                <div class="volunter_registration_section__form">
+                    <div class="volunter_registration_section__form_heading">
+                        become  a volunteer
+                    </div>
+                    <form wire:submit="save" class="volunter_registration_section__form__inputs">
+                        <input type="text" name="name"   placeholder="Full Name*" wire:model="name">
+                        <input type="email" name="email" placeholder="Email Address*" wire:model="email">
+                        <input type="email" name="tel" placeholder="Phone Number*" wire:model="email">
+
+                        <textarea name="message"  rows="15" placeholder="Tell us about the skills and experience you can offer" wire:model="message"></textarea>
+                        
+                        <button type="submit" class="volunter_registration_section__form_submit">
+                            Submit Now
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </section>
 
         <!-- homepage gallery section start -->
         <section class="homepage__gallery_section">
