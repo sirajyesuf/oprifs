@@ -1,6 +1,5 @@
 .newpagecontainer {
     /* background-color: #f9fafb; */
-
 }
 
 .newssectionbox {
@@ -63,15 +62,16 @@
     color: #323232;
 }
 
-.trendingnewssection__detail_content_description{
-    font-size: 1rem;
+.trendingnewssection__detail_content_description {
+    font-size: 1.8rem;
     text-transform: capitalize;
     font-weight: normal;
-    color: gray;
+    line-height: 27px;
+    color: #2a2a2a;
 }
 
 .trendingnewssection__detail_footer {
-    width: 50%;
+    /* width: 50%; */
     margin-top: 3rem;
     padding-top: 1rem;
     border-top: 0.5px solid gainsboro;
@@ -81,10 +81,13 @@
 }
 
 .trendingnewssection__detail_footer_timeago,
-.trendingnewssection__detail_footer_author {
-    font-size: 1rem;
-    text-transform: capitalize;
-    color: gray;
+.trendingnewssection__detail_footer_author,
+.newscard_detail_footer_timeago,
+.newscard_detail_footer_author {
+    font-size: 1.3rem;
+    line-height: 165%;
+    /* text-transform: capitalize; */
+    color: #2a2a2a;
 }
 
 .newslistsectionbox {
@@ -109,13 +112,12 @@
     border-bottom: 1px solid gainsboro;
 }
 
-.newslistsection_filter_news{
+.newslistsection_filter_news {
     padding: 2rem;
     background-color: #f06c51;
     color: white;
-
 }
-.newslistsection_filter_selected{
+.newslistsection_filter_selected {
     padding: 2rem;
     background-color: #40535c;
     color: white;
@@ -127,19 +129,12 @@
     gap: 2rem;
 }
 
-
-
-
-
-
 .newscard {
     display: flex;
     flex-direction: column;
     /* gap: 3rem; */
     /* border: 1px solid #2a2a2a; */
     /* box-shadow: 10px 10px 14px 0px rgba(42, 42, 42, 0.34); */
-
-
 }
 /* .newscardimgcontainer {
     width: 400px;
@@ -150,7 +145,6 @@
     width: 100%;
     height: auto;
     background-color: #f6f6f6;
-
 }
 .newscard_detail {
     /* width: 100%; */
@@ -162,8 +156,6 @@
     padding: 4rem;
 
     background-color: #f6f6f6;
-
-
 }
 
 .newscard_detail_header {
@@ -174,16 +166,15 @@
 
 .newscard_detail_description {
     font-size: 1.5rem;
-    letter-spacing: 1px;
+    line-height: 22px;
     text-transform: capitalize;
     font-weight: normal;
-    color: gray;
+    color: #2a2a2a;
 }
 .newscard_detail_footer {
     display: flex;
     gap: 2rem;
     background-color: #f6f6f6;
-
 }
 
 .newscard_icon {
@@ -195,7 +186,6 @@
     /* border-top: 0.5px solid gainsboro; */
     cursor: pointer;
     background-color: #f6f6f6;
-
 }
 
 .newscard_readmore {
@@ -209,7 +199,6 @@
     color: white;
     /* text-transform: capitalize; */
     font-weight: bold;
-
 }
 
 .newscard_readmore:hover {
@@ -234,23 +223,7 @@
     background-color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* NEWSDETAILPAGEA */
-
+/* NEWSDETAILPAGEA */
 .newsdetailpagesection {
     padding-block: 10rem;
     display: flex;
@@ -259,7 +232,7 @@
 
 .newsdetailpagesection__titlebox {
     height: 400px;
-    background-color: #0E1E32;
+    background-color: #0e1e32;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,8 +248,7 @@
     text-align: center;
 }
 
-
-.newsdetailpagesection__main{
+.newsdetailpagesection__main {
     /* background-color: #40535c; */
     width: 90%;
     /* margin: 0px auto; */
@@ -285,11 +257,10 @@
     /* justify-content: center; */
 }
 
-
 .newsdetailpagesection__main_icons {
     width: 10%;
 }
-.newsdetailpagesection__main_content{
+.newsdetailpagesection__main_content {
     width: 70%;
 }
 .newsdetailpagesection__main_content_img {
@@ -301,17 +272,12 @@
     flex-direction: column;
     gap: 2rem;
     width: 20%;
-
 }
-
-
 
 .newsdetailpagesection__main_othercontents_item {
     width: 100%;
     height: 250px;
     overflow: hidden;
-
-
 }
 .newsdetailpagesection__main_othercontents_item img {
     width: 100%;
@@ -321,4 +287,33 @@
 .newsdetailpagesection__main_othercontents_item div {
     color: rebeccapurple;
     font-size: 2rem;
+}
+
+
+/* MEDIA QUERIES */
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+    .trendingnewssection {
+        flex-direction: column;
+    }
+    .newslistsection_cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+    .trendingnewssection {
+        flex-direction: column;
+    }
+    .newslistsection_cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

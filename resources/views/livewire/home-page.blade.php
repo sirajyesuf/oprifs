@@ -94,13 +94,13 @@
         {{-- volunter section end --}}
 
 
-        <section class="volunter_registration_section">
+        {{-- <section class="volunter_registration_section">
 
 
             <div class="volunter_registration_sectionbox">
 
                 <div class="volunter_registration_section__hero">
-                        {{-- <img src="{{asset("img/2.jpg")}}" alt=""> --}}
+                        <img src="{{asset("img/2.jpg")}}" alt="">
                 </div>
         
                 <div class="volunter_registration_section__form">
@@ -122,15 +122,10 @@
 
             </div>
 
-
-
-
-
-
-        </section>
+        </section> --}}
 
         <!-- homepage gallery section start -->
-        <section class="homepage__gallery_section">
+        {{-- <section class="homepage__gallery_section">
 
             <div class="homepage__gallery_section_cta">
                 <h1>Gallery</h1>
@@ -165,7 +160,7 @@
                 </div>
             </div>
 
-        </section>
+        </section> --}}
         <!-- homepage gallery section end -->
 
         <!-- testimonials  section start-->

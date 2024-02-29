@@ -1,13 +1,15 @@
 <footer class="footer">
     <div class="footer_info_box">
         <div class="footer__socialmedia">
-            <img src="{{asset("img/logo.png")}}" alt="oprifs logo" />
-            <p>
+
+            <img src="{{asset("img/logo.png")}}" alt="oprifs logo" class="footer__socialmedia__logo_img" />
+            <p class="footer__socialmedia__logo_text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Hic at illo odio debitis similique ex ad, alias
                 illum itaque minus explicabo assumenda aliquid quas
                 reprehenderit, ducimus ab? Delectus, quasi itaque.
             </p>
+
             <ul>
                 <li>
                     <a href="#">
@@ -119,6 +121,6 @@
     </div>
 
     <div class="footer_copyrightbox"> 
-    <div class="footer_copyright">copyright @oprifs.com</div>    
+        <div class="footer_copyright">copyright @oprifs.com</div>    
     </div>
 </footer>
