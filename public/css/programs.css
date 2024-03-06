@@ -1,0 +1,53 @@
+.programs_newsrecommendation_section {
+
+    display: flex;
+    gap: 3rem;
+    width: 90%;
+    margin: 0px auto;
+    padding: 5%;
+    border: 1px solid rebeccapurple;
+}
+
+.programs_section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.programs_section__title {
+    text-align: center;
+    color: #2E4049;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.programs {
+    display: flex;
+    gap: 5.2rem;
+}
+
+.program {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.program__icon {
+    width: 7rem;
+    height: 7rem;
+}
+.program_title {
+    font-size: 2.5rem;
+    font-family: 700;
+    line-height: 120%;
+    color: #2E4049;
+}
+
+.program_description {
+    font-size: 2rem;
+    line-height: 130%;
+    color: #727272;
+
+}

@@ -16,6 +16,7 @@
 
         <link rel="stylesheet" href="{{asset('css/volunterpage.css')}}" />
         <link rel="stylesheet" href="{{asset('css/news.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/programs.css')}}" />
 
 
         <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -2,10 +2,10 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use App\Models\Testimonial;
-use Livewire\WithPagination;
 use App\Models\Gallery;
+use App\Models\Testimonial;
+use Livewire\Component;
+use Livewire\WithPagination;
 
 class HomePage extends Component
 {
@@ -14,9 +14,9 @@ class HomePage extends Component
     public function render()
     {
         return view('livewire.home-page')
-        ->with([
-            'testimonials' => Testimonial::paginate(2),
-            'galleries'   => Gallery::take(5)->get()
-        ]);
+            ->with([
+                'testimonials' => Testimonial::paginate(2),
+                'galleries' => Gallery::take(5)->get(),
+            ]);
     }
 }

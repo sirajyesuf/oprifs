@@ -5,6 +5,7 @@
     margin: 50px auto;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 4rem;
     /* background-color: #faf9fd; */
 }
@@ -364,3 +365,27 @@
         width: 80%;
     }
 } */
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+    .testimonials_section {
+        width: min-content;
+    }
+    .testimonials {
+        flex-direction: column
+    }
+
+}

@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\GalleryResource\Pages;
-use App\Filament\Resources\GalleryResource\RelationManagers;
 use App\Models\Gallery;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class GalleryResource extends Resource
 {
@@ -24,7 +21,7 @@ class GalleryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('path')
-                ->directory("gallery")
+                    ->directory('gallery'),
             ]);
     }
 
@@ -32,7 +29,7 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('path')
+                Tables\Columns\ImageColumn::make('path'),
             ])
             ->filters([
                 //

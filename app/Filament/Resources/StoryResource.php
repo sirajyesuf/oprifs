@@ -2,24 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\StoryResource\RelationManagers;
+use App\Filament\Resources\StoryResource\Pages;
 use App\Models\Story;
 use Filament\Forms;
-use Filament\Forms\Components\Tabs\Tab;
 use Filament\Forms\Form;
+use Filament\Infolists\Components;
+use Filament\Infolists\Infolist;
+use Filament\Pages\SubNavigationPosition;
+use Filament\Resources\Pages\Page;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
-use Filament\Infolists\Components;
-use Filament\Infolists\Infolist;
-use Filament\Notifications\Notification;
-use Filament\Pages\SubNavigationPosition;
-use Filament\Resources\Pages\Page;
-use App\Filament\Resources\StoryResource\Pages;
-
 
 class StoryResource extends Resource
 {
@@ -33,57 +29,52 @@ class StoryResource extends Resource
 
     protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
-
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\Group::make()
-                ->schema([
-
-                    Forms\Components\Section::make()
                     ->schema([
-                        Forms\Components\TextInput::make('title')
-                        ->required()
-                        ->live(onBlur:true)
-                        ->maxLength(255)
-                        ->afterStateUpdated(fn(string $operation,$state,Forms\Set $set) => $operation === 'create' ? $set('slug',Str::slug($state)) :  null),
 
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\TextInput::make('title')
+                                    ->required()
+                                    ->live(onBlur: true)
+                                    ->maxLength(255)
+                                    ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
 
-                        Forms\Components\TextInput::make('slug')
-                        ->disabled()
-                        ->dehydrated()
-                        ->required()
-                        ->maxLength(255)
-                        ->unique(Story::class, 'slug', ignoreRecord: true),
+                                Forms\Components\TextInput::make('slug')
+                                    ->disabled()
+                                    ->dehydrated()
+                                    ->required()
+                                    ->maxLength(255)
+                                    ->unique(Story::class, 'slug', ignoreRecord: true),
 
+                                Forms\Components\MarkdownEditor::make('content')
+                                    ->required()
+                                    ->columnSpan('full'),
 
-                        Forms\Components\MarkdownEditor::make('content')
-                        ->required()
-                        ->columnSpan('full')
+                            ])->columns(2),
 
+                    ])
+                    ->columnSpan(['lg' => 2]),
 
-                    ])->columns(2)
+                Forms\Components\Group::make()
+                    ->schema([
 
-
-                ])
-                ->columnSpan(['lg' => 2]),
-            
-            Forms\Components\Group::make()
-            ->schema([
-
-                Forms\Components\Section::make()
-                ->schema([
-                    Forms\Components\FileUpload::make('cover_image')
-                    ->required()
-                    ->label('Cover Image')
-                    ->directory('coverimages')
-                    ->image()
-                    ->imageEditor(),
-                ])
+                        Forms\Components\Section::make()
+                            ->schema([
+                                Forms\Components\FileUpload::make('cover_image')
+                                    ->required()
+                                    ->label('Cover Image')
+                                    ->directory('coverimages')
+                                    ->image()
+                                    ->imageEditor(),
+                            ]),
+                    ]),
             ])
-        ])
-        ->columns(3);
+            ->columns(3);
     }
 
     public static function table(Table $table): Table
@@ -91,15 +82,15 @@ class StoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('cover_image')
-                ->label('Cover Image'),
+                    ->label('Cover Image'),
                 Tables\Columns\TextColumn::make('title')
-                ->searchable(),
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('status')
-                ->badge()
-                ->colors([
-                    'success' => 'published',
-                    'danger' => 'draft',
-                ]),
+                    ->badge()
+                    ->colors([
+                        'success' => 'published',
+                        'danger' => 'draft',
+                    ]),
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
@@ -114,7 +105,6 @@ class StoryResource extends Resource
             ]);
     }
 
-
     public static function infolist(Infolist $infolist): Infolist
     {
         return $infolist
@@ -126,9 +116,9 @@ class StoryResource extends Resource
                                 ->schema([
                                     Components\Group::make([
                                         Components\TextEntry::make('title'),
-                                        Components\TextEntry::make('slug')
+                                        Components\TextEntry::make('slug'),
                                     ]),
-                            
+
                                 ]),
                             Components\ImageEntry::make('cover_image')
                                 ->hiddenLabel()
@@ -153,7 +143,6 @@ class StoryResource extends Resource
             Pages\EditStory::class,
         ]);
     }
-
 
     public static function getRelations(): array
     {

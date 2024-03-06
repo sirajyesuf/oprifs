@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use App\Enums\PostType;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Builder;
-use App\Enums\PostType;
+
 class News extends Model
 {
     use HasFactory;
@@ -18,9 +19,8 @@ class News extends Model
 
     protected static function booted(): void
     {
-        static::addGlobalScope('onlyNews',function (Builder $builder) {
-            $builder->where('type',PostType::NEWS->value);
+        static::addGlobalScope('onlyNews', function (Builder $builder) {
+            $builder->where('type', PostType::NEWS->value);
         });
     }
-
 }

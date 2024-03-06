@@ -85,13 +85,9 @@
 
 .homepage__gallery_section {
     display: grid;
-    /* grid-template-columns: repeat(4, 48rem);
-    grid-template-rows: repeat(2, 44.3rem); */
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    /* background-color: red; */
-    /* padding: 4rem; */
+    padding-block: 10rem;
 }
 
 .homepage__gallery_section_gallery-item {

@@ -3,15 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\TestimonialResource\Pages;
-use App\Filament\Resources\TestimonialResource\RelationManagers;
 use App\Models\Testimonial;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class TestimonialResource extends Resource
 {
@@ -23,13 +20,12 @@ class TestimonialResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make("name")
-                ->required(),
-                Forms\Components\TextInput::make("job")
-                ->required(),
-                Forms\Components\Textarea::make("content")
-                ->required()
-                
+                Forms\Components\TextInput::make('name')
+                    ->required(),
+                Forms\Components\TextInput::make('job')
+                    ->required(),
+                Forms\Components\Textarea::make('content')
+                    ->required(),
 
             ]);
     }
@@ -38,9 +34,9 @@ class TestimonialResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make("name"),
-                Tables\Columns\TextColumn::make("job"),
-                Tables\Columns\TextColumn::make("content")
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('job'),
+                Tables\Columns\TextColumn::make('content'),
             ])
             ->filters([
                 //

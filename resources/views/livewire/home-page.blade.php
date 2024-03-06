@@ -31,6 +31,142 @@
         {{-- hero section end --}}
 
 
+
+        {{-- oprifs program and news recommendation section start --}}
+
+        <section class="programs_newsrecommendation_section">
+
+            <div class="programs_section">
+
+                <div class="programs_section__title">
+                    programs
+                </div>
+                <div class="programs">
+                        <div class="program">
+                                <ion-icon name="home-outline" class="program__icon"></ion-icon>
+                                <div class="program_title">
+                                    Safe Home Based Child Care and Support
+        
+                                </div>
+                                <div class="program_description">
+                                    one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
+                                </div>
+                        </div>
+                        <div class="program">
+                            <ion-icon name="home-outline" class="program__icon"></ion-icon>
+                            <div class="program_title">
+                                Safe Home Based Child Care and Support
+        
+                            </div>
+                            <div class="program_description">
+                                one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
+                            </div>
+                    </div>
+                    <div class="program">
+                        <ion-icon name="people-outline"  class="program__icon"></ion-icon>
+                        <div class="program_title">
+                            Safe Home Based Child Care and Support
+        
+                        </div>
+                        <div class="program_description">
+                            one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
+                        </div>
+                </div>
+        
+                <div class="program">
+                    <ion-icon name="home-outline" class="program__icon"></ion-icon>
+                    <div class="program_title">
+                        Safe Home Based Child Care and Support
+        
+                    </div>
+                    <div class="program_description">
+                        one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
+                    </div>
+            </div>
+        
+            <div class="program">
+                <ion-icon name="shield-half-outline" class="program__icon"></ion-icon>
+                <div class="program_title">
+                    Safe Home Based Child Care and Support
+        
+                </div>
+                <div class="program_description">
+                    one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
+                </div>
+            </div>
+    
+    
+                </div>
+            </div>
+
+            <div class="newsrecommendation_section">
+                news recommendation
+            </div>
+
+
+
+        </section>
+
+
+        {{-- oprifs program and news recommendation section end --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {{-- volunter section start --}}
 
         <section class="voluntersection">
@@ -94,7 +230,7 @@
         {{-- volunter section end --}}
 
 
-        {{-- <section class="volunter_registration_section">
+        <section class="volunter_registration_section">
 
 
             <div class="volunter_registration_sectionbox">
@@ -122,10 +258,10 @@
 
             </div>
 
-        </section> --}}
+        </section>
 
         <!-- homepage gallery section start -->
-        {{-- <section class="homepage__gallery_section">
+        <section class="homepage__gallery_section">
 
             <div class="homepage__gallery_section_cta">
                 <h1>Gallery</h1>
@@ -160,7 +296,7 @@
                 </div>
             </div>
 
-        </section> --}}
+        </section>
         <!-- homepage gallery section end -->
 
         <!-- testimonials  section start-->
@@ -169,20 +305,24 @@
             <div class="testimonials">
                 @foreach ($testimonials as $testimonial)
                 <div class="testimonial">
-                    <div class="testimonial__header">
-                        <div class="testimonial__name">
-                            <p class="testimonial__name_fn">
-                                {{$testimonial->name}}
-                            </p>
-                            <p class="testimonial__name_job">
-                                {{$testimonial->job}}
-                            </p>
+                    <img src="{{asset("img/testimonial.png")}}" alt="" class="testimonial__image">
+                    <div class="testimonial__body">
+                        <div class="testimonial__header">
+                            <div class="testimonial__name">
+                                <p class="testimonial__name_fn">
+                                    {{$testimonial->name}}
+                                </p>
+                                <p class="testimonial__name_job">
+                                    {{$testimonial->job}}
+                                </p>
+                            </div>
+                            <img src="{{asset("img/quote.png")}}" alt="quote image" class="testimonial__quote">
                         </div>
-                        <div class="testimonial__quote">&ldquo;</div>
+                        <div class="testimonial__content">
+                            {{$testimonial->content}}
+                        </div>
                     </div>
-                    <div class="testimonial__content">
-                        {{$testimonial->content}}
-                    </div>
+
                 </div>
                 @endforeach
 
@@ -191,91 +331,41 @@
             <div class="testimonials__pagination">
 
             @if ($testimonials->onFirstPage())
-
                 <div class="testimonials__pagination_back">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="ionicon"
-                        viewBox="0 0 512 512"
-                    >
-                        <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="48"
-                            d="M328 112L184 256l144 144"
-                        />
-                    </svg>
+                    <img src="{{asset("img/back_pagination.png")}}" alt="back pagination" class="testimonials__pagination_back_img">
                 </div>
+
+
+
             @else
-
-            <div 
-            @wire:click="previousPage"
-            wire:loading.attr="disabled"
-            class="testimonials__pagination_back">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="ionicon"
-                        viewBox="0 0 512 512"
-                    >
-                        <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="48"
-                            d="M328 112L184 256l144 144"
-                        />
-                    </svg>
+            <div class="testimonials__pagination_forward">
+                <img 
+                wire:click="previousPage"
+                wire:loading.attr="disabled"
+                src="{{asset("img/back_pagination.png")}}" alt="back pagination"
+                class="testimonials__pagination_forward_img"
+                >
             </div>
-
             @endif
             
                 <div class="testimonials__pagination_line"></div>
 
             @if($testimonials->onLastPage())
-
-                <div class="testimonials__pagination_forward">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="ionicon"
-                        viewBox="0 0 512 512"
-                    >
-                        <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="48"
-                            d="M184 112l144 144-144 144"
-                        />
-                    </svg>
-                </div>
+            <div class="testimonials__pagination_forward">
+                <img src="{{asset("img/forward_pagination.png")}}" alt="back pagination" class="testimonials__pagination_forward_img">
+            </div>
             @else
-            <div
-            wire:click="nextPage"
-            wire:loading.attr="disabled"
-            class="testimonials__pagination_forward">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="ionicon"
-                        viewBox="0 0 512 512"
-                    >
-                        <path
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="48"
-                            d="M184 112l144 144-144 144"
-                        />
-                    </svg>
-                </div>
-
+            <div class="testimonials__pagination_forward">
+                <img
+                wire:click="nextPage"
+                wire:loading.attr="disabled"
+                src="{{asset("img/forward_pagination.png")}}" alt="back pagination" class="testimonials__pagination_forward_img"
+                >
+            </div>
             @endif
 
-            </div>
+
+            </div> 
         </section>
 
         <!-- testimonials section end -->

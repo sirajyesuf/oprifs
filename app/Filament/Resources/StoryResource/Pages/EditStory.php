@@ -7,7 +7,6 @@ use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Contracts\Support\Htmlable;
 
-
 class EditStory extends EditRecord
 {
     protected static string $resource = StoryResource::class;
@@ -21,7 +20,7 @@ class EditStory extends EditRecord
         ];
     }
 
-    public function getTitle(): string | Htmlable
+    public function getTitle(): string|Htmlable
     {
         return $this->record->title;
     }

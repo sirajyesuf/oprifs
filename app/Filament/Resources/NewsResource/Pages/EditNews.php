@@ -20,7 +20,7 @@ class EditNews extends EditRecord
         ];
     }
 
-    public function getTitle(): string | Htmlable
+    public function getTitle(): string|Htmlable
     {
         return $this->record->title;
     }
