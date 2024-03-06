@@ -305,7 +305,7 @@
             <div class="testimonials">
                 @foreach ($testimonials as $testimonial)
                 <div class="testimonial">
-                    <img src="{{asset("img/testimonial.png")}}" alt="" class="testimonial__image">
+                    <img src="{{asset('storage/'.$testimonial->path)}}" alt="" class="testimonial__image">
                     <div class="testimonial__body">
                         <div class="testimonial__header">
                             <div class="testimonial__name">
@@ -362,7 +362,7 @@
                 src="{{asset("img/forward_pagination.png")}}" alt="back pagination" class="testimonials__pagination_forward_img"
                 >
             </div>
-            @endif
+        @endif
 
 
             </div> 

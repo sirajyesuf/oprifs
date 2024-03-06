@@ -14,7 +14,9 @@ class TestimonialResource extends Resource
 {
     protected static ?string $model = Testimonial::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-m-identification';
+
+    protected static ?string $navigationGroup = 'Website';
 
     public static function form(Form $form): Form
     {
@@ -25,6 +27,13 @@ class TestimonialResource extends Resource
                 Forms\Components\TextInput::make('job')
                     ->required(),
                 Forms\Components\Textarea::make('content')
+                    ->rows(3)
+                    ->required(),
+
+                Forms\Components\FileUpload::make('path')
+                    ->label('Picture')
+                    ->directory('testimonials')
+                    ->image()
                     ->required(),
 
             ]);
@@ -34,15 +43,21 @@ class TestimonialResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\ImageColumn::make('path')
+                    ->label('Picture'),
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Full Name'),
                 Tables\Columns\TextColumn::make('job'),
-                Tables\Columns\TextColumn::make('content'),
+                Tables\Columns\TextColumn::make('content')
+                    ->label('Testimonial')
+                    ->limit(15),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -64,6 +79,7 @@ class TestimonialResource extends Resource
             'index' => Pages\ListTestimonials::route('/'),
             'create' => Pages\CreateTestimonial::route('/create'),
             'edit' => Pages\EditTestimonial::route('/{record}/edit'),
+            'view' => Pages\ViewTestimonial::route('/{record}/view'),
         ];
     }
 }
