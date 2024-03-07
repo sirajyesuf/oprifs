@@ -2,13 +2,13 @@
 
 namespace App\Filament\Resources\VolunterResource\Pages;
 
-use App\Filament\Resources\VolunterResource;
+use App\Filament\Resources\VolunteerResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListVolunters extends ListRecords
+class ListVolunteers extends ListRecords
 {
-    protected static string $resource = VolunterResource::class;
+    protected static string $resource = VolunteerResource::class;
 
     protected function getHeaderActions(): array
     {
