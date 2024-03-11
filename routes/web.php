@@ -15,5 +15,5 @@ Route::get('/contactus', ContactUs::class);
 Route::get('/gallery', GalleryPage::class);
 Route::get('/volunter', VolunterPage::class);
 
-Route::get('/news-stories', NewsPage::class);
-Route::get('/news-stories/{id}', NewsDetailPage::class);
+Route::get('/contents', NewsPage::class);
+Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail');

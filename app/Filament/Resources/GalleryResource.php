@@ -15,16 +15,16 @@ class GalleryResource extends Resource
     protected static ?string $model = Gallery::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-photo';
-    protected static ?string $navigationGroup = 'Website';
 
+    protected static ?string $navigationGroup = 'Website';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('path')
-                ->label("Picture")
-                ->directory('gallery'),
+                    ->label('Picture')
+                    ->directory('gallery'),
             ]);
     }
 
@@ -33,7 +33,7 @@ class GalleryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('path')
-                ->label("Picture"),
+                    ->label('Picture'),
             ])
             ->filters([
                 //

@@ -7,7 +7,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 4rem;
-    /* background-color: #faf9fd; */
 }
 .voluntersection__heading {
     font-size: 4rem;
@@ -55,7 +54,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-
     padding: 64px 21px 64px 21px;
 }
 
@@ -236,9 +234,6 @@
 /* VOLUNTEER REGISTRATION SECTION START */
 
 .volunter_registration_section {
-
-    /* margin-block: 40px; */
-
     width: 192rem;
     height: 98.8rem;
     background-image: linear-gradient(
@@ -256,23 +251,43 @@
 
 .volunter_registration_sectionbox {
     width: 1200px;
-    /* padding: 40px 60px 40px 60px; */
-    /* margin: 0px auto; */
-    height: 70.4rem;
+    height: 80rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5.6rem;
 }
 
-.volunter_registration_section__hero  {
+.volunter_registration_section__hero {
     width: 50%;
     height: 100%;
-    background-color: rebeccapurple;
     z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
+
+.volunter_registration_section__hero_heading {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 120%;
+    color: white;
+}
+.volunter_registration_section__hero_subheading {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 130%;
+    color: white;
+}
+
+.volunter_registration_section__hero_img {
+    width: 570px;
+    height: 192px;
+}
+
 .volunter_registration_section__form {
-    height: 70.4rem;
+    height: 80rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -298,25 +313,23 @@
 }
 
 .volunter_registration_section__form__inputs input {
-    /* padding: 4rem; */
     width: 443px;
-    height: 65px;
+    height: 50px;
     background-color: transparent;
     border: 1px solid white;
 }
 
 .volunter_registration_section__form__inputs textarea {
     width: 443px;
-    height: 156px;
+    height: 100px;
     background-color: transparent;
     border: 1px solid white;
-    /* padding: 2rem; */
 }
 
 .volunter_registration_section__form__inputs textarea::placeholder {
     padding: 2rem;
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 130%;
     font-weight: bold;
     text-transform: uppercase;
@@ -325,10 +338,10 @@
     align-items: center;
 }
 
-.volunter_registration_section__form__inputs input::placeholder{
+.volunter_registration_section__form__inputs input::placeholder {
     padding-left: 2rem;
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 130%;
     font-weight: bold;
     text-transform: uppercase;
@@ -337,12 +350,12 @@
     align-items: center;
 }
 
-.volunter_registration_section__form__inputs input:focus,
+/* .volunter_registration_section__form__inputs input:focus,
 .volunter_registration_section__form__inputs textarea:focus {
+    border: 1px solid red;
+    border: none;
+} */
 
-    /* border: 1px solid red; */
-    /* border: none; */
-}
 .volunter_registration_section__form_submit {
     align-self: flex-start;
     padding: 22px 41px 22px 41px;
@@ -353,6 +366,13 @@
     color: #2e4049;
     font-size: 1.8rem;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.error {
+    font-size: 1.5rem;
+    color: red;
+    line-height: 150%;
 }
 
 /* VOLUNTEER REGISTRATION SECTION END */
@@ -366,14 +386,6 @@
     }
 } */
 
-
-
-
-
-
-
-
-
 /* MEDIA QUERIES */
 
 /**************************/
@@ -381,11 +393,9 @@
 /**************************/
 
 @media (max-width: 59em) {
-    .testimonials_section {
-        width: min-content;
+    .volunter_registration_section__hero {
+        display: none;
+        visibility: none;
+        
     }
-    .testimonials {
-        flex-direction: column
-    }
-
 }

@@ -34,7 +34,7 @@
 
         {{-- oprifs program and news recommendation section start --}}
 
-        <section class="programs_newsrecommendation_section">
+        {{-- <section class="programs_newsrecommendation_section">
 
             <div class="programs_section">
 
@@ -105,7 +105,7 @@
 
 
 
-        </section>
+        </section> --}}
 
 
         {{-- oprifs program and news recommendation section end --}}
@@ -236,7 +236,13 @@
             <div class="volunter_registration_sectionbox">
 
                 <div class="volunter_registration_section__hero">
-                        <img src="{{asset("img/2.jpg")}}" alt="">
+                    <div class="volunter_registration_section__hero_heading">
+                        Join The Community To Give Education For Girls
+                    </div>
+                    <div class="volunter_registration_section__hero_subheading">
+                        Empower change by joining our community. Together, let's ensure every girl gets the education she deserves. Make an impact now!
+                    </div>
+                    <img src="{{asset("img/femalestudents.png")}}" alt="" class="volunter_registration_section__hero_img">
                 </div>
         
                 <div class="volunter_registration_section__form">
@@ -245,10 +251,24 @@
                     </div>
                     <form wire:submit="save" class="volunter_registration_section__form__inputs">
                         <input type="text" name="name"   placeholder="Full Name*" wire:model="name">
+                        <div>
+                            @error('name') <span class="error">{{ $message }}</span> @enderror 
+                        </div>
+
                         <input type="email" name="email" placeholder="Email Address*" wire:model="email">
-                        <input type="email" name="tel" placeholder="Phone Number*" wire:model="email">
+                        <div>
+                            @error('email') <span class="error">{{ $message }}</span> @enderror 
+                        </div>
+
+                        <input type="tel" name="phonenumber" placeholder="Phone Number*" wire:model="phonenumber">
+                        <div>
+                            @error('phonenumber') <span class="error">{{ $message }}</span> @enderror 
+                        </div>
 
                         <textarea name="message"   placeholder="Message*" wire:model="message"></textarea>
+                        <div>
+                            @error('message') <span class="error">{{ $message }}</span> @enderror 
+                        </div>
                         
                         <button type="submit" class="volunter_registration_section__form_submit">
                             Submit Now

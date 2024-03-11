@@ -9,7 +9,7 @@ class Volunteer extends Model
 {
     use HasFactory;
 
-    protected $table = "volunters";
+    protected $table = 'volunters';
 
     protected $guarded = [];
 }
