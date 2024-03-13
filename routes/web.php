@@ -16,4 +16,5 @@ Route::get('/gallery', GalleryPage::class);
 Route::get('/volunter', VolunterPage::class);
 
 Route::get('/contents', NewsPage::class);
-Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail');
+Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail')
+->middleware('increment.view');

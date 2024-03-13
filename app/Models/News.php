@@ -23,4 +23,9 @@ class News extends Model
             $builder->where('type', PostType::NEWS->value);
         });
     }
+
+    public function author(){
+        
+        return $this->belongsTo(User::class,'author_id');
+    }
 }

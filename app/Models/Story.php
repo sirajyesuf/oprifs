@@ -23,4 +23,9 @@ class Story extends Model
             $builder->where('type', PostType::STORIES->value);
         });
     }
+
+    public function author(){
+        
+        return $this->belongsTo(User::class,'author_id');
+    }
 }

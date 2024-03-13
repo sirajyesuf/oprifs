@@ -14,6 +14,7 @@ class CreateStory extends CreateRecord
     {
 
         $data['type'] = PostType::STORIES->value;
+        $data['author_id'] = Auth()->user()->id;
 
         return $data;
     }

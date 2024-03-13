@@ -3,13 +3,14 @@
 namespace App\Livewire;
 
 use App\Models\News;
+use App\Models\Story;
 use Livewire\Component;
 use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Str;
 
 class NewsPage extends Component
 {
-    public $amount = 6;
+    public $amount = 3;
 
     public $categories = [
 
@@ -30,13 +31,26 @@ class NewsPage extends Component
     ];
 
 
+    public function loadMoreContent(){
+        $this->amount = $this->amount + 3;
+    }
+
+
     public function getActiveCategory(){
 
         foreach ($this->categories as $category) {
 
             if ($category['status']) {
 
-                return str::lower($category['name']);
+                if(str::lower($category['name']) == "news") {
+
+                    return "news";
+                }
+
+                else {
+
+                    return "story";
+                }
 
             }
 
@@ -70,7 +84,12 @@ class NewsPage extends Component
     public function getContent(){
 
         $activeCategory = $this->getActiveCategory();
-        return News::where("type",$activeCategory)->paginate($this->amount);
+
+        if($activeCategory == "news"){
+            
+            return News::paginate($this->amount);
+        }
+        return Story::paginate($this->amount);
     }
 
 

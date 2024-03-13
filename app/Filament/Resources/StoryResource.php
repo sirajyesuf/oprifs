@@ -25,7 +25,7 @@ class StoryResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
-    protected static ?string $navigationGroup = 'Post';
+    protected static ?string $navigationGroup = 'Contents';
 
     protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 

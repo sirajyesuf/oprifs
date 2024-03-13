@@ -14,7 +14,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M336 192h40a40 40 0 0140 40v192a40 40 0 01-40 40H136a40 40 0 01-40-40V232a40 40 0 0140-40h40M336 128l-80-80-80 80M256 321V48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
                     </div>
-
                 </div>
 
                 <div class="trendingnewssection__detail_content">
@@ -78,7 +77,7 @@
                         </p>
 
                         <p class="newscard_detail_description">
-                            {{$content->content}}
+                            {{  \Illuminate\Support\Str::limit($content->content,200) }}
                         </p>
 
                     </div>
@@ -90,7 +89,7 @@
                         </p>
 
                         <p class="newscard_detail_footer_author">
-                        by siraj yesuf <span>| 4min read </span>
+                        by {{$content->author->name}} <span>| 4min read </span>
                         </p>
                     </div>
 
@@ -99,12 +98,12 @@
                 <div class="newscard_icon">
 
                     <button class="newscard_readmore">
-                        <a href="{{route('content_detail',['slug' => $content->slug])}}">
+                        <a href="{{route('content_detail',['slug' => $content->slug])}}"
+                            class="newscard_readmore__link"
+                        >
                             Read more
                         </a>
                     </button>
-                    {{-- <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M336 192h40a40 40 0 0140 40v192a40 40 0 01-40 40H136a40 40 0 01-40-40V232a40 40 0 0140-40h40M336 128l-80-80-80 80M256 321V48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg> --}}
                 </div>
                 </div>
 
@@ -150,14 +149,14 @@
                 </div>
             </div>  --}}
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qw-FLc7Z01Q" frameborder="0" allowfullscreen></iframe>
+            {{-- <iframe width="560" height="315" src="https://www.youtube.com/embed/qw-FLc7Z01Q" frameborder="0" allowfullscreen></iframe> --}}
 
 
         </div>
 
         @if (count($contents))
             
-            <button class="newslistsection_loadmorebtn">
+            <button class="newslistsection_loadmorebtn"  wire:click="loadMoreContent">
                 view more
             </button>
         @else
