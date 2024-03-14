@@ -2,7 +2,7 @@
     <div class="footer_info_box">
         <div class="footer__socialmedia">
 
-            <img src="{{asset("img/logo.png")}}" alt="oprifs logo" class="footer__socialmedia__logo_img" />
+            <img src="{{asset("img/logo11.png")}}" alt="oprifs logo" class="footer__socialmedia__logo_img" />
             <p class="footer__socialmedia__logo_text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Hic at illo odio debitis similique ex ad, alias

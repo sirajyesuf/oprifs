@@ -82,10 +82,11 @@
 
     <div class="header__navigation">
         <img
-            src="{{asset("img/logo.png")}}"
+            src="{{asset("img/logo11.png")}}"
             alt="oprifs logo"
             class="header_logo"
         />
+
         <div class="header__navigation__menu">
             <a href="#">Home</a>
             <a href="#">AboutUS</a>

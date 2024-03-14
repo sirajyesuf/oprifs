@@ -2,6 +2,7 @@
     background-color: var(--color-primary4);
     width: 100%;
     margin: 0 auto;
+    /* position: relative; */
 }
 
 .header__footer {
@@ -81,8 +82,10 @@
 }
 
 .header_logo {
+    padding:2rem;
     width: 319px;
     height: 160px;
+    border: none;
 }
 
 .header__navigation__menu {
@@ -186,7 +189,7 @@
     /* MOBILE NAVIGATION */
     .btn-mobile-nav {
         display: block;
-        z-index: 9999;
+        /* z-index: 9999; */
     }
 
     .header__navigation__menu {
@@ -199,13 +202,14 @@
         transform: translateX(100%);
 
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: all 0.5s ease-in;
 
         /* Hide navigation */
         /* Allows NO transitions at all */
-        display: none;
+        /* display: none; */
 
         /* 1) Hide it visually */
         opacity: 0;
@@ -217,12 +221,32 @@
         visibility: hidden;
     }
 
-    .nav-open .main-nav {
+    .header__footer {
+        /* Hide navigation */
+        /* Allows NO transitions at all */
+        /* display: none; */
+
+        /* 1) Hide it visually */
+        opacity: 0;
+
+        /* 2) Make it unaccessible to mouse and keyboard */
+        pointer-events: none;
+
+        /* 3) Hide it from screen readers */
+        visibility: hidden;
+    }
+
+    .nav-open .header__navigation__menu {
         opacity: 1;
         pointer-events: auto;
         visibility: visible;
         transform: translateX(0);
     }
+/* 
+    .herosection {
+        position: relative;
+        z-index: 0;
+    } */
 
     .nav-open .icon-mobile-nav[name="close-outline"] {
         display: block;

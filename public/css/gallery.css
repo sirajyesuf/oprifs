@@ -19,7 +19,7 @@
 
 .gallery {
     width: 120rem;
-    height: 100%;
+    /* height: 100%; */
     margin: 10rem auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -66,14 +66,25 @@
 }
 
 .gallery__pagination {
-    padding: 4rem;
     grid-area: 4/2;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
+    color: #202d33;
 }
 
+.gallery__pagination__icon {
+    width: 15px;
+    height: 30px;
+    color: #000000;
+}
+
+.gallery__pagination__range {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 150%;
+}
 .gallery__pagination_item {
     width: 10px;
     height: 10px;

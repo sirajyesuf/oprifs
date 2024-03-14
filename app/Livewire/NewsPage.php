@@ -5,7 +5,6 @@ namespace App\Livewire;
 use App\Models\News;
 use App\Models\Story;
 use Livewire\Component;
-use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Str;
 
 class NewsPage extends Component

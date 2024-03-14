@@ -32,9 +32,91 @@
 
 
 
-        {{-- oprifs program and news recommendation section start --}}
 
-        {{-- <section class="programs_newsrecommendation_section">
+        <section class="programs_section">
+            <div class="programs_section__heading">
+                our programs
+            </div>
+            <div class="programs">
+                <div class="program program1">
+
+                    {{-- <div class="program_imgbox">
+                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
+                    </div> --}}
+       <div class="program_imgbox">
+
+                    <ion-icon name="school-outline" class="program_img"></ion-icon>
+       </div>
+
+
+                    <div class="program_heading">
+                        Healthy Food
+                    </div>
+                    <div class="program_subheading">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
+                    </div>
+                </div>
+                <div class="program">
+                    <div class="program_imgbox">
+                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
+                    </div>
+                    <div class="program_heading">
+                        Education
+                    </div>
+                    <div class="program_subheading">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
+                    </div>
+                </div>
+                <div class="program">
+                    <div class="program_imgbox">
+                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
+                    </div>
+                    <div class="program_heading">
+                        Healthy Food
+                    </div>
+                    <div class="program_subheading">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
+                    </div>
+                </div>
+                <div class="program">
+                    <div class="program_imgbox">
+                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
+                    </div>                    <div class="program_heading">
+                        Healthy Food
+                    </div>
+                    <div class="program_subheading">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
+                    </div>
+                </div>
+                <div class="program">
+                    <div class="program_imgbox">
+                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
+                    </div>                    <div class="program_heading">
+                        Healthy Food
+                    </div>
+                    <div class="program_subheading">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
+                    </div>
+                </div>
+                <div class="program">
+                    <div class="program_imgbox">
+                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
+                    </div>                    <div class="program_heading">
+                        Healthy Food
+                    </div>
+                    <div class="program_subheading">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        {{-- oprifs program and news recommendation section start --}}
+{{-- 
+        <section class="programs_newsrecommendation_section">
 
             <div class="programs_section">
 
@@ -237,7 +319,7 @@
 
                 <div class="volunter_registration_section__hero">
                     <div class="volunter_registration_section__hero_heading">
-                        Join The Community To Give Education For Girls
+                        Join The Community To Give Education,Health,Legal and other For Girls
                     </div>
                     <div class="volunter_registration_section__hero_subheading">
                         Empower change by joining our community. Together, let's ensure every girl gets the education she deserves. Make an impact now!
@@ -281,7 +363,7 @@
         </section>
 
         <!-- homepage gallery section start -->
-        <section class="homepage__gallery_section">
+         <section class="homepage__gallery_section">
 
             <div class="homepage__gallery_section_cta">
                 <h1>Gallery</h1>
@@ -307,7 +389,7 @@
                 <div class="homepage__gallery_section_gallery-item_info_tags">
                     
                     <p>Education</p>
-                    <p>Health</p>
+                    <p>Safe Home</p>
                 </div>
 
                 <div class="homepage__gallery_section_gallery-item_info_text">
@@ -316,7 +398,7 @@
                 </div>
             </div>
 
-        </section>
+        </section> 
         <!-- homepage gallery section end -->
 
         <!-- testimonials  section start-->

@@ -23,6 +23,7 @@ class GalleryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('path')
+                    // ->multiple()
                     ->label('Picture')
                     ->directory('gallery'),
             ]);

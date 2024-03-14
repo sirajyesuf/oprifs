@@ -5,7 +5,6 @@
     --color-primary4: #ffffff;
 
     --font-primary: "IBM Plex Serif", serif;
-    ;
 }
 
 *,
@@ -23,4 +22,5 @@ html {
 
 body {
     font-family: var(--font-primary);
+    overflow-x: hidden;
 }

@@ -20,17 +20,26 @@
 
             @endforeach
 
-            <div class="gallery-item_info">
-                <p>
-                    More than thousands of lives<br />
-                    changed.
-                </p>
-            </div>
-
             <div class="gallery__pagination">
-                <div class="gallery__pagination_item"></div>
-                <div class="gallery__pagination_item"></div>
-                <div class="gallery__pagination_item"></div>
+
+                <img 
+                wire:click="previousPage"
+                wire:loading.attr="disabled"
+                src="{{asset("img/back_pagination.png")}}" alt="back pagination"
+                class="gallery__pagination__icon"
+                >
+                <div class="gallery__pagination__range">
+                    04/24
+                </div>
+                @if($galleries->onLastPage())
+                    <img src="{{asset("img/forward_pagination.png")}}" alt="back pagination" class="gallery__pagination__icon">
+                @else
+                    <img
+                    wire:click="nextPage"
+                    wire:loading.attr="disabled"
+                    src="{{asset("img/forward_pagination.png")}}" alt="back pagination" class="gallery__pagination__icon"
+                    >
+                @endif
             </div>
 
         </section>
