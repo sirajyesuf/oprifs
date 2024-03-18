@@ -266,7 +266,7 @@
         <section class="volunter_registration_section">
 
 
-            <div class="volunter_registration_sectionbox">
+            {{-- <div class="volunter_registration_sectionbox"> --}}
 
                 <div class="volunter_registration_section__hero">
                     <div class="volunter_registration_section__hero_heading">
@@ -283,33 +283,51 @@
                         become  a volunteer
                     </div>
                     <form wire:submit="save" class="volunter_registration_section__form__inputs">
-                        <input type="text" name="name"   placeholder="Full Name*" wire:model="name">
-                        <div>
-                            @error('name') <span class="error">{{ $message }}</span> @enderror 
+                        <div class="volunter_registration_section__form__inputs_top">
+                            <div class="inputtag">
+                                <input type="text" name="name"   placeholder="Full Name*" wire:model="name"
+                                class="inputtag__name"
+                                >
+                                <div>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    @error('name') <span class="error">{{ $message }}</span> @enderror 
+                                </div>
+                            </div>
+                            <div class="inputtag">
+                                <input type="email" name="email" placeholder="Email Address*" wire:model="email"
+                                class="inputtag__email"
+                                >
+                                <div>
+                                    @error('email') <span class="error">{{ $message }}</span> @enderror 
+                                </div>
+                            </div>
+                            <div class="inputtag">
+                                <input type="tel" name="phonenumber" placeholder="Phone Number*" wire:model="phonenumber"
+                                class="inputtag__phonenumber"
+                                >
+                                <div>
+                                    @error('phonenumber') <span class="error">{{ $message }}</span> @enderror 
+                                </div>
+                            </div>
+
                         </div>
 
-                        <input type="email" name="email" placeholder="Email Address*" wire:model="email">
-                        <div>
-                            @error('email') <span class="error">{{ $message }}</span> @enderror 
-                        </div>
 
-                        <input type="tel" name="phonenumber" placeholder="Phone Number*" wire:model="phonenumber">
-                        <div>
-                            @error('phonenumber') <span class="error">{{ $message }}</span> @enderror 
-                        </div>
-
-                        <textarea name="message"   placeholder="Message*" wire:model="message"></textarea>
-                        <div>
-                            @error('message') <span class="error">{{ $message }}</span> @enderror 
+                        <div class="inputtag_message">
+                            <textarea name="message"   placeholder="Message*" wire:model="message"
+                            ></textarea>
+                            <div>
+                                @error('message') <span class="error">{{ $message }}</span> @enderror 
+                            </div>
                         </div>
                         
-                        <button type="submit" class="volunter_registration_section__form_submit">
+                        <button type="submit" class="volunter_registration_section__form_submit inputtag">
                             Submit Now
                         </button>
                     </form>
                 </div>
 
-            </div>
+            {{-- </div> --}}
 
         </section>
 

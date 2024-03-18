@@ -23,6 +23,10 @@ class NewsLetterSubscribersResource extends Resource
 
     protected static ?string $navigationGroup = 'Subscribers';
 
+    protected static ?string $modelLabel = 'Subscriber';
+
+    protected static ?string $pluralModelLabel = 'Subscribers';
+
 
     public static function form(Form $form): Form
     {
@@ -39,12 +43,13 @@ class NewsLetterSubscribersResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('email')
+                ->label('Email Address')
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
