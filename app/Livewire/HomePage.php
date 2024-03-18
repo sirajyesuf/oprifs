@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Gallery;
+use App\Models\NewsLetterSubscriber;
 use App\Models\Program;
 use App\Models\Testimonial;
 use App\Models\Volunteer;
@@ -26,6 +27,9 @@ class HomePage extends Component
     #[Validate('required')]
     public $message = '';
 
+    #[Validate('required|unique:news_letter_subscribers,email')]
+    public $email_address  = '';
+
     public function save()
     {
 
@@ -37,6 +41,19 @@ class HomePage extends Component
 
         return redirect()->back()->with('status', 'Post successfully created.');
 
+    }
+
+
+    public function subscribeToNewsLetter(){
+
+        $this->validate();
+
+        NewsLetterSubscriber::create([
+            'email' => $this->email_address,
+        ]);
+
+        return redirect()->back()->with('status', 'You have successfully subscribed to our newsletter. Thank you!');
+    
     }
 
     public function render()

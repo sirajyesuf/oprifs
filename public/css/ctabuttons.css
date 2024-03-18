@@ -1,67 +1,83 @@
 .actionsbuttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .actionsbuttons__newsletterbox {
-    padding: 10rem;
+    flex: 1 1 50%;
+    padding: 11.2rem;
     background-color: #f06c51;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 3rem;
+}
+
+.newsletter__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 .actionsbuttons__newsletterbox_heading {
     font-size: 4rem;
-    font-weight: 600;
     line-height: 120%;
     color: #ffffff;
 }
 .actionsbuttons__newsletterbox_subheading {
     font-size: 2rem;
-    font-weight: normal;
     line-height: 130%;
     color: #ffffff;
-    text-align: left;
-    height: auto;
 }
 
 .actionsbuttons__newsletterbox__form {
-    /* width: 80%; */
+    /* background-color: aqua; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    /* background-color: yellow; */
     align-items: center;
     gap: 2rem;
+    width: 100%;
 }
 .actionsbuttons__newsletterbox__form_inputtag {
-    /* width: 70%; */
     border: none;
     border-radius: 34px;
-    padding: 22px 36px 22px 36px;
+    padding: 15px 20px 15px 20px;
+    width: 70%;
+    flex-grow: 1;
+    flex-basis: 1;
+    flex-shrink: 0;
 }
 
 .actionsbuttons__newsletterbox__form_inputtag::placeholder {
-    font-weight: normal;
-    font-size: 1.8rem;
-    line-height: 130%;
+    font-size: 1.5rem;
+    line-height: 150%;
     color: #727272;
 }
 
 .actionsbuttons__newsletterbox__form_subscribebtn {
-    padding: 22px 36px 22px 36px;
+    padding: 10px 15px 10px 15px;
     border: none;
     border-radius: 34px;
+
     background-color: #2e4049;
     color: #ffffff;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    line-height: 150%;
     text-transform: capitalize;
+
+    cursor: pointer;
+
+    flex-grow: 1;
+    flex-basis: 1;
+    flex-shrink: 0;
 }
 
 .actionsbuttons__blogbox {
-    padding: 4rem;
+    flex: 1 1 50%;
+
+    padding: 6rem;
     background-color: #d5dca2;
     background-image: linear-gradient(
             to right bottom,
@@ -74,7 +90,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.6rem;
 }
 
 .actionsbuttons__blogbox_heading {
@@ -85,26 +101,25 @@
 }
 
 .actionsbuttons__blogbox_ctabtn {
+    font-size: 1.8rem;
     border: none;
     border-radius: 34px;
     background-color: #2e4049;
     color: #ffffff;
-    padding: 22px 28px 22px 28px;
+    padding: 10px 15px 10px 15px;
     align-self: flex-start;
+    text-decoration: none;
 }
-
-
-
 
 /* MEDIA QUERIES */
 
 /**************************/
 /* BELOW 944px (Tablets) */
 /**************************/
-
+/* 
 @media (max-width: 59em) {
     .actionsbuttons {
         grid-template-columns: 1fr;
     }
 
-}
+} */

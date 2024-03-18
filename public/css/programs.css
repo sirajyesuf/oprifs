@@ -26,8 +26,8 @@
 .program {
     padding: 2rem;
     color: #2e4049;
-    flex: 1 0 250px; /* Flex-grow, flex-shrink, flex-basis */
-    height: min-content;
+    flex: 1 0 30%; /* Flex-grow, flex-shrink, flex-basis */
+    height: max-content;
 
     display: flex;
     flex-direction: column;

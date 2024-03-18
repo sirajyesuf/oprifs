@@ -24,3 +24,9 @@ body {
     font-family: var(--font-primary);
     overflow-x: hidden;
 }
+
+.error_display {
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #2e4049;
+}

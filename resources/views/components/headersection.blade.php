@@ -93,7 +93,7 @@
             <a href="#">Gallery</a>
             <a href="#">Blog</a>
             <a href="#">ContactUS</a>
-            <button>Donate</button>
+            <button href="jio">Donate</button>
         </div>
 
         <button class="btn-mobile-nav">

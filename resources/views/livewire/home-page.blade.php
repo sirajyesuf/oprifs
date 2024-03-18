@@ -34,6 +34,7 @@
 
 
         <section class="programs_section">
+
             <div class="programs_section__heading">
                 our programs
             </div>
@@ -59,62 +60,8 @@
                 </div>
 
             @endforeach
-
-                {{-- <div class="program">
-                    <div class="program_imgbox">
-                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
-                    </div>
-                    <div class="program_heading">
-                        Education
-                    </div>
-                    <div class="program_subheading">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
-                    </div>
-                </div>
-                <div class="program">
-                    <div class="program_imgbox">
-                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
-                    </div>
-                    <div class="program_heading">
-                        Healthy Food
-                    </div>
-                    <div class="program_subheading">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
-                    </div>
-                </div>
-                <div class="program">
-                    <div class="program_imgbox">
-                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
-                    </div>                    <div class="program_heading">
-                        Healthy Food
-                    </div>
-                    <div class="program_subheading">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
-                    </div>
-                </div>
-                <div class="program">
-                    <div class="program_imgbox">
-                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
-                    </div>                    <div class="program_heading">
-                        Healthy Food
-                    </div>
-                    <div class="program_subheading">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
-                    </div>
-                </div>
-                <div class="program">
-                    <div class="program_imgbox">
-                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
-                    </div>                    <div class="program_heading">
-                        Healthy Food
-                    </div>
-                    <div class="program_subheading">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
-                    </div>
-                </div>
-            </div> --}}
-
         </section>
+        
 
 
 
@@ -481,27 +428,45 @@
 
         <section class="actionsbuttons">
             <div class="actionsbuttons__newsletterbox">
+                <div class="newsletter__header">
                 <h1 class="actionsbuttons__newsletterbox_heading">Newsletter</h1>
                 <p class="actionsbuttons__newsletterbox_subheading">
-                    Sign up for our monthly newsletter to get the latest news, volunteer opportunities.
+                    Sign up to our newsletter to get the latest news,stories and volunteer opportunities.
                 </p>
-                <form class="actionsbuttons__newsletterbox__form">
-                    <input type="email" name="email" placeholder="Enter Your Email Address"
+            </div>
+
+                <form class="actionsbuttons__newsletterbox__form"
+                wire:submit="subscribeToNewsLetter"
+                >
+                    <input type="email" wire:model="email_address" placeholder="Email Address"
                     class="actionsbuttons__newsletterbox__form_inputtag"
                     >
-
                     <button
                     class="actionsbuttons__newsletterbox__form_subscribebtn"
+                    type="submit"
                     >
                     subscribe
                     </button>
                 </form>
+                <div>
+                    @error('email_address') <span class="error_display">{{ $message }}</span> @enderror
+                </div>
+
+                @if(session('status'))
+                <div class="error_display">
+                    {{ session('status') }}
+                </div>
+            @endif
+            
             </div>
             <div class="actionsbuttons__blogbox">
                 <h1 class="actionsbuttons__blogbox_heading">
                     Take Look At Recent News
                 </h1>
-                <button class="actionsbuttons__blogbox_ctabtn">NEWS</button>
+                <a class="actionsbuttons__blogbox_ctabtn"
+                href="/contents">
+                    NEWS
+                </a>
             </div>
         </section>
 
