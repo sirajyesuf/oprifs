@@ -13,8 +13,9 @@ return new class extends Migration
             $table->id();
             $table->string("name");
             $table->longText("description");
-            $table->string("path");
+            $table->string("icon");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
     

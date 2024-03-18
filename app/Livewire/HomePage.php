@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Gallery;
+use App\Models\Program;
 use App\Models\Testimonial;
 use App\Models\Volunteer;
 use Livewire\Attributes\Validate;
@@ -44,6 +45,7 @@ class HomePage extends Component
             ->with([
                 'testimonials' => Testimonial::paginate(2),
                 'galleries' => Gallery::take(5)->get(),
+                'programs' => Program::all()
             ]);
     }
 }

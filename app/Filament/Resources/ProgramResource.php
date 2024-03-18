@@ -12,6 +12,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\HtmlString;
+
 
 class ProgramResource extends Resource
 {
@@ -26,7 +28,13 @@ class ProgramResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make("name")
+                ->required(),
+                Forms\Components\TextInput::make("icon")
+                ->required(),
+                Forms\Components\Textarea::make("description")
+                ->required()
+                ->columnSpan(2)
             ]);
     }
 
@@ -34,7 +42,9 @@ class ProgramResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('icon'),
+                Tables\Columns\TextColumn::make('description')
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),

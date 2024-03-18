@@ -37,26 +37,30 @@
             <div class="programs_section__heading">
                 our programs
             </div>
+
+                
             <div class="programs">
-                <div class="program program1">
+                @foreach ($programs as $program )
 
-                    {{-- <div class="program_imgbox">
-                        <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
-                    </div> --}}
-       <div class="program_imgbox">
+                <div class="program">
 
-                    <ion-icon name="school-outline" class="program_img"></ion-icon>
-       </div>
+                    <div class="program_imgbox">
+                        <ion-icon name="{{$program->icon}}" class="program_img"></ion-icon>
+                    </div>
 
 
                     <div class="program_heading">
-                        Healthy Food
+                        {{$program->name}}
                     </div>
+
                     <div class="program_subheading">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
+                        {{$program->description}}
                     </div>
                 </div>
-                <div class="program">
+
+            @endforeach
+
+                {{-- <div class="program">
                     <div class="program_imgbox">
                         <img src="{{asset("img/Photo.png")}}" alt="program img" class="program_img">
                     </div>
@@ -108,7 +112,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor eaque nam optio praesentium saepe esse natus facilis repellendus temporibus sit, cupiditate possimus eum, animi officiis alias amet totam inventore.
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </section>
 
