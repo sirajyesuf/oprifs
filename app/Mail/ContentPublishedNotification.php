@@ -24,7 +24,6 @@ class ContentPublishedNotification extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            
             subject: 'New Content Published.',
             from:env('MAIL_FROM_ADDRESS')
         );
@@ -36,8 +35,7 @@ class ContentPublishedNotification extends Mailable
         return new Content(
             markdown: 'emails.content_published_notification',
             with:[
-                'content_detail_url' => url(route('content_detail',['slug' => $this->news->slug])),
-                ''
+                'content_detail_url' => url(route('content_detail',['slug' => $this->news->slug]))
             ]
         );
     }
