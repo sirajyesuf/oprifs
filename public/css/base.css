@@ -30,3 +30,8 @@ body {
     line-height: 150%;
     color: #2e4049;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+}

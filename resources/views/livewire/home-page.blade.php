@@ -1,9 +1,9 @@
-<div>
+<div class="container">
 <x-headersection></x-headersection>
 
 
         {{-- hero section start --}}
-        <section class="herosection">
+        {{-- <section class="herosection">
                 
                 <img src="{{asset("img/hero.jpg")}}" alt="" class="herosection_img">
 
@@ -26,7 +26,7 @@
                 </div>
 
 
-        </section>
+        </section> --}}
 
         {{-- hero section end --}}
 
@@ -210,7 +210,9 @@
             <div class="voluntersection__volunters">
 
                 <div class="voluntersection__volunters_volunter">
-                    <img src="{{asset("img/volunter1.png")}}" alt="" class="voluntersection__volunters_volunter_img">
+                    <div class="voluntersection__volunters_volunter_imgbox">
+                        <img src="{{asset("img/volunter1.png")}}" alt="volunter picture" class="voluntersection__volunters_volunter_img">
+                    </div>
                     <div class="voluntersection__volunters_volunter_detail">
                         <p class="voluntersection__volunters_volunter_detail__name">
                             john doe
@@ -222,7 +224,9 @@
                     </div>
                 </div>
                 <div class="voluntersection__volunters_volunter">
-                    <img src="{{asset("img/volunter2.png")}}" alt="" class="voluntersection__volunters_volunter_img">
+                    <div class="voluntersection__volunters_volunter_imgbox">
+                        <img src="{{asset("img/volunter2.png")}}" alt="volunter picture" class="voluntersection__volunters_volunter_img">
+                    </div>
                     <div class="voluntersection__volunters_volunter_detail">
                         <p class="voluntersection__volunters_volunter_detail__name">
                             john doe
@@ -233,7 +237,9 @@
                     </div>
                 </div>
                 <div class="voluntersection__volunters_volunter">
-                    <img src="{{asset("img/volunter3.png")}}" alt="" class="voluntersection__volunters_volunter_img">
+                    <div class="voluntersection__volunters_volunter_imgbox">
+                        <img src="{{asset("img/2.jpg")}}" alt="volunter picture" class="voluntersection__volunters_volunter_img">
+                    </div>
                     <div class="voluntersection__volunters_volunter_detail">
                         <p class="voluntersection__volunters_volunter_detail__name">
                             john doe
@@ -245,8 +251,7 @@
                 </div>
                 <div class="become_avolunter">
                     <div class="become_avolunter__imgbox">
-                        <img src="{{asset("img/volunterhand.png")}}" alt="">
-
+                        <img src="{{asset("img/volunterhand.png")}}" alt="volunterhand">
                     </div>
                     <div class="become_avolunter__heading">Become a Volunteer</div>
                     <div class="become_avolunter__subheading">Centuries but also the leap  electtypesetting, remaining </div>
@@ -332,7 +337,7 @@
         </section>
 
         <!-- homepage gallery section start -->
-         <section class="homepage__gallery_section">
+         {{-- <section class="homepage__gallery_section">
 
             <div class="homepage__gallery_section_cta">
                 <h1>Gallery</h1>
@@ -367,7 +372,7 @@
                 </div>
             </div>
 
-        </section> 
+        </section>  --}}
         <!-- homepage gallery section end -->
 
         <!-- testimonials  section start-->
@@ -402,40 +407,40 @@
             <div class="testimonials__pagination">
 
             @if ($testimonials->onFirstPage())
-                <div class="testimonials__pagination_back">
-                    <img src="{{asset("img/back_pagination.png")}}" alt="back pagination" class="testimonials__pagination_back_img">
+                <div class="testimonials__pagination_back">                    
+                    <ion-icon name="chevron-back-outline"
+                    class="pagination_icon"></ion-icon>
                 </div>
-
+                    
 
 
             @else
             <div class="testimonials__pagination_forward">
-                <img 
+                <ion-icon name="chevron-back-outline"
                 wire:click="previousPage"
                 wire:loading.attr="disabled"
-                src="{{asset("img/back_pagination.png")}}" alt="back pagination"
-                class="testimonials__pagination_forward_img"
-                >
+                class="pagination_icon"
+                ></ion-icon>
             </div>
+
+
             @endif
             
-                <div class="testimonials__pagination_line"></div>
+            <div class="testimonials__pagination_line"></div>
 
             @if($testimonials->onLastPage())
             <div class="testimonials__pagination_forward">
-                <img src="{{asset("img/forward_pagination.png")}}" alt="back pagination" class="testimonials__pagination_forward_img">
+                <ion-icon name="chevron-forward-outline"
+                class="pagination_icon"></ion-icon>
             </div>
             @else
             <div class="testimonials__pagination_forward">
-                <img
+                <ion-icon name="chevron-forward-outline"
                 wire:click="nextPage"
                 wire:loading.attr="disabled"
-                src="{{asset("img/forward_pagination.png")}}" alt="back pagination" class="testimonials__pagination_forward_img"
-                >
+                class="pagination_icon"></ion-icon>
             </div>
         @endif
-
-
             </div> 
         </section>
 
