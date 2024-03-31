@@ -46,7 +46,7 @@
                 <div class="program">
 
                     <div class="program_imgbox">
-                        <ion-icon name="{{$program->icon}}" class="program_img"></ion-icon>
+                        {!!$program->icon!!}
                     </div>
 
 

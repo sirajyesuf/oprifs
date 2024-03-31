@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProgramResource\Pages;
 use App\Filament\Resources\ProgramResource\RelationManagers;
+use App\Models\HeroIcons;
 use App\Models\Program;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -30,7 +31,8 @@ class ProgramResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make("name")
                 ->required(),
-                Forms\Components\TextInput::make("icon")
+                Forms\Components\Select::make("icon")
+                ->options(HeroIcons::pluck('name','svg'))
                 ->required(),
                 Forms\Components\Textarea::make("description")
                 ->required()
