@@ -13,14 +13,16 @@
         <section class="gallery">
 
             @foreach ($galleries as  $gallery)
-                
-                <figure class="gallery-item">
-                    <img src="{{asset('storage/'.$gallery->path)}}" alt="" />
-                </figure>
-
+                <div class="gallery_item">
+                    <img src="{{asset('storage/'.$gallery->path)}}" alt="picture" class="gallery_item__image"/>
+                   
+                    <div class="gallery_item__description">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                </div>
             @endforeach
 
-            <div class="gallery__pagination">
+            {{-- <div class="gallery__pagination">
 
                 <img 
                 wire:click="previousPage"
@@ -40,7 +42,7 @@
                     src="{{asset("img/forward_pagination.png")}}" alt="back pagination" class="gallery__pagination__icon"
                     >
                 @endif
-            </div>
+            </div> --}}
 
         </section>
         <x-footersection></x-footersection>

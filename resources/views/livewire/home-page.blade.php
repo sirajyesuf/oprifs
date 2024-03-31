@@ -3,7 +3,7 @@
 
 
         {{-- hero section start --}}
-        {{-- <section class="herosection">
+        <section class="herosection">
                 
                 <img src="{{asset("img/hero.jpg")}}" alt="" class="herosection_img">
 
@@ -26,7 +26,7 @@
                 </div>
 
 
-        </section> --}}
+        </section>
 
         {{-- hero section end --}}
 

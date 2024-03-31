@@ -43,6 +43,7 @@
 }
 
 .socialmedia  a {
+    
     border: 1px solid white;
     width: 8rem;
     height: 8rem;
@@ -51,6 +52,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.socialmedia a:hover {
+    background-color: #f06c51;
 }
 
 .socialmedia  a  svg {

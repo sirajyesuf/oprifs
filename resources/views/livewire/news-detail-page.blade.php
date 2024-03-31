@@ -4,8 +4,7 @@
     <section class="newsdetailpagesection">
         <div class="newsdetailpagesection__titlebox">
             <p class="newsdetailpagesection__title">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-
+                {{$content->title}}
             </p>
         </div>
 

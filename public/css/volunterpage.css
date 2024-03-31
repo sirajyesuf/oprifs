@@ -1,11 +1,12 @@
 /* MEET OUR VOLUNTERS  START */
 
 .voluntersection {
-    width: 120rem;
-    margin: 50px auto;
+    width: 90%;
+    margin: 5rem auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 4rem;
 }
 .voluntersection__heading {
@@ -13,23 +14,36 @@
     font-weight: 700;
     line-height: 120%;
     color: #2e4049;
-    text-align: center;
 }
 
 .voluntersection__volunters {
     display: flex;
-    gap: 2.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
-
 .voluntersection__volunters_volunter {
+    flex: 1 1 22.5%;
+    height: 500px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1.6rem;
+
+    background-color: #81D47E;
+}
+
+.voluntersection__volunters_volunter_imgbox {
+    /* width: 100%; */
+    /* height: 450px; */
 }
 
 .voluntersection__volunters_volunter_img {
-    width: 283px;
-    height: 382px;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .voluntersection__volunters_volunter_detail {
@@ -48,13 +62,16 @@
 }
 
 .become_avolunter {
+    flex: 1 1 22.5%;
     background-color: #77d7d3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 64px 21px 64px 21px;
+    padding: 16px 21px 64px 21px;
+    /* width: 22.5%; */
+    height: 500px;
 }
 
 .become_avolunter__imgbox {
@@ -93,7 +110,7 @@
     height: 65px;
     background-color: #2e4049;
     border: none;
-    border-radius: 10px;
+    border-radius: 34px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,8 +124,13 @@
     text-transform: uppercase;
 }
 
-/* MEET OUR VOLUNTERS  END */
 
+
+
+
+
+
+/* MEET OUR VOLUNTERS  END */
 
 /* .volunterpage_herosection {
     padding: 5rem;
@@ -232,9 +254,6 @@
     cursor: pointer;
 } */
 
-
-
-
 /* VOLUNTEER REGISTRATION SECTION START */
 
 .volunter_registration_section {
@@ -306,8 +325,6 @@
     border: 1px solid white;
 }
 
-
-
 .volunter_registration_section__form_heading {
     font-size: 3.5rem;
     font-weight: bold;
@@ -317,8 +334,7 @@
     color: #ffffff;
 }
 
-
-.volunter_registration_section__form__inputs{
+.volunter_registration_section__form__inputs {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -331,17 +347,15 @@
     /* flex-direction: column; */
     flex-wrap: wrap;
     gap: 1rem;
-
 }
 .inputtag {
     flex-grow: 1;
-    flex-basis: 25%
+    flex-basis: 25%;
 }
 
 .inputtag input {
     width: 100%;
     padding: 10px 15px 10px 15px;
-
 }
 
 .inputtag_message textarea {

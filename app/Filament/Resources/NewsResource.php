@@ -42,14 +42,16 @@ class NewsResource extends Resource
                                     ->required()
                                     ->live(onBlur: true)
                                     ->maxLength(255)
-                                    ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+                                    ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null)
+                                    ->columnSpan(2),
 
                                 Forms\Components\TextInput::make('slug')
                                     ->disabled()
                                     ->dehydrated()
                                     ->required()
                                     ->maxLength(255)
-                                    ->unique(News::class, 'slug', ignoreRecord: true),
+                                    ->unique(News::class, 'slug', ignoreRecord: true)
+                                    ->columnSpan(2),
 
                                 Forms\Components\MarkdownEditor::make('content')
                                     ->required()

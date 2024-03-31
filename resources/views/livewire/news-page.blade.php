@@ -49,7 +49,6 @@
     <section class="newslistsectionbox">
             
         <div class="newslistsection_filter">
-
             @foreach ($categories as $category)
                 <div wire:key="{{ $category['id'] }}">
                     @if (! $category['status'])
@@ -63,6 +62,9 @@
         </div>
 
         <div class="newslistsection_cards">
+
+            @if ($this->getActiveCategoryID() != 3)
+                
 
             @foreach ($contents as $content)
                 <div class="newscard">
@@ -109,47 +111,13 @@
 
             @endforeach
 
-
-            {{-- <div class="newscard">
-                
-                <img src="{{asset("img/2.jpg")}}" alt="" class="newscard_img">
-                <div class="newscard_detail">
-
-                    <div class="newscard_detail_header">
-
-                        <p class="newscard_detail_title">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            (News)
-                        </p>
-
-                        <p class="newscard_detail_description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sed nesciunt veniam id dignissimos! Itaque molestias fugiat perferendis, vero quam totam inventore perspiciatis, cumque enim, illum sit qui sed ullam.
-                        </p>
-
-                    </div>
-
-                    <div class="newscard_detail_footer">
-
-                        <p class="newscard_detail_footer_timeago" >
-                            2 hours ago
-                        </p>
-    
-                        <p class="newscard_detail_footer_author">
-                           by siraj yesuf <span>| 4min read </span>
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="newscard_icon">
-
-                    <button class="newscard_readmore">
-                        Read more
-                    </button>
-                </div>
-            </div>  --}}
+            @else
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/qw-FLc7Z01Q" frameborder="0" allowfullscreen></iframe>
+
+            @endif
+
+
 
 
         </div>

@@ -16,32 +16,49 @@
     left: 20%;
     z-index: 4;
 }
-
 .gallery {
-    width: 120rem;
-    /* height: 100%; */
+    width: 90%;
+    height: auto;
     margin: 10rem auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 300px);
-    gap: 1.6rem;
-    padding: 1.6rem;
+    gap: 2rem;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.gallery-item,
-.gallery-item_info {
+.gallery_item {
+    flex: 1 0 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffa858;
+    position: relative;
+    height: 50rem;
+}
+
+.gallery_item__image {
+    width: 100%;
+    height: 400px;
     overflow: hidden;
 }
 
-.gallery-item img {
-    display: block;
-    object-fit: cover;
+.gallery_item__description {
     width: 100%;
-    height: 100%;
-    transition: all 0.4s;
+    background-color: #e85353;
+    font-size: 3rem;
+}
+.gallery_item__description:hover {
+    position: absolute;
+    height: auto;
+    top: 0px;
+    transition: 0.5s ease-in all;
 }
 
-.gallery-item_info {
+.gallery_item__description:hover + .gallery_item__image {
+    display: none;
+    visibility: hidden;
+}
+
+/* .gallery_item_info {
     width: 100%;
     height: 100%;
     background-color: #ff6d6d;
@@ -50,7 +67,7 @@
     align-items: end;
     transition: all 0.4s;
 }
-.gallery-item_info p {
+.gallery_item_info p {
     color: white;
     font-size: 2rem;
     font-weight: 700;
@@ -58,12 +75,12 @@
     width: fit-content;
     padding-left: 2rem;
     padding-bottom: 3rem;
-}
+} */
 
-.gallery img:hover,
-.gallery-item_info:hover {
+/* .gallery img:hover,
+.gallery_item_info:hover {
     transform: scale(1.1);
-}
+} */
 
 .gallery__pagination {
     grid-area: 4/2;
@@ -91,7 +108,6 @@
     border-radius: 50%;
     background-color: #ffa858;
 }
-
 
 /* HOMEPAGE GALLER SECTION  */
 
@@ -217,6 +233,6 @@
 
 @media (max-width: 59em) {
     .homepage__gallery_section {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }

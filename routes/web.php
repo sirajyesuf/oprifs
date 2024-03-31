@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactUsController;
 use App\Livewire\ContactUs;
 use App\Livewire\GalleryPage;
+use App\Livewire\GalleryPageTwo;
 use App\Livewire\HomePage;
 use App\Livewire\NewsDetailPage;
 use App\Livewire\NewsPage;
@@ -18,3 +19,5 @@ Route::get('/volunter', VolunterPage::class);
 Route::get('/contents', NewsPage::class);
 Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail')
 ->middleware('increment.view');
+
+Route::get('gallery2',GalleryPageTwo::class);

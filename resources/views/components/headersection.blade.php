@@ -88,11 +88,11 @@
         />
 
         <div class="header__navigation__menu">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
             <a href="#">AboutUS</a>
-            <a href="#">Gallery</a>
-            <a href="#">Blog</a>
-            <a href="#">ContactUS</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/contents">Blog</a>
+            <a href="/contactus">ContactUS</a>
             <button href="jio">Donate</button>
         </div>
 

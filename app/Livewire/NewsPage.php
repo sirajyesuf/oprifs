@@ -11,6 +11,8 @@ class NewsPage extends Component
 {
     public $amount = 3;
 
+    public $activeCategoryID = 1;
+
     public $categories = [
 
         ['id' => 1,
@@ -51,6 +53,18 @@ class NewsPage extends Component
                     return "story";
                 }
 
+            }
+
+        }
+
+    }
+
+    public function getActiveCategoryID(){
+
+        foreach ($this->categories as $category) {
+
+            if ($category['status']) {
+                return $category['id'];
             }
 
         }

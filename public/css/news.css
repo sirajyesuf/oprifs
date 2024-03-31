@@ -1,6 +1,3 @@
-.newpagecontainer {
-}
-
 .newssectionbox {
     padding: 5%;
     width: 90%;
@@ -133,10 +130,10 @@
     flex-direction: column;
 }
 
-
 .newscard_img {
+    /* width: 462px;
+    height: 215px; */
     width: 100%;
-    height: auto;
     background-color: #f6f6f6;
 }
 .newscard_detail {
@@ -186,7 +183,7 @@
     background-color: #f06c51;
 }
 
-.newscard_readmore__link{
+.newscard_readmore__link {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -210,14 +207,12 @@
     background-color: white;
 }
 
-.empty_content{
+.empty_content {
     font-size: 3rem;
     color: #40535c;
     line-height: 150%;
     text-align: center;
 }
-
-
 
 /* NEWS DETAIL PAGE */
 .newsdetailpagesection {
@@ -239,19 +234,14 @@
     font-weight: 600;
     text-transform: capitalize;
     text-align: center;
-    padding-top: 3rem;
+    padding: 3rem;
 }
 
 .newsdetailpagesection__main {
-    
     margin: 0px auto;
     margin-top: -15%;
     z-index: 1;
 }
-
-/* .newsdetailpagesection__main_icons {
-    width: 10%;
-} */
 
 .newsdetailpagesection__main_content {
     max-width: 1050px;
@@ -263,27 +253,25 @@
     gap: 3rem;
 }
 
-.newsdetailpagesection__main_content_author_and_share{
+.newsdetailpagesection__main_content_author_and_share {
     display: flex;
     gap: 3rem;
 }
 
-.newsdetailpagesection__main_content_author{
+.newsdetailpagesection__main_content_author {
     font-size: 1.3rem;
 }
 .newsdetailpagesection__main_content_img_container {
     height: 423px;
-   
 }
-.newsdetailpagesection__main_content_img{
+.newsdetailpagesection__main_content_img {
     width: 100%;
     height: 100%;
 }
 .newsdetailpagesection__main_content_article {
-
     font-size: 1.8rem;
     line-height: 150%;
-
+    padding-bottom: 10rem;
 }
 /* .newsdetailpagesection__main_othercontents {
     display: flex;
@@ -307,7 +295,6 @@
     font-size: 2rem; */
 /* } */
 
-
 /* MEDIA QUERIES */
 
 /**************************/
@@ -321,7 +308,6 @@
     .newslistsection_cards {
         grid-template-columns: repeat(1, 1fr);
     }
-
 }
 /**************************/
 /* BELOW 544px (Phones) */
