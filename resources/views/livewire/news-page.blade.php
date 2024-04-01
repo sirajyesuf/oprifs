@@ -70,7 +70,7 @@
                 <div class="newscard">
                     
                     <img src="{{asset("storage/".$content->cover_image)}}" alt="" class="newscard_img">
-                <div class="newscard_detail">
+                    <div class="newscard_detail">
 
                     <div class="newscard_detail_header">
 

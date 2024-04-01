@@ -6,18 +6,16 @@
             <p class="newsdetailpagesection__title">
                 {{$content->title}}
             </p>
+
+            <div class="newsdetailpagesection__main_content_img_container">
+                <img src="{{asset("storage/".$content->cover_image)}}" alt="" class="newsdetailpagesection__main_content_img">
+            </div>
         </div>
 
         <div class="newsdetailpagesection__main">
 
-            {{-- <div class="newsdetailpagesection__main_icons">
-                share and bookmark
-            </div> --}}
-
             <div class="newsdetailpagesection__main_content">
-                <div class="newsdetailpagesection__main_content_img_container">
-                    <img src="{{asset("img/3.jpg")}}" alt="" class="newsdetailpagesection__main_content_img">
-                </div>
+
                 <div class="newsdetailpagesection__main_content_author_and_share">
                     <div class="newsdetailpagesection__main_content_author">
                         {{  Carbon\Carbon::now()->subDays(Carbon\Carbon::parse($content->created_at)->day)->diffForHumans() }} | by siraj yesuf | {{ round(str_word_count($content->content) / 200)}} minute read

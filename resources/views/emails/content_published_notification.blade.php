@@ -11,4 +11,3 @@ Happy reading!
 Thanks,  
 {{ config('app.name') }}
 
-
