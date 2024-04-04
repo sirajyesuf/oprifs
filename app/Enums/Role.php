@@ -1,9 +1,19 @@
 <?php
 
 namespace App\Enums;
+use Filament\Support\Contracts\HasLabel;
 
-enum Role:string
+enum Role:string  implements HasLabel
 {
-    case ADMIN = 'Admin';
-    case EDITOR = 'Editor';
+    case ADMIN = 'ADMIN';
+    case EDITOR = 'EDITOR';
+
+    public function getLabel(): ?string
+    {
+        return match ($this) {
+            self::ADMIN => 'ADMIN',
+            self::EDITOR => 'EDITOR',
+        };        
+    }
+
 }

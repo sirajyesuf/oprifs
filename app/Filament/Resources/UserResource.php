@@ -19,7 +19,9 @@ class UserResource extends Resource
     protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-c-user-group';
-    protected static ?string $navigationLabel = 'User Management';
+    protected static ?string $navigationLabel = 'Staffs';
+    protected static ?string $modelLabel = 'Staff';
+    protected static ?string $pluralModelLabel = 'Staffs';
 
 
     public static function form(Form $form): Form
@@ -29,10 +31,7 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('name'),
                 Forms\Components\TextInput::make('email'),
                 Forms\Components\Select::make('role')
-                ->options([
-                    "Admin" => "Admin",
-                    "Editor" => "Editor"
-                ]),
+                ->options(Role::class)
             ]);
     }
 
@@ -42,7 +41,8 @@ class UserResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\BadgeColumn::make('role'),
+                Tables\Columns\TextColumn::make('role')
+                ->badge(),
 
             ])
             ->filters([
