@@ -17,17 +17,19 @@ class VolunterPage extends Component
     {
 
         $validated = $this->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'message' => 'required',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'message' => 'required|string|max:255',
         ]);
 
-        Volunter::create($validated);
+        $v = Volunter::create($validated);
+
+
 
         return redirect()->to('/volunter')
             ->with([
 
-                'success' => 'we will reach out to soon via your email address.',
+                'success' => 'we will reach out to you soon via your email address.',
 
             ]);
 

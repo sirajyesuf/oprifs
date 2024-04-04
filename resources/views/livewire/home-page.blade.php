@@ -275,12 +275,12 @@
 
                 <div class="volunter_registration_section__hero">
                     <div class="volunter_registration_section__hero_heading">
-                        Join The Community To Give Education,Health,Legal and other For Girls
+                        Join The Community To Give Education,Health,Legal and other For Girls.
                     </div>
                     <div class="volunter_registration_section__hero_subheading">
-                        Empower change by joining our community. Together, let's ensure every girl gets the education she deserves. Make an impact now!
+                        Empower change by joining our community. Together, let's ensure every girl gets the education she deserves. Make an impact now.
                     </div>
-                    <img src="{{asset("img/femalestudents.png")}}" alt="" class="volunter_registration_section__hero_img">
+                    {{-- <img src="{{asset("img/volunteer_new.jpg")}}" alt="" class="volunter_registration_section__hero_img"> --}}
                 </div>
         
                 <div class="volunter_registration_section__form">
@@ -290,36 +290,27 @@
                     <form wire:submit="save" class="volunter_registration_section__form__inputs">
                         <div class="volunter_registration_section__form__inputs_top">
                             <div class="inputtag">
-                                <input type="text" name="name"   placeholder="Full Name*" wire:model="name"
+                                <input type="text" name="name"   placeholder="Full Name" wire:model="name"
                                 class="inputtag__name"
                                 >
                                 <div>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                     @error('name') <span class="error">{{ $message }}</span> @enderror 
                                 </div>
                             </div>
                             <div class="inputtag">
-                                <input type="email" name="email" placeholder="Email Address*" wire:model="email"
+                                <input type="email" name="email" placeholder="Email Address" wire:model="email"
                                 class="inputtag__email"
                                 >
                                 <div>
                                     @error('email') <span class="error">{{ $message }}</span> @enderror 
                                 </div>
                             </div>
-                            <div class="inputtag">
-                                <input type="tel" name="phonenumber" placeholder="Phone Number*" wire:model="phonenumber"
-                                class="inputtag__phonenumber"
-                                >
-                                <div>
-                                    @error('phonenumber') <span class="error">{{ $message }}</span> @enderror 
-                                </div>
-                            </div>
 
                         </div>
 
 
-                        <div class="inputtag_message">
-                            <textarea name="message"   placeholder="Message*" wire:model="message"
+                        <div class="inputtag inputtag_message">
+                            <textarea name="message" cols="" rows="5"  placeholder="Message" wire:model="message"
                             ></textarea>
                             <div>
                                 @error('message') <span class="error">{{ $message }}</span> @enderror 
@@ -329,6 +320,12 @@
                         <button type="submit" class="volunter_registration_section__form_submit inputtag">
                             Submit Now
                         </button>
+
+                        @if(session('volunteer_status'))
+                        <div class="error_display">
+                            {{ session('volunteer_status') }}
+                        </div>
+                        @endif
                     </form>
                 </div>
 

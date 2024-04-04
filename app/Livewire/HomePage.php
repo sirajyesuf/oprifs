@@ -15,16 +15,13 @@ class HomePage extends Component
 {
     use WithPagination;
 
-    #[Validate('required')]
+    #[Validate('required|string|max:255')]
     public $name = '';
 
-    #[Validate('required', 'email')]
+    #[Validate('required|email|unique:volunters')]
     public $email = '';
 
-    #[Validate('required')]
-    public $phonenumber = '';
-
-    #[Validate('required')]
+    #[Validate('required|string|max:255')]
     public $message = '';
 
     #[Validate('required|unique:news_letter_subscribers,email')]
@@ -36,10 +33,10 @@ class HomePage extends Component
         $this->validate();
 
         Volunteer::create(
-            $this->only(['name', 'email', 'phonenumber', 'message']),
+            $this->only(['name', 'email', 'message']),
         );
 
-        return redirect()->back()->with('status', 'Post successfully created.');
+        return redirect()->back()->with('volunteer_status', 'we will reach out to you soon via your email address.');
 
     }
 

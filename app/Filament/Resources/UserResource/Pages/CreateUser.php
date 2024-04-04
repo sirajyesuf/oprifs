@@ -15,13 +15,6 @@ class CreateUser extends CreateRecord
 {
     protected static string $resource = UserResource::class;
 
-    // protected function mutateFormDataBeforeCreate($data):array{
-
-    //     $data['password'] = Hash::make(Str::random(6));
-        
-    //     return $data;
-    // }
-
     protected function handleRecordCreation(array $data): Model
     {
         $temporaryPassword = Str::random(6);
