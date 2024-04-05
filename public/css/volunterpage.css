@@ -5,10 +5,7 @@
     margin: 5rem auto;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
     gap: 4rem;
-    /* background-color: brown; */
 }
 .voluntersection__heading {
     /* width: 100%; */
@@ -18,7 +15,6 @@
     line-height: 120%;
     color: #2e4049;
     text-align: center;
-    /* background-color: aqua; */
 }
 
 .voluntersection__volunters {
@@ -259,46 +255,26 @@
 /* VOLUNTEER REGISTRATION SECTION START */
 
 .volunter_registration_section {
-    border: 1px solid red;
     padding: 5%;
-    /* width: 192rem; */
-    /* height: 98.8rem; */
     background-image: linear-gradient(
             to right bottom,
             rgba(46, 64, 73, 0.9),
             rgba(46, 64, 73, 0.9)
         );
-        /* url("../img/recentnewsbackground.png"); */
     background-size: cover;
-
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    /* align-items: center; */
     gap: 5.6rem;
 }
-
-/* .volunter_registration_sectionbox {
-    width: 1200px;
-    height: 80rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5.6rem;
-} */
 
 .volunter_registration_section__hero {
     flex: 1 1 45%;
-    /* z-index: 3; */
-
     display: flex;
     flex-direction: column;
-    /* gap: 3rem; */
-    /* border: 1px solid green; */
 }
 
 .volunter_registration_section__hero_heading {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     line-height: 120%;
     color: white;
@@ -306,7 +282,6 @@
 }
 .volunter_registration_section__hero_subheading {
     font-size: 2rem;
-    /* font-weight: bold; */
     line-height: 130%;
     color: white;
 }
@@ -318,15 +293,11 @@
 
 .volunter_registration_section__form {
     flex: 1 1 45%;
-    /* height: 80rem; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     gap: 2rem;
     padding: 20px 40px 20px 40px;
     border: 1px solid white;
-    /* background-color: peru; */
 }
 
 .volunter_registration_section__form_heading {
@@ -336,37 +307,27 @@
     text-align: center;
     text-transform: capitalize;
     color: #ffffff;
-    /* background-color: brown; */
 }
 
 .volunter_registration_section__form__inputs {
-    /* background-color: aqua; */
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    /* padding-inline: 100px; */
-    /* background-color: chartreuse; */
 }
 .volunter_registration_section__form__inputs_top {
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     gap: 1rem;
-    /* background-color: darkmagenta; */
 }
 .inputtag {
     flex-grow: 1;
-    /* flex-basis: 50%; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
     
 }
 .inputtag_message {
-    /* background-color: fuchsia; */
     padding: 10px 15px 10px 15px;
 
 
@@ -380,30 +341,22 @@
 .inputtag_message textarea {
     /* width: 100%; */
     /* align-self: stretch; */
-
 }
 
 .inputtag input {
-    /* width: 443px;
-    height: 50px; */
-
-    /* background-color: transparent; */
     border: 1.5px solid #aaa;
 }
 
 .inputtag_message textarea {
-    /* height: 70px; */
-    /* background-color: transparent; */
     border: 1.5px solid #aaa;
     padding: 10px;
 }
 
 .inputtag_message textarea::placeholder {
     padding: 2rem;
-    color: white;
-    /* font-size: 1.5rem; */
-    /* line-height: 130%; */
-    /* font-weight: bold; */
+    color: #2e4049;
+    font-size: 1.2rem;
+    font-weight: bold;
     text-transform: uppercase;
     display: flex;
     justify-content: start;
@@ -412,20 +365,14 @@
 
 .inputtag input::placeholder {
     padding-left: 2rem;
-    color: white;
-    font-size: 1rem;
-    /* line-height: 130%; */
-    /* font-weight: bold; */
+    color: #2e4049;
+    font-size: 1.2rem;
+    font-weight: bold;
     text-transform: capitalize;
     display: flex;
     justify-content: start;
     align-items: center;
 }
-
-/* .inputtag input:focus,
-.inputtag textarea:focus {
-    border: 1px solid white;
-} */
 
 .volunter_registration_section__form_submit {
     padding: 10px 15px 10px 15px;

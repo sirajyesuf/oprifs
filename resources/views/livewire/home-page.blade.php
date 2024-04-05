@@ -270,9 +270,6 @@
 
         <section class="volunter_registration_section">
 
-
-            {{-- <div class="volunter_registration_sectionbox"> --}}
-
                 <div class="volunter_registration_section__hero">
                     <div class="volunter_registration_section__hero_heading">
                         Join The Community To Give Education,Health,Legal and other For Girls.
@@ -280,7 +277,6 @@
                     <div class="volunter_registration_section__hero_subheading">
                         Empower change by joining our community. Together, let's ensure every girl gets the education she deserves. Make an impact now.
                     </div>
-                    {{-- <img src="{{asset("img/volunteer_new.jpg")}}" alt="" class="volunter_registration_section__hero_img"> --}}
                 </div>
         
                 <div class="volunter_registration_section__form">
@@ -328,9 +324,6 @@
                         @endif
                     </form>
                 </div>
-
-            {{-- </div> --}}
-
         </section>
 
         <!-- homepage gallery section start -->
