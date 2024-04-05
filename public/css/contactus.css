@@ -1,117 +1,110 @@
 .contactus {
-    height: 100%;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
-    padding: 30rem;
+    background-color: #fafbfa;
+    padding-bottom: 4rem;
 }
 
 .contactus__hero {
-    font-size: 20rem;
-    text-transform: capitalize;
-    color: darkgrey;
-    text-align: center;
-}
-
-.contactus__form {
-    width: 90%;
-    height: 68rem;
-    margin: 5rem auto;
-    display: flex;
-    gap: 3rem;
-}
-
-.contactus__form_info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.contactus__form_info_header {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contactus__form_info_header h1 {
-    color: #ff6d6d;
-    text-transform: capitalize;
-    font-style: italic;
-    font-size: 2rem;
-}
-.contactus__form_info_header h2 {
-    text-transform: capitalize;
-    font-size: 3rem;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 200%;
+    letter-spacing: 10px;
+    /* text-transform: capitalize; */
     color: #2e4049;
 }
 
-.contactus__form_info_header p {
-    color: #727272;
-    font-size: 2rem;
-}
-
-.contactus__form_info_icons {
+.contactus__form_info {
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-left: 1rem;
-}
-
-.contactus__form_info__mail,
-.contactus__form_info__call {
-    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 2rem;
+}
+.contactus__form_info_item {
+    flex: 1 0 30%;
+    height: 400px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: 34px;
 }
 
-.contactus__form_info__mail svg,
-.contactus__form_info__call svg {
-    width: 6rem;
-    height: 6rem;
-    padding: 1rem;
-    background-color: #f2f2f2;
+.contactus__form_info_item svg {
+    width: 10rem;
+    height: 10rem;
     color: #ff6d6d;
 }
 
-.contactus__form_info__follow {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-}
-
-.contactus__form_info__follow_links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.contactus__form_info__follow_links svg {
-    fill: #2e4049;
+.contactus__form_info_item p {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 200%;
+    letter-spacing: 2px;
+    color: #2e4049;
+    text-align: center;
 }
 
 .contactus__form_form {
-    background-color: #ffffff;
-    padding: 2rem;
-    border: 1px solid #e7e7e7;
-    width: 50%;
-    padding: 3rem;
+    width: 90%;
+    border-radius: 34px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-}
-
-.contactus__form_form input,
-.contactus__form_form textarea {
-    background-color: #f5f5f5;
-    border: none;
     padding: 2rem;
+    border: 3px solid #2e4049;
+}
+.contactus__form_form__fullname,
+.contactus__form_form__subject {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.contactus__form_form__fullname_inputtag {
+    flex: 1 0 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contactus__form_form__subject_inputtag {
+    flex: 1 0 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.contactus__form_form input:focus,
-.contactus__form_form textarea:focus {
-    border: 1px solid red;
+.contactus__form_form__subject_inputtag input,
+.contactus__form_form__fullname_inputtag input {
+    width: 100%;
+    padding: 2rem;
+    border: none;
+    border-radius: 34px;
+}
+.contactus__form_form__subject_inputtag input::placeholder,
+.contactus__form_form__fullname_inputtag input::placeholder {
+    font-size: 2rem;
+}
+
+.contactus__form_form_inputtag textarea {
+    width: 100%;
+    padding: 2rem;
+    border: none;
+    border-radius: 34px;
+}
+
+.contactus__form_form_inputtag textarea::placeholder {
+    font-size: 2rem;
 }
 
 .contactus__form_form button {
@@ -120,9 +113,32 @@
 
     text-transform: uppercase;
     font-size: 1.5rem;
-    background-color: #2e4049;
+    background-color: #ff6d6d;
     border: none;
     border-radius: 34px;
     color: #f5f5f5;
     padding-top: 2rem;
+    cursor: pointer;
 }
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media (max-width: 59em) {
+    .contactus__form_form__fullname,
+    .contactus__form_form__subject {
+        flex-direction: column;
+    }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+/* @media (max-width: 34em) {
+    .contactus__form_form__fullname,
+    .contactus__form_form__subject{
+        flex-direction: column;
+    }
+
+} */

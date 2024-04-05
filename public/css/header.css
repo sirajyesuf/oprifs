@@ -103,7 +103,7 @@
     text-transform: capitalize;
 }
 
-.header__navigation__menu button {
+.donate  {
     width: 20rem;
     height: 6rem;
     cursor: pointer;
@@ -111,8 +111,12 @@
     padding: 22px 36px 22px 36px;
     background-color: #f06c51;
     border: none;
-    color: white;
     text-transform: uppercase;
+}
+
+.donate a {
+    color: white;
+
 }
 
 /* HEROSECTION */

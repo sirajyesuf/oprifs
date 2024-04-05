@@ -18,6 +18,9 @@
         <link rel="stylesheet" href="{{asset('css/news.css')}}" />
         <link rel="stylesheet" href="{{asset('css/programs.css')}}" />
 
+        <link rel="stylesheet" href="{{asset('css/donation.css')}}" />
+
+
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

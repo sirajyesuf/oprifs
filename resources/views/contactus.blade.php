@@ -2,7 +2,7 @@
     <x-headersection></x-headersection>
 
         <section class="contactus">
-            <div class="contactus__hero">get in touch</div>
+            <div class="contactus__hero">Contact us</div>
 
             <div class="contactus__form">
                 <div class="contactus__form_info">

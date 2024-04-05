@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactUsController;
 use App\Livewire\ContactUs;
+use App\Livewire\DonatePage;
 use App\Livewire\GalleryPage;
 use App\Livewire\GalleryPageTwo;
 use App\Livewire\HomePage;
@@ -20,4 +21,4 @@ Route::get('/contents', NewsPage::class);
 Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail')
 ->middleware('increment.view');
 
-Route::get('gallery2',GalleryPageTwo::class);
+Route::get('donate',DonatePage::class);

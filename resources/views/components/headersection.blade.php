@@ -93,7 +93,11 @@
             <a href="/gallery">Gallery</a>
             <a href="/contents">Blog</a>
             <a href="/contactus">ContactUS</a>
-            <button href="jio">Donate</button>
+            <button class="donate">
+                <a href="/donate">
+                    Donate
+                </a>
+            </button>
         </div>
 
         <button class="btn-mobile-nav">

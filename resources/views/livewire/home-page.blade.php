@@ -249,7 +249,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="become_avolunter">
+                <div class="become_avolunter voluntersection__volunters_volunter">
                     <div class="become_avolunter__imgbox">
                         <img src="{{asset("img/volunterhand.png")}}" alt="volunterhand">
                     </div>
@@ -404,20 +404,20 @@
             <div class="testimonials__pagination">
 
             @if ($testimonials->onFirstPage())
-                <div class="testimonials__pagination_back">                    
-                    <ion-icon name="chevron-back-outline"
-                    class="pagination_icon"></ion-icon>
+                <div class="testimonials__pagination_back">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pagination_icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
                 </div>
-                    
-
-
             @else
             <div class="testimonials__pagination_forward">
-                <ion-icon name="chevron-back-outline"
+                <svg
                 wire:click="previousPage"
-                wire:loading.attr="disabled"
-                class="pagination_icon"
-                ></ion-icon>
+                wire:loading.attr="disabled"                
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pagination_icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+                  
             </div>
 
 
@@ -427,17 +427,20 @@
 
             @if($testimonials->onLastPage())
             <div class="testimonials__pagination_forward">
-                <ion-icon name="chevron-forward-outline"
-                class="pagination_icon"></ion-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pagination_icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
             </div>
             @else
             <div class="testimonials__pagination_forward">
-                <ion-icon name="chevron-forward-outline"
+                <svg 
                 wire:click="nextPage"
                 wire:loading.attr="disabled"
-                class="pagination_icon"></ion-icon>
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pagination_icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
             </div>
-        @endif
+            @endif
             </div> 
         </section>
 

@@ -5,45 +5,51 @@
     margin: 5rem auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     gap: 4rem;
+    /* background-color: brown; */
 }
 .voluntersection__heading {
+    /* width: 100%; */
+    align-self: stretch;
     font-size: 4rem;
     font-weight: 700;
     line-height: 120%;
     color: #2e4049;
+    text-align: center;
+    /* background-color: aqua; */
 }
 
 .voluntersection__volunters {
+    /* background-color: darkgreen; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     gap: 1rem;
 }
 .voluntersection__volunters_volunter {
-    flex: 1 1 22.5%;
-    height: 500px;
+    flex: 1 0 22.5%;
+    height: 50rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1.6rem;
 
     /* background-color: #81D47E; */
 }
 
 .voluntersection__volunters_volunter_imgbox {
-    /* width: 100%; */
-    /* height: 450px; */
+    width: 100%;
+    height: 90%;
+    /* background-color: rgb(42, 93, 165); */
+    /* overflow: hidden; */
 }
 
 .voluntersection__volunters_volunter_img {
-    display: block;
     width: 100%;
     height: 100%;
+    object-fit: streach;
 }
 
 .voluntersection__volunters_volunter_detail {
@@ -62,13 +68,9 @@
 }
 
 .become_avolunter {
-    flex: 1 1 22.5%;
     background-color: #77d7d3;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     padding: 16px 21px 64px 21px;
     /* width: 22.5%; */
     height: 500px;

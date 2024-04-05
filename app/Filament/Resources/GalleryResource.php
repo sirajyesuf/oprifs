@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Outerweb\FilamentImageLibrary\Filament\Forms\Components\ImageLibraryPicker;
 
 class GalleryResource extends Resource
 {
@@ -23,9 +24,11 @@ class GalleryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('path')
-                    // ->multiple()
                     ->label('Picture')
                     ->directory('gallery'),
+
+                // ImageLibraryPicker::make('image'),
+
             ]);
     }
 

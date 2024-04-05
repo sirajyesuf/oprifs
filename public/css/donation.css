@@ -1,0 +1,13 @@
+.donation_hero_section{
+    background-color: #f3fae8;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.donation_hero_section_heading {
+    font-size: 4rem;
+    line-height: 200%;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+}
