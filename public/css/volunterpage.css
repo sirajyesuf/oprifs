@@ -350,6 +350,7 @@
 .inputtag_message textarea {
     border: 1.5px solid #aaa;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .inputtag_message textarea::placeholder {

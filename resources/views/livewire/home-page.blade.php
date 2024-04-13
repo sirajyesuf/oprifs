@@ -327,7 +327,7 @@
         </section>
 
         <!-- homepage gallery section start -->
-         {{-- <section class="homepage__gallery_section">
+         <section class="homepage__gallery_section">
 
             <div class="homepage__gallery_section_cta">
                 <h1>Gallery</h1>
@@ -342,16 +342,19 @@
             </div>
 
             @foreach ( $galleries as $gallery )
-                            
-                <img src="{{ asset('storage/'.$gallery->path)}}" alt="gallery image"  class="homepage__gallery_section_gallery-item item{{$loop->iteration}}"/>
 
+            <div class="homepage__gallery_section_gallery-item">
+
+                <img src="{{ asset('storage/'.$gallery->path)}}" alt="gallery image"  class="homepage__gallery_section_gallery-item-img"/>
+                
+            </div>
+                            
             @endforeach
 
 
             <div class="homepage__gallery_section_gallery-item_info">
 
                 <div class="homepage__gallery_section_gallery-item_info_tags">
-                    
                     <p>Education</p>
                     <p>Safe Home</p>
                 </div>
@@ -362,7 +365,7 @@
                 </div>
             </div>
 
-        </section>  --}}
+        </section> 
         <!-- homepage gallery section end -->
 
         <!-- testimonials  section start-->
