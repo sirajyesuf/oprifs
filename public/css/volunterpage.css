@@ -26,7 +26,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    /* background-color: rgb(255, 0, 85); */
 }
 
 .voluntersection__volunters_volunter_imgbox {
@@ -131,6 +130,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5.6rem;
+
+
 }
 
 .volunter_registration_section__hero {
@@ -193,11 +194,7 @@
 
     
 }
-.inputtag_message {
-    padding: 10px 15px 10px 15px;
-
-
-}
+.inputtag_message {}
 .inputtag input {
     width: 100%;
     padding: 10px 15px 10px 15px;
@@ -251,7 +248,7 @@
 }
 
 .error {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: red;
     line-height: 150%;
 }
