@@ -24,10 +24,7 @@
 
 
                 </div>
-
-
         </section>
-
         {{-- hero section end --}}
 
 
@@ -209,46 +206,25 @@
 
             <div class="voluntersection__volunters">
 
-                <div class="voluntersection__volunters_volunter">
-                    <div class="voluntersection__volunters_volunter_imgbox">
-                        <img src="{{asset("img/volunter1.png")}}" alt="volunter picture" class="voluntersection__volunters_volunter_img">
-                    </div>
-                    <div class="voluntersection__volunters_volunter_detail">
-                        <p class="voluntersection__volunters_volunter_detail__name">
-                            john doe
-                        </p>
+                @foreach ($volunteers as $volunteer )
+                    
+                    <div class="voluntersection__volunters_volunter">
+                        <div class="voluntersection__volunters_volunter_imgbox">
+                            <img src="{{ asset('storage/'.$volunteer->image)}}" alt="volunter picture" class="voluntersection__volunters_volunter_img">
+                        </div>
+                        <div class="voluntersection__volunters_volunter_detail">
+                            <p class="voluntersection__volunters_volunter_detail__name">
+                                {{$volunteer->full_name}}
+                            </p>
 
-                        <p class="voluntersection__volunters_volunter_detail__name">
-                            Student
-                        </p>
+                            <p class="voluntersection__volunters_volunter_detail__name">
+                                {{$volunteer->occupation}}
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="voluntersection__volunters_volunter">
-                    <div class="voluntersection__volunters_volunter_imgbox">
-                        <img src="{{asset("img/volunter2.png")}}" alt="volunter picture" class="voluntersection__volunters_volunter_img">
-                    </div>
-                    <div class="voluntersection__volunters_volunter_detail">
-                        <p class="voluntersection__volunters_volunter_detail__name">
-                            john doe
-                        </p>
-                        <p class="voluntersection__volunters_volunter_detail__name">
-                            Engineer
-                        </p>
-                    </div>
-                </div>
-                <div class="voluntersection__volunters_volunter">
-                    <div class="voluntersection__volunters_volunter_imgbox">
-                        <img src="{{asset("img/2.jpg")}}" alt="volunter picture" class="voluntersection__volunters_volunter_img">
-                    </div>
-                    <div class="voluntersection__volunters_volunter_detail">
-                        <p class="voluntersection__volunters_volunter_detail__name">
-                            john doe
-                        </p>
-                        <p class="voluntersection__volunters_volunter_detail__name">
-                            Doctor
-                        </p>
-                    </div>
-                </div>
+
+                @endforeach
+                
                 <div class="become_avolunter voluntersection__volunters_volunter">
                     <div class="become_avolunter__imgbox">
                         <img src="{{asset("img/volunterhand.png")}}" alt="volunterhand">
@@ -258,12 +234,10 @@
                     <div class="become_avolunter_joinustoday">
                         <a href="#">Join Us Today</a>
                     </div>
-          
                 </div>
 
             </div>
         </section>
-
 
         {{-- volunter section end --}}
 
@@ -283,7 +257,7 @@
                     <div class="volunter_registration_section__form_heading">
                         become  a volunteer
                     </div>
-                    <form wire:submit="save" class="volunter_registration_section__form__inputs">
+                    <form wire:submit="becomeAVolunteer" class="volunter_registration_section__form__inputs">
                         <div class="volunter_registration_section__form__inputs_top">
                             <div class="inputtag">
                                 <input type="text" name="name"   placeholder="Full Name" wire:model="name"
@@ -318,7 +292,7 @@
                         </button>
 
                         @if(session('volunteer_status'))
-                        <div class="error_display">
+                        <div class="success">
                             {{ session('volunteer_status') }}
                         </div>
                         @endif
@@ -350,7 +324,6 @@
             </div>
                             
             @endforeach
-
 
             <div class="homepage__gallery_section_gallery-item_info">
 

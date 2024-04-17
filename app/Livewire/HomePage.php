@@ -10,6 +10,7 @@ use App\Models\Volunteer;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithPagination;
+use App\Models\OurVolunteer;
 
 class HomePage extends Component
 {
@@ -27,7 +28,7 @@ class HomePage extends Component
     #[Validate('required|unique:news_letter_subscribers,email')]
     public $email_address  = '';
 
-    public function save()
+    public function becomeAVolunteer()
     {
 
         $this->validate();
@@ -57,6 +58,7 @@ class HomePage extends Component
     {
         return view('livewire.home-page')
             ->with([
+                'volunteers' => OurVolunteer::take(3)->get(),
                 'testimonials' => Testimonial::paginate(2),
                 'galleries' => Gallery::take(5)->get(),
                 'programs' => Program::all()

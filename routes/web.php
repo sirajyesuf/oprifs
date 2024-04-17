@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactUsController;
+use App\Livewire\AboutUsPage;
 use App\Livewire\ContactUs;
 use App\Livewire\DonatePage;
 use App\Livewire\GalleryPage;
@@ -22,3 +23,4 @@ Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail')
 ->middleware('increment.view');
 
 Route::get('donate',DonatePage::class);
+Route::get('aboutus',AboutUsPage::class);
