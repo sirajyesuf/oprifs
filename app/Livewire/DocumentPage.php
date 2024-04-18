@@ -12,7 +12,16 @@ class DocumentPage extends Component
 
     use WithPagination;
 
+    private $amount = 3;
+
     public $search = '';
+
+
+
+    public function loadMoreDocuments(){
+        $this->amount = $this->amount + 3;
+    }
+
 
     public function render()
     {    
@@ -20,12 +29,12 @@ class DocumentPage extends Component
 
         if($this->search == '') {
             
-            $documents = Document::paginate();
+            $documents = Document::take($this->amount)->get();
         }
 
         else {
 
-           $documents =  Document::where('name', 'like', '%' . $this->search . '%')->paginate(2);
+           $documents =  Document::where('name', 'like', '%' . $this->search . '%')->take($this->amount)->get();
 
         }
 
