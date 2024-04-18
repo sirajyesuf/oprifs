@@ -15,22 +15,21 @@ class DocumentResource extends Resource
 {
     protected static ?string $model = Document::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-folder';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('description')
-                    ->columnSpanFull(),
                 Forms\Components\FileUpload::make('path')
                     ->label('Document')
                     ->columnSpanFull()
                     ->directory('documents')
                     ->acceptedFileTypes(['application/pdf'])
                     ->preserveFilenames()
+                    ->storeFileNamesIn('name')
                     ->openable()
-                    ->previewable(),
+                    ->previewable()
             ]);
     }
 
