@@ -22,6 +22,7 @@ class DocumentResource extends Resource
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('path')
+                    ->required()
                     ->label('Document')
                     ->columnSpanFull()
                     ->directory('documents')
@@ -37,33 +38,19 @@ class DocumentResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\Layout\Stack::make([
-                    // Tables\Columns\File::make('path')
-                    //     ->height('100%')
-                    //     ->width('100%'),
-                    Tables\Columns\Layout\Stack::make([
-                        Tables\Columns\TextColumn::make('description')
-                            ->weight(FontWeight::Bold),
-                        Tables\Columns\TextColumn::make('url')
-                            ->formatStateUsing(fn (string $state): string => str($state)->after('://')->ltrim('www.')->trim('/'))
-                            ->color('gray')
-                            ->limit(30),
-                    ]),
-                ])->space(3),
-                Tables\Columns\Layout\Panel::make([
-                    Tables\Columns\Layout\Split::make([
-                        Tables\Columns\ColorColumn::make('color')
-                            ->grow(false),
-                        Tables\Columns\TextColumn::make('description')
-                            ->color('gray'),
-                    ]),
-                ])->collapsible(),
+                Tables\Columns\TextColumn::make('name')
+                ->searchable()
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
+                Tables\Actions\ViewAction::make()
+                ->label('Read')
+                ->icon('')
+                ->button()
+                ->url(fn(Document $record) => URL('storage/'.$record->path))
+                ->openUrlInNewTab(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([

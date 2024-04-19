@@ -1,5 +1,7 @@
 <?php
 
+use App\Settings\FooterSettings;
+
 return [
     /**
      * The desired name of the database table
@@ -12,4 +14,8 @@ return [
      * where the settings will be stored
      */
     'cache_key' => 'settings_',
+
+    'settings' => [
+        FooterSettings::class
+    ],
 ];

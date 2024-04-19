@@ -1,12 +1,28 @@
 <div>
     <x-headersection></x-headersection>
 
-    <section class="aboutus__hero_section">
+    {{-- <section class="aboutus__hero_section">
         <div class="aboutus__hero_section_textabout">
         About
         </div>
         <div class="aboutus__hero_section_companyname">
             Our Organazation
+        </div>
+    </section> --}}
+
+
+    <section class="aboutus__hero_section">
+        <div class="aboutus__hero_title">
+            <h1 class="aboutus__hero_heading">About 
+                <span>
+                    OPRIFS
+                </span>
+            </h1>
+            <h2 class="aboutus__hero_subheading">
+                Organization for Prevention,
+                Rehabilitation and Integration
+                of Female Street Children.
+            </h2>
         </div>
     </section>
 

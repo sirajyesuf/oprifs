@@ -1,23 +1,36 @@
 .aboutus__hero_section {
+    height: 500px;
+    background-color: #81d47e;
+    padding: 10%;
+
     display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.aboutus__hero_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #538582;
-    height: 40vh;
-
-    font-size: 5rem;
-    letter-spacing: 2;
-    font-weight: 700;
-    padding-left: 6rem;
-    gap: 2rem;
 }
 
-.aboutus__hero_section_textabout {
-    color: white;
+.aboutus__hero_heading {
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
+    font-size: 10.7rem;
+    color: #ffffff;
+}
+.aboutus__hero_heading > span {
+    color: #f06c51;
+}
+.aboutus__hero_subheading {
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: center;
 }
 
-.aboutus__hero_section_companyname {
-    color: #2e4049;
-}
+
+
 
 .aboutus__content_section {
     width: 120rem;
@@ -195,6 +208,15 @@
 /**************************/
 
 @media (max-width: 59em) {
+
+    .aboutus__hero_heading {
+        font-size: 6rem;
+    }
+    .aboutus__hero_subheading {
+        flex-direction: 2rem;
+        text-align: center;
+        line-height: normal;
+    }
 
     .aboutus__content_section_aboutus {
         flex-direction: column;

@@ -25,4 +25,4 @@ Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail')
 
 Route::get('donate',DonatePage::class);
 Route::get('aboutus',AboutUsPage::class);
-Route::get('document',DocumentPage::class);
+Route::get('documents',DocumentPage::class);
