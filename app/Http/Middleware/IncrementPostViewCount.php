@@ -13,8 +13,8 @@ class IncrementPostViewCount
     public function handle(Request $request, Closure $next): Response
     {
 
-        if(request()->routeIs('.content_detail')){
-
+        if(request()->routeIs('content_detail')){
+            
             $slug = $request->route()->parameter('slug');
             if ($slug) {
                 DB::table('news_and_stories')->where('slug',$slug)->increment('views');
