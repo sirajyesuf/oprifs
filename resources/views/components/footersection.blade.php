@@ -119,8 +119,8 @@
         </li>
     </ul>
 
-    <div class="footer_copyrightbox"> 
-        Copyright © oprifs.com
-    </div>
+    <p class="footer_copyrightbox"> 
+        Copyright © <span class="footer_copyrightbox_yr"></span> oprifs.
+    </p>
 
 </footer>

@@ -100,11 +100,7 @@
     text-decoration: none;
     color: inherit;
 }
-.footer_copyrightbox {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
+
 .footer_copyrightbox {
     background-color: #465a64;
     color: white;
