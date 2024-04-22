@@ -2,6 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Models\News;
+use App\Models\Story;
 use Livewire\Component;
 use  Illuminate\Support\Facades\DB;
 
@@ -11,7 +13,14 @@ class NewsDetailPage extends Component
 
     public function mount($slug){
 
-        $this->content = DB::table('news_and_stories')->where('slug',$slug)->first();
+        $this->content = News::where('slug',$slug)->first();
+
+        if ($this->content == null) {
+
+            $this->content = Story::where('slug',$slug)->firstOrFail();
+        }
+        
+
     }
 
     public function render()
