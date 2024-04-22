@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Observers\NewsObserver;
 use Illuminate\Database\Eloquent\Attributes\ObservedBy;
-
+use App\Utils\ReadingTimeCalculator;
 
 #[ObservedBy([NewsObserver::class])]
 class News extends Model
@@ -31,5 +31,10 @@ class News extends Model
     public function author(){
         
         return $this->belongsTo(User::class,'author_id');
+    }
+
+    public function readingTime(){
+
+        return ReadingTimeCalculator::calculateReadingTime($this->content);
     }
 }

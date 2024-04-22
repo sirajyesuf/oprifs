@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Utils\ReadingTimeCalculator;
 
 class Story extends Model
 {
@@ -27,5 +28,10 @@ class Story extends Model
     public function author(){
         
         return $this->belongsTo(User::class,'author_id');
+    }
+
+    public function readingTime(){
+
+        return ReadingTimeCalculator::calculateReadingTime($this->content);
     }
 }

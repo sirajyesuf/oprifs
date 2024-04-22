@@ -38,7 +38,9 @@
                         {{$cause->title}}
                     </div>
 
-                    <button>Donate</button>
+                    <a href="{{route('donate.detail',['slug' => $cause->slug])}}">
+                    donate
+                    </a>
                 
                 </div>
 

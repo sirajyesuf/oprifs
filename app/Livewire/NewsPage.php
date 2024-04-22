@@ -94,7 +94,22 @@ class NewsPage extends Component
         $this->categories = $categories;        
     }
 
+    public function getTrendingNews(){
+
+        $newsWithMaxViews = News::where('views', News::max('views'))->get();
+
+        if ($newsWithMaxViews->count() == 1) {
+
+            return $newsWithMaxViews->first();
+        }
+        else {
+            
+            return News::inRandomOrder()->first();
+        }
+    }
+
     public function getContent(){
+
 
         $activeCategory = $this->getActiveCategory();
 
@@ -113,7 +128,8 @@ class NewsPage extends Component
         return view('livewire.news-page')
             ->with([
                 'categories' => $this->categories,
-                'contents'  => $this->getContent()
+                'contents'  => $this->getContent(),
+                'trendingNews' => $this->getTrendingNews()
             ]);
     }
 }

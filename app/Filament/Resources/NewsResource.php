@@ -53,6 +53,11 @@ class NewsResource extends Resource
                                     ->unique(News::class, 'slug', ignoreRecord: true)
                                     ->columnSpan(2),
 
+                                Forms\Components\Textarea::make('excerpt')
+                                    ->required()
+                                    ->maxLength(300)
+                                    ->columnSpan('full'),
+
                                 Forms\Components\MarkdownEditor::make('content')
                                     ->required()
                                     ->columnSpan('full'),
