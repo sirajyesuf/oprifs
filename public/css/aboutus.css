@@ -33,7 +33,10 @@
 
 
 .aboutus__content_section {
-    width: 120rem;
+    /* width: 120rem; */
+    max-width: 120rem;
+    width: 100%;
+
     margin: 10rem auto;
     /* display: flex; */
     /* justify-content: center; */
@@ -220,12 +223,12 @@
 
     .aboutus__content_section_aboutus {
         flex-direction: column;
-        width: 100vw;
+        /* width: 100vw; */
 
     }
     .aboutus__content_section_mission_vision {
         flex-direction: column;
-        width: 100vw;
+        /* width: 100vw; */
     }
   
 
