@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+
+    public static function canCreateAboutus(){
+        
+        return  Setting::whereNotNull('aboutus')
+        ->whereNotNull('mission')
+        ->whereNotNull('vission')
+        ->exists();
+    }
 }
+

@@ -57,7 +57,7 @@
                 <div class="bank">
 
                     <div class="bank_detail">
-                        <p class="bank_subheading_title">Financial Institute:</p>
+                        <p class="bank_subheading_title">Bank:</p>
                         <p class="bank_subheading">{{$bank->institute}}</p>
                     </div>
 

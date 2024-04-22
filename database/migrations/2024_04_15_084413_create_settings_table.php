@@ -11,12 +11,16 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string('phone_number');
-            $table->string('email');
-            $table->string('facebook');
-            $table->string('youtube');
-            $table->string('linkedin');
-            $table->string('instagram');
+            $table->text('aboutus')->nullable();
+            $table->text('mission')->nullable();
+            $table->text('vission')->nullable();
+
+            $table->string('phone_number')->nullable();
+            $table->string('email')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('instagram')->nullable();
             $table->timestamps();
         });
     }
