@@ -4,26 +4,28 @@
 
         {{-- hero section start --}}
         <section class="herosection">
-                
-                <img src="{{asset("img/hero.jpg")}}" alt="" class="herosection_img">
 
                 <div class="herosection__info">
 
+                    <p class="herosection__info_text">
+                        Organization for Prevention
+                        Rehabilitation & Integration
+                        of Female Street Children.
+                    </p>
 
                     <button class="herosection__info_cta">
                         Donate
                     </button>
 
-                    <p class="herosection__info_text">
-                        Organization for Prevention,
-                        <br>
-                        Rehabilitation and Integration
-                        <br>
-                        of Female Street Children.
-                    </p>
+                </div>
 
+                <div class="herosection_imgbox">
+                    
+                    <img src="{{asset("img/oprifs_hero.png")}}" alt="" class="herosection_img">
 
                 </div>
+
+
         </section>
         {{-- hero section end --}}
 

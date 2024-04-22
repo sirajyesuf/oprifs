@@ -1,15 +1,56 @@
 <div>
     <x-headersection></x-headersection>
 
-    <section class="donation_hero_section">
-        <h1 class="donation_hero_section_heading">donte to bring happiness to <br> underprivileged children.</h1>
-        <h2 class="donation_hero_section_subheading">
-            our commitment to making a difference is rooted in compassion,integrity,and collaboration.though our diverse programs and initiatives.
-        </h2>
+
+    <section class="donate__hero_section">
+        <div class="donate__hero_title">
+            <h1 class="donate__hero_heading"> 
+                    Donate for our Causes
+            </h1>
+            <h2 class="donate__hero_subheading">
+                Organization for Prevention,
+                Rehabilitation and Integration
+                of Female Street Children.
+            </h2>
+        </div>
     </section>
-    <section class="donate2">
+
+    
+
+    <section class="causes_section">
+
+
+        <div class="causes">
+
+
+            @foreach ($causes as $cause )
+                
+
+            <div class="cause">
+
+                <div class="cause_imgbox">
+                    <img src="{{asset("storage/".$cause->thumbnail)}}" alt="cause picture" class="cause_img">
+                </div>
+
+                <div class="cause_footer">
+
+                    <div class="cause_heading">
+                        {{$cause->title}}
+                    </div>
+
+                    <button>Donate</button>
+                
+                </div>
+
+            </div>
+
+            @endforeach
+
+        </div>
 
     </section>
+
+        
+
     <x-footersection></x-footersection>
 </div>
-

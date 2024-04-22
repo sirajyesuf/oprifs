@@ -17,12 +17,25 @@
             <div class="newsdetailpagesection__main_content">
 
                 <div class="newsdetailpagesection__main_content_author_and_share">
-                    <div class="newsdetailpagesection__main_content_author">
-                        {{  Carbon\Carbon::now()->subDays(Carbon\Carbon::parse($content->created_at)->day)->diffForHumans() }} | by siraj yesuf | {{ round(str_word_count($content->content) / 200)}} minute read
+
+                    <div class="trendingnewssection__detail_footer">
+                        <p class="trendingnewssection__detail_footer_timeago" >
+                            {{\Carbon\Carbon::parse($content->created_at)->isoFormat('MMM D')}}
+                        </p>
+
+                        <p class="trendingnewssection__detail_footer_author">
+                        by siraj yesuf <span>| {{$content->readingTime()}} min read </span>
+                        </p>
+
                     </div>
-                    <div class="trendingnewssection__detail_header_icons">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M336 192h40a40 40 0 0140 40v192a40 40 0 01-40 40H136a40 40 0 01-40-40V232a40 40 0 0140-40h40M336 128l-80-80-80 80M256 321V48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                    <div class="trendingnewssection__detail_header_icon" onclick="copyLink('{{route('content_detail',['slug' => $content->slug])}}')">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                        </svg>
+
+                        <span class="tooltiptext">Copy link</span>
+                        
                     </div>
                 </div>
                 <div class="newsdetailpagesection__main_content_article">
