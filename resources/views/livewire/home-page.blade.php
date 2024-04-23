@@ -1,5 +1,4 @@
 <div class="container">
-    @livewire('header-section-page')
 
 
 
@@ -466,8 +465,6 @@
         </section>
 
         {{-- cta end --}}
-
-        @livewire('footer-section-page')
 
 
 
