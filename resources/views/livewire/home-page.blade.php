@@ -1,5 +1,6 @@
 <div class="container">
-<x-headersection></x-headersection>
+    @livewire('header-section-page')
+
 
 
         {{-- hero section start --}}
@@ -466,7 +467,8 @@
 
         {{-- cta end --}}
 
-        <x-footersection></x-footersection>
+        @livewire('footer-section-page')
+
 
 
 

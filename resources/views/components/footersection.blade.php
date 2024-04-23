@@ -56,10 +56,9 @@
         </div>
     </div>
 
-
     <ul class="socialmedia">
         <li>
-            <a href="#">
+            <a href="{{$contactus->instagram}}">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="ionicon"
@@ -76,7 +75,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="{{$contactus->facebook}}">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="ionicon"
@@ -91,7 +90,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="{{$contactus->linkedin}}">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="ionicon"
@@ -105,7 +104,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="{{$contactus->youtube}}">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="ionicon"

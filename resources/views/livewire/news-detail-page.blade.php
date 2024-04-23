@@ -1,5 +1,4 @@
 <div>
-    <x-headersection></x-headersection>
     
     <section class="newsdetailpagesection">
         <div class="newsdetailpagesection__titlebox">
@@ -86,6 +85,6 @@
 
 
     
-    <x-footersection></x-footersection>
+
 </div>
     

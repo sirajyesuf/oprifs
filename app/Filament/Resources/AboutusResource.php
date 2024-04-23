@@ -49,9 +49,12 @@ class AboutusResource extends Resource
         return $table
             ->columns([
 
-                Tables\Columns\TextColumn::make('aboutus'),
-                Tables\Columns\TextColumn::make('mission'),
+                Tables\Columns\TextColumn::make('aboutus')
+                ->limit(50),
+                Tables\Columns\TextColumn::make('mission')
+                ->limit(50),
                 Tables\Columns\TextColumn::make('vission')
+                ->limit(50)
             ])
             ->filters([
                 //

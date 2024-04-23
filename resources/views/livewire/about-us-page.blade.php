@@ -1,6 +1,4 @@
 <div>
-    <x-headersection></x-headersection>
-
     <section class="aboutus__hero_section">
         <div class="aboutus__hero_title">
             <h1 class="aboutus__hero_heading">About 
@@ -84,12 +82,7 @@
 
         </div>
         {{-- MISSION AND VISSION END --}}
-
-        
-
     </section>
 
-        
-
-    <x-footersection></x-footersection>
+    
 </div>

@@ -1,5 +1,4 @@
 <div>
-    <x-headersection></x-headersection>
 
     <section class="document__hero">
         <div class="document__hero_title">
@@ -65,6 +64,5 @@
 
     </section>
 
-
-    <x-footersection></x-footersection>
+    
 </div>

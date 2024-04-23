@@ -22,6 +22,7 @@
     color: #126360;
     display: flex;
     gap: 3rem;
+    /* background-color: #f06c51; */
 }
 .header__footer__contact_call {
     display: flex;
@@ -31,7 +32,7 @@
 }
 
 .header__footer__contact_call_phonenumber {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .header__footer__contact_email {
@@ -41,14 +42,14 @@
     gap: 0.5rem;
 }
 
-.header__footer__contact_email_img,
+/* .header__footer__contact_email_img,
 .header__footer__contact_call_img {
     width: 14px;
     height: 14px;
-}
+} */
 
 .header__footer__contact_email_email {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .header__footer__socialmedia_box {

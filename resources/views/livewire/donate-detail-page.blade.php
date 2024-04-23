@@ -1,6 +1,4 @@
 <div>
-    <x-headersection></x-headersection>
-
 
     <section class="donate__hero_section">
         <div class="donatedetail__hero_title">
@@ -81,7 +79,5 @@
 
     </section>
 
-        
 
-    <x-footersection></x-footersection>
 </div>

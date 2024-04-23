@@ -1,5 +1,4 @@
 <div>
-        <x-headersection></x-headersection>
 
         <section class="gallery_hero">
             <p>Explore</p>
@@ -54,6 +53,7 @@
             </div> 
 
         </section>
-        <x-footersection></x-footersection>
-</div>
+
+
+    </div>
 

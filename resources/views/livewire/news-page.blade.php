@@ -1,7 +1,6 @@
 <div class="newpagecontainer">
 
     
-    <x-headersection></x-headersection>
 
     <section class="newssectionbox">
 
@@ -154,7 +153,6 @@
     </section>
 
     
-    <x-footersection></x-footersection>
 
 
 </div>

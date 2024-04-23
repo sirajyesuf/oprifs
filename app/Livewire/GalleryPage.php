@@ -6,7 +6,6 @@ use App\Models\Gallery;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-
 class GalleryPage extends Component
 {
     use WithPagination;

@@ -1,21 +1,29 @@
 <header class="header">
-
     <div class="header__footer">
         <div class="header__footerbox">
         <div class="header__footer__contact">
             <div class="header__footer__contact_call">
-                <img src="{{asset("img/call.png")}}" alt="" class="header__footer__contact_call_img">
-                <p class="header__footer__contact_call_phonenumber">+251 1234 6548</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 2rem; heigth: 2rem;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+                                  
+                <p class="header__footer__contact_call_phonenumber">
+                    {{$contactus->phone_number}}
+                </p>
             </div>
             <div class="header__footer__contact_email">
-                <img src="{{asset("img/email.png")}}" alt="" class="header__footer__contact_email_img">
-                <p class="header__footer__contact_email_email">info@oprifs.com</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 3rem; heigth: 3rem;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                <p class="header__footer__contact_email_email">
+                    {{$contactus->email}}
+                </p>
             </div>
         </div>
 
         <ul class="header__footer__socialmedia">
             <li>
-                <a href="#">
+                <a href="{{$contactus->instagram}}">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="ionicon"
@@ -32,7 +40,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{$contactus->facebook}}">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="ionicon"
@@ -47,7 +55,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{$contactus->linkedin}}">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="ionicon"
@@ -61,7 +69,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{$contactus->youtube}}">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="ionicon"

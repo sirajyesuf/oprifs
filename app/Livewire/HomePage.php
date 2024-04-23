@@ -56,12 +56,13 @@ class HomePage extends Component
 
     public function render()
     {
+
         return view('livewire.home-page')
             ->with([
                 'volunteers' => OurVolunteer::take(3)->get(),
                 'testimonials' => Testimonial::paginate(2),
                 'galleries' => Gallery::take(5)->get(),
-                'programs' => Program::all()
+                'programs' => Program::all(),
             ]);
     }
 }

@@ -1,5 +1,4 @@
 <div>
-    <x-headersection></x-headersection>
 
         <section class="contactus">
 
@@ -98,5 +97,4 @@
             </form>
         </section>
 
-<x-footersection></x-footersection>
     </div>
