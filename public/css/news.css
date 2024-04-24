@@ -257,7 +257,10 @@
     background-color: white;
 }
 
-.empty_content {
+
+.zero_contents {
+    width: 90%;
+    margin: 2rem auto;
     font-size: 3rem;
     color: #40535c;
     line-height: 150%;

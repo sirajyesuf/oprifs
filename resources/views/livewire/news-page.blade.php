@@ -1,6 +1,6 @@
 <div class="newpagecontainer">
 
-    
+    @if (count($contents))
 
     <section class="newssectionbox">
 
@@ -151,6 +151,13 @@
 
 
     </section>
+
+    @else
+    <div class="zero_contents">
+        We're taking a breather at the moment! Stay tuned for updates on new content coming your way soon. In the meantime, feel free to explore our archives or connect with us on social media for the latest news and updates.
+    </div>
+    @endif
+
 
     
 
