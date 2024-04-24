@@ -43,12 +43,15 @@ class CauseResource extends Resource
                 ->imageEditor()
                 ->imageResizeTargetWidth('587')
                 ->imageResizeTargetHeight('386')
-                ->columnSpanFull(),
+                ->columnSpanFull()
+                ->required(),
                 Forms\Components\Textarea::make('goal')
                 ->columnSpanFull()
+                ->required()
                 ->rows(4),
                 Forms\Components\Textarea::make('description')
                 ->columnSpanFull()
+                ->required()
                 ->label('Details about the cause')
                 ->rows(10)
 
