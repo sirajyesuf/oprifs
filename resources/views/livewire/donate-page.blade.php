@@ -20,6 +20,8 @@
 
         <div class="causes">
 
+            @if (count($causes))
+                
 
             @foreach ($causes as $cause )
                 
@@ -46,6 +48,10 @@
 
             @endforeach
 
+            @else
+            <div class="zero_cause_text">
+                Thank you for your interest. Currently, we do not have any ongoing causes that require your charitable support. Please feel free to check back with us in the future.            </div>
+            @endif
         </div>
 
     </section>

@@ -166,7 +166,6 @@
         </section>
 
 
-
         <!-- homepage gallery section start -->
          <section class="homepage__gallery_section">
 
@@ -211,7 +210,7 @@
 
 
 
-        
+
         <!-- testimonials  section start-->
         <section class="testimonials_section">
             <div class="testimonials__title">What people say about us</div>

@@ -1,5 +1,5 @@
 .donate__hero_section {
-    height: 500px;
+    height: 50rem;
     background-color: #81d47e;
     padding: 10%;
 }
@@ -90,6 +90,16 @@
     text-decoration: none;
 }
 
+.zero_cause_text {
+
+    font-family: "Shippori Mincho", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #2e4049;
+    
+}
+
 /* DONATEDETAIL */
 
 .donatedetail__hero_title {
@@ -166,6 +176,8 @@
     color: #2e4049;
 }
 
+
+
 .paymentsection {
     background-color: #ecf1f0;
     width: 120rem;
@@ -237,7 +249,7 @@
 
 @media (max-width: 59em) {
     .donate__hero_heading {
-        font-size: 6rem;
+        font-size: 4rem;
     }
     .donate__hero_subheading {
         flex-direction: 2rem;
@@ -262,5 +274,10 @@
 /**************************/
 
 @media (max-width: 34em) {
-
+    .donate__hero_heading {
+        font-size: 3rem;
+    }
+    .donate__hero_subheading {
+        flex-direction: 1.5rem;
+    }
 }
