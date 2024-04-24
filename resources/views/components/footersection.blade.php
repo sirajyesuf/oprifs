@@ -3,8 +3,7 @@
         <div class="footer__socialmedia">
             <img src="{{asset("img/oprifs_footer_logo.png")}}" alt="oprifs logo" class="footer__socialmedia__logo_img" />
             <p class="footer__socialmedia__logo_text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Hic at illo odio debitis.
+                Organization for Prevention, Rehabilitation and Integration of Female Street Children.
             </p>
 
         </div>

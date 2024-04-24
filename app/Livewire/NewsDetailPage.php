@@ -5,7 +5,7 @@ namespace App\Livewire;
 use App\Models\News;
 use App\Models\Story;
 use Livewire\Component;
-use  Illuminate\Support\Facades\DB;
+use Livewire\Attributes\Title;
 
 class NewsDetailPage extends Component
 {
@@ -23,6 +23,7 @@ class NewsDetailPage extends Component
 
     }
 
+    #[Title('news-oprifs')]
     public function render()
     {
 

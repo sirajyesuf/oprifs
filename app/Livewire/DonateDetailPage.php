@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Bank;
 use App\Models\Cause;
 use Livewire\Component;
+use Livewire\Attributes\Title;
 
 class DonateDetailPage extends Component
 {
@@ -17,6 +18,7 @@ class DonateDetailPage extends Component
 
     }
 
+    #[Title('donate-oprifs')]
     public function render()
     {
         return view('livewire.donate-detail-page',[

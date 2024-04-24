@@ -121,12 +121,13 @@
 
 .volunter_registration_section {
     padding: 5%;
-    background-image: linear-gradient(
+    background-color: #2e4049;
+    /* background-image: linear-gradient(
             to right bottom,
             rgba(46, 64, 73, 0.9),
             rgba(46, 64, 73, 0.9)
-        );
-    background-size: cover;
+        ); */
+    /* background-size: cover; */
     display: flex;
     flex-wrap: wrap;
     gap: 5.6rem;
@@ -194,7 +195,6 @@
 
     
 }
-.inputtag_message {}
 .inputtag input {
     width: 100%;
     padding: 10px 15px 10px 15px;

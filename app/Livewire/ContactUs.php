@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\Attributes\Validate;
-use App\Mail\ContactUSEmail;
+use Livewire\Attributes\Title;
 class ContactUs extends Component
 {
     #[Validate('required|string|max:255')]
@@ -22,6 +22,8 @@ class ContactUs extends Component
     #[Validate('required|string')]
     public $message = '';
 
+
+    #[Title('contactus-oprifs')]
     public function render()
     {
         return view('livewire.contact-us');

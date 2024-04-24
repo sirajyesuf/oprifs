@@ -63,146 +63,7 @@
             @endforeach
         </section>
         
-
-
-
-        {{-- oprifs program and news recommendation section start --}}
-{{-- 
-        <section class="programs_newsrecommendation_section">
-
-            <div class="programs_section">
-
-                <div class="programs_section__title">
-                    programs
-                </div>
-                <div class="programs">
-                        <div class="program">
-                                <ion-icon name="home-outline" class="program__icon"></ion-icon>
-                                <div class="program_title">
-                                    Safe Home Based Child Care and Support
-        
-                                </div>
-                                <div class="program_description">
-                                    one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
-                                </div>
-                        </div>
-                        <div class="program">
-                            <ion-icon name="home-outline" class="program__icon"></ion-icon>
-                            <div class="program_title">
-                                Safe Home Based Child Care and Support
-        
-                            </div>
-                            <div class="program_description">
-                                one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
-                            </div>
-                    </div>
-                    <div class="program">
-                        <ion-icon name="people-outline"  class="program__icon"></ion-icon>
-                        <div class="program_title">
-                            Safe Home Based Child Care and Support
-        
-                        </div>
-                        <div class="program_description">
-                            one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
-                        </div>
-                </div>
-        
-                <div class="program">
-                    <ion-icon name="home-outline" class="program__icon"></ion-icon>
-                    <div class="program_title">
-                        Safe Home Based Child Care and Support
-        
-                    </div>
-                    <div class="program_description">
-                        one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
-                    </div>
-            </div>
-        
-            <div class="program">
-                <ion-icon name="shield-half-outline" class="program__icon"></ion-icon>
-                <div class="program_title">
-                    Safe Home Based Child Care and Support
-        
-                </div>
-                <div class="program_description">
-                    one of the intervention areas that makes safe home service available for female children who have been victims and vulnerable to sexual and other abuses and exploitations. Under this program, OPRIFS has been admitting and providing integrated support like food, shelter, clothes , education, healthcare, counseling, vocational training, family tracing, reunification, and post-reunification follow-up.
-                </div>
-            </div>
-    
-    
-                </div>
-            </div>
-
-            <div class="newsrecommendation_section">
-                news recommendation
-            </div>
-
-
-
-        </section> --}}
-
-
-        {{-- oprifs program and news recommendation section end --}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {{-- volunter section start --}}
-
         <section class="voluntersection">
             <div class="voluntersection__heading">
                 Meet Our Volunteers
@@ -304,6 +165,8 @@
                 </div>
         </section>
 
+
+
         <!-- homepage gallery section start -->
          <section class="homepage__gallery_section">
 
@@ -345,6 +208,10 @@
         </section> 
         <!-- homepage gallery section end -->
 
+
+
+
+        
         <!-- testimonials  section start-->
         <section class="testimonials_section">
             <div class="testimonials__title">What people say about us</div>

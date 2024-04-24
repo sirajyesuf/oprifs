@@ -6,6 +6,7 @@ use App\Models\Document;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Storage;
+use Livewire\Attributes\Title;
 
 class DocumentPage extends Component
 {
@@ -23,6 +24,7 @@ class DocumentPage extends Component
     }
 
 
+    #[Title('news-oprifs')]
     public function render()
     {    
         $documents = null;

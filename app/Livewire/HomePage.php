@@ -11,6 +11,7 @@ use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\OurVolunteer;
+use Livewire\Attributes\Title;
 
 class HomePage extends Component
 {
@@ -54,6 +55,7 @@ class HomePage extends Component
     
     }
 
+    #[Title('home-oprifs')] 
     public function render()
     {
 

@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Models\Story;
 use Livewire\Component;
 use Illuminate\Support\Str;
+use Livewire\Attributes\Title;
 
 class NewsPage extends Component
 {
@@ -123,6 +124,7 @@ class NewsPage extends Component
 
 
 
+    #[Title('news-oprifs')]
     public function render()
     {
         return view('livewire.news-page')
