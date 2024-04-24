@@ -26,6 +26,11 @@ class Setting extends Model
         ->first();
     }
 
+    public static function getLocation(){
+        return Setting::whereNotNull('relative_location')
+        ->whereNotNull('absolute_location')->first();
+    }
+
 
     public static function canCreateAboutus(){
 
@@ -43,6 +48,14 @@ class Setting extends Model
         ->whereNotNull('youtube')
         ->whereNotNull('linkedin')
         ->whereNotNull('instagram')
+        ->exists();
+    }
+
+
+    public static function canCreateLocation(){
+        
+        return  Setting::whereNotNull('relative_location')
+        ->whereNotNull('absolute_location')
         ->exists();
     }
 }

@@ -10,11 +10,23 @@ class GalleryPage extends Component
 {
     use WithPagination;
 
+
+    public  $paginationLength;
+
+    public function mount(){
+
+        $this->paginationLength = ceil(Gallery::count() / 3);
+
+    }
+
     public function render()
     {
         return view('livewire.gallery-page')
             ->with([
-                'galleries' => Gallery::paginate(3),
+                'galleries' => Gallery::simplePaginate(3),
+                'paginationLength' => $this->paginationLength
             ]);
     }
+
+
 }

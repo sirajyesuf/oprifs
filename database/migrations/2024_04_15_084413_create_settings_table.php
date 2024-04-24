@@ -21,6 +21,10 @@ return new class extends Migration
             $table->string('youtube')->nullable();
             $table->string('linkedin')->nullable();
             $table->string('instagram')->nullable();
+
+            $table->text('relative_location')->nullable();
+            $table->text('absolute_location')->nullable();
+            
             $table->timestamps();
         });
     }

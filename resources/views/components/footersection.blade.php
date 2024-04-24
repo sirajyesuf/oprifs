@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer_info_box">
         <div class="footer__socialmedia">
-            <img src="{{asset("img/logo.png")}}" alt="oprifs logo" class="footer__socialmedia__logo_img" />
+            <img src="{{asset("img/oprifs_footer_logo.png")}}" alt="oprifs logo" class="footer__socialmedia__logo_img" />
             <p class="footer__socialmedia__logo_text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing
                 elit. Hic at illo odio debitis.
@@ -12,14 +12,14 @@
             <div class="footer__link">
                 <h1 class="footer__link_heading">Discover</h1>
                 <ul class="footer__link_list">
-                    {{-- <li class="footer__link_list_item">
-                        <a href="#">home</a>
-                    </li> --}}
                     <li class="footer__link_list_item">
-                        <a href="#">About us</a>
+                        <a href="/aboutus">About us</a>
                     </li>
                     <li class="footer__link_list_item">
-                        <a href="#">programs</a>
+                        <a href="/documents">Documents</a>
+                    </li>
+                    <li class="footer__link_list_item">
+                        <a href="/gallery">Gallery</a>
                     </li>
                 </ul>
             </div>
@@ -28,14 +28,14 @@
                 <h1 class="footer__link_heading">engage</h1>
                 <ul class="footer__link_list">
                     <li class="footer__link_list_item">
-                        <a href="#">volunter</a>
+                        <a href="/#volunter_registration_section">volunteer</a>
                     </li>
                     <li class="footer__link_list_item">
-                        <a href="#">Donate</a>
+                        <a href="/donate">Donate</a>
                     </li>
-                    {{-- <li class="footer__link_list_item">
-                        <a href="#">Blog</a>
-                    </li> --}}
+                    <li class="footer__link_list_item">
+                        <a href="/contents">Blog</a>
+                    </li>
                 </ul>
             </div>
 
@@ -43,14 +43,8 @@
                 <h1 class="footer__link_heading">Connect</h1>
                 <ul class="footer__link_list">
                     <li class="footer__link_list_item">
-                        <a href="#">contact</a>
+                        <a href="/contactus">Contact Us</a>
                     </li>
-                    {{-- <li class="footer__link_list_item">
-                        <a href="#">faq</a>
-                    </li>
-                    <li class="footer__link_list_item">
-                        <a href="#">privacy policy</a>
-                    </li> --}}
                 </ul>
             </div>
         </div>

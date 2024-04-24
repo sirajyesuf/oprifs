@@ -14,7 +14,9 @@
                     </p>
 
                     <button class="herosection__info_cta">
-                        Donate
+                        <a href="/donate">
+                            Donate
+                        </a>
                     </button>
 
                 </div>
@@ -32,7 +34,7 @@
 
 
 
-        <section class="programs_section">
+        <section class="programs_section" id="#programs_section">
 
             <div class="programs_section__heading">
                 our programs
@@ -244,7 +246,7 @@
         {{-- volunter section end --}}
 
 
-        <section class="volunter_registration_section">
+        <section class="volunter_registration_section" id="volunter_registration_section">
 
                 <div class="volunter_registration_section__hero">
                     <div class="volunter_registration_section__hero_heading">

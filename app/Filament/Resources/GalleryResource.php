@@ -25,10 +25,14 @@ class GalleryResource extends Resource
             ->schema([
                 Forms\Components\FileUpload::make('path')
                     ->label('Picture')
-                    ->directory('gallery'),
-
-                // ImageLibraryPicker::make('image'),
-
+                    ->image()
+                    ->required()
+                    ->directory('gallery')
+                    ->columnSpanFull(),
+                Forms\Components\Textarea::make('description')
+                    ->rows(2)
+                    ->required()
+                    ->columnSpanFull()
             ]);
     }
 
@@ -36,8 +40,9 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\ImageColumn::make('path')
-                    ->label('Picture'),
+                    ->label('Picture')
             ])
             ->filters([
                 //
