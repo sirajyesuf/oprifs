@@ -33,18 +33,13 @@
 
 
 .aboutus__content_section {
-    /* width: 120rem; */
     max-width: 120rem;
     width: 100%;
-
     margin: 15rem auto;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-direction: column; */
-    /* gap: 5rem; */
     padding: 2%;
-    /* background-color: #FF6D6D; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
 }
 
@@ -54,7 +49,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    /* background-color: chartreuse; */
 }
 
 .aboutus__hero {
@@ -63,8 +57,12 @@
     height: 70rem;
 
 }
-.aboutus__hero_img {
+.aboutus__hero_imgbox{
+    width: 100%;
 
+}
+.aboutus__hero_img {
+    width: 100%;
     object-fit: fill;
 }
 
@@ -140,9 +138,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
     gap: 2rem;
-    /* background-color: dodgerblue; */
 }
 .vission,
 .mission {
@@ -209,11 +205,10 @@
 /**************************/
 /* BELOW 944px (Tablets) */
 /**************************/
-
 @media (max-width: 59em) {
 
     .aboutus__hero_heading {
-        font-size: 6rem;
+        font-size: 5rem;
     }
     .aboutus__hero_subheading {
         flex-direction: 2rem;

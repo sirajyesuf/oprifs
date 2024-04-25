@@ -1,10 +1,8 @@
 <div>
     <section class="aboutus__hero_section">
         <div class="aboutus__hero_title">
-            <h1 class="aboutus__hero_heading">About 
-                <span>
-                    OPRIFS
-                </span>
+            <h1 class="aboutus__hero_heading">
+                About <span>OPRIFS</span>
             </h1>
             <h2 class="aboutus__hero_subheading">
                 Organization for Prevention,
@@ -20,8 +18,8 @@
         <div class="aboutus__content_section_aboutus">
 
             <div class="aboutus__hero">
-                <div class="aboutus__hero_img">
-                    <img src="{{asset('img/oprifs_aboutus.png')}}" alt="two girls stand together">
+                <div class="aboutus__hero_imgbox">
+                    <img src="{{asset('img/oprifs_aboutus.png')}}" alt="two girls standing together" class="aboutus__hero_img">
                 </div>
                 <div class="aboutus__hero_caption">
                     <img src="{{asset("img/quote.png")}}" alt="quote image" class="aboutus__hero_caption_quote">
