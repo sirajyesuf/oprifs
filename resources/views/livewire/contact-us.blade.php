@@ -13,7 +13,9 @@
                     <p>
                         call now 
                         <br>
-                        <span>0924836179</span>
+                        <span>
+                            {{$phone_number}}
+                        </span>
                     </p>
                       
                 </div>
@@ -26,7 +28,9 @@
                     <p>
                     mail your queries 
                     <br>
-                    <span>info@gmail.com</span>
+                    <span>
+                        {{$email}}
+                    </span>
                     </p>
                       
                 </div>
@@ -38,7 +42,7 @@
                     </svg>
                         
                     <p>
-                        skyhigh tower,lajpat nagar,new delhi
+                        {{$relative_address}}
                     </p>
                       
                 </div>
