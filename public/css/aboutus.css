@@ -148,7 +148,6 @@
     gap: 1rem;
     position: relative;
 }
-.mission_img {}
 .mission_img img {
     width: 100%;
     height: 100%;
@@ -208,7 +207,7 @@
 @media (max-width: 59em) {
 
     .aboutus__hero_heading {
-        font-size: 5rem;
+        font-size: 4rem;
     }
     .aboutus__hero_subheading {
         flex-direction: 2rem;
@@ -218,12 +217,10 @@
 
     .aboutus__content_section_aboutus {
         flex-direction: column;
-        /* width: 100vw; */
 
     }
     .aboutus__content_section_mission_vision {
         flex-direction: column;
-        /* width: 100vw; */
     }
   
 
