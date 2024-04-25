@@ -32,13 +32,16 @@ class AboutusResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Textarea::make('aboutus')
+                ->required()
                 ->columnSpanFull()
                 ->rows(5),
 
                 Forms\Components\Textarea::make('vission')
-                ->rows(5),
+                ->rows(5)
+                ->required(),
 
                 Forms\Components\Textarea::make('mission')
+                ->required()
                 ->rows(5),
 
             ]);
@@ -50,11 +53,11 @@ class AboutusResource extends Resource
             ->columns([
 
                 Tables\Columns\TextColumn::make('aboutus')
-                ->limit(50),
+                ->limit(30),
                 Tables\Columns\TextColumn::make('mission')
-                ->limit(50),
+                ->limit(30),
                 Tables\Columns\TextColumn::make('vission')
-                ->limit(50)
+                ->limit(30)
             ])
             ->filters([
                 //
