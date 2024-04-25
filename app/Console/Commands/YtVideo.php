@@ -10,9 +10,9 @@ use Google\Service\YouTube;
 class YtVideo extends Command
 {
     
-    // protected $signature = 'app:ytvedio';
+    protected $signature = 'app:ytvedio';
 
-    // protected $description = 'Command description';
+    protected $description = 'Command description';
 
     // public $ytchannelId;
     // public $ytservice;
