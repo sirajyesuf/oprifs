@@ -27,7 +27,7 @@ class ContactUs extends Component
     public function render()
     {
         return view('livewire.contact-us',[
-            'email' => 'info@gmail.com',
+            'email_address' => 'info@gmail.com',
             'phone_number' =>  '+125 924836179',
             'relative_address' =>  'bole alemneshe building floor 9 office 8',
             'absolute_address' =>  'iframe'

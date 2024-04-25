@@ -32,18 +32,20 @@
     padding: 2rem;
     margin-bottom: 5rem;
     /* background-color: #fafbfa; */
+    background-color: aqua;
 
 }
 .contactus__form_info_item {
     flex: 1 0 30%;
-    height: 400px;
+    height: auto;
+    /* height: 400px; */
     background-color: #f1f1f1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 34px;
 }
 
@@ -133,13 +135,14 @@
     }
 
     .contactus__form_info {
-
         flex-direction: column;
     }
+
     .contactus__form_info_item {
-        
         width: 100%;
+        padding: 1.5rem;
     }
+
 }
 
 

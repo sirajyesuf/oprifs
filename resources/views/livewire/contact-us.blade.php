@@ -29,7 +29,7 @@
                     mail your queries 
                     <br>
                     <span>
-                        {{$email}}
+                        {{$email_address}}
                     </span>
                     </p>
                       
