@@ -81,45 +81,57 @@
 
             @foreach ($contents as $content)
                 <div class="newscard">
-                    
-                    <img src="{{asset("storage/".$content->cover_image)}}" alt="" class="newscard_img">
-                    <div class="newscard_detail">
 
-                    <div class="newscard_detail_header">
+                    <div class="newscard_img_caption">
 
-                        <p class="newscard_detail_title">
-                            {{$content->title}}
-                        </p>
 
-                        <p class="newscard_detail_description">
-                            {{ $content->excerpt }}
-                        </p>
+                        <div class="newscard_imgbox">
+                            <img src="{{asset("storage/".$content->cover_image)}}" alt="" class="newscard_img">
+                        </div>
+
+                        <div class="newscard_detail">
+
+                            <div class="newscard_detail_header">
+
+                                <p class="newscard_detail_title">
+                                    {{$content->title}}
+                                </p>
+
+                                <p class="newscard_detail_description">
+                                    {{ $content->excerpt }}
+                                </p>
+
+                            </div>
+
+                            <div class="newscard_detail_footer">
+
+                                <p class="newscard_detail_footer_timeago" >
+                                    {{\Carbon\Carbon::parse($content->created_at)->isoFormat('MMM D')}}
+                                </p>
+
+                                <p class="newscard_detail_footer_author">
+                                by {{$content->author->name}} <span>| {{$content->readingTime()}} min read </span>
+                                </p>
+                                
+                            </div>
+
+
+                        </div>
 
                     </div>
 
-                    <div class="newscard_detail_footer">
 
-                        <p class="newscard_detail_footer_timeago" >
-                            {{\Carbon\Carbon::parse($content->created_at)->isoFormat('MMM D')}}
-                        </p>
+                    <div class="newscard_icon">
 
-                        <p class="newscard_detail_footer_author">
-                        by {{$content->author->name}} <span>| {{$content->readingTime()}} min read </span>
-                        </p>
+                        <button class="newscard_readmore">
+                            <a href="{{route('content_detail',['slug' => $content->slug])}}"
+                                class="newscard_readmore__link"
+                            >
+                                Read more
+                            </a>
+                        </button>
                     </div>
 
-                </div>
-
-                <div class="newscard_icon">
-
-                    <button class="newscard_readmore">
-                        <a href="{{route('content_detail',['slug' => $content->slug])}}"
-                            class="newscard_readmore__link"
-                        >
-                            Read more
-                        </a>
-                    </button>
-                </div>
                 </div>
 
             @endforeach

@@ -13,7 +13,7 @@
 .trendingnewssection img {
     width: 100%;
     height: 400px;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .trendingnewssection__detail {
@@ -90,11 +90,18 @@
 
 .trendingnewssection__detail_content_title,
 .newscard_detail_title {
-    font-size: 3rem;
+    font-size: 1.8rem;
     text-transform: capitalize;
     font-weight: bold;
     color: #323232;
     text-decoration: none;
+
+    font-family: "IBM Plex Serif", serif;
+    font-style:normal;
+    text-align: left;
+
+
+    
 }
 
 .trendingnewssection__detail_content_title:hover {
@@ -102,6 +109,7 @@
 }
 
 .trendingnewssection__detail_content_description {
+    font-family: "Nunito Sans", sans-serif;
     font-size: 1.8rem;
     text-transform: capitalize;
     font-weight: normal;
@@ -122,20 +130,18 @@
 .trendingnewssection__detail_footer_author,
 .newscard_detail_footer_timeago,
 .newscard_detail_footer_author {
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: #2a2a2a;
     text-transform: capitalize;
     font-weight: 400;
 }
 
 .newslistsectionbox {
-    padding: 5%;
-    width: 90%;
+    width: 140rem;
     margin: 0px auto;
-
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    
 }
 
 .newslistsection_filter {
@@ -165,30 +171,41 @@
 }
 
 .newslistsection_cards {
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    gap: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
 }
 
 .newscard {
+    flex: 1 0 30%;
+    height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: #f6f6f6;
+    padding: 1rem;
+    border-radius: 10px;
+
 }
 
+.newscard_imgbox {
+    width: 100%;
+    height: 215px;
+}
 .newscard_img {
 
     width: 100%;
-    height: 400px;
-    object-fit: fill;
-    background-color: #f6f6f6;
+    height: 100%;
+    object-fit: cover;
 }
 .newscard_detail {
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem;
-    background-color: #f6f6f6;
+    padding: 2rem;
 }
 
 .newscard_detail_header {
@@ -198,6 +215,7 @@
 }
 
 .newscard_detail_description {
+    font-family: "Nunito Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 22px;
     text-transform: capitalize;
@@ -207,17 +225,15 @@
 .newscard_detail_footer {
     display: flex;
     gap: 2rem;
-    background-color: #f6f6f6;
 }
 
 .newscard_icon {
-    padding: 4rem;
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 2rem;
     cursor: pointer;
-    background-color: #f6f6f6;
+    padding: 2rem;
 }
 
 .newscard_readmore {
@@ -339,7 +355,7 @@
         flex-direction: column;
     }
     .newslistsection_cards {
-        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
     }
 }
 /**************************/
