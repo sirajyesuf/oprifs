@@ -41,12 +41,17 @@
                 </div>
 
                 <div class="trendingnewssection__detail_footer">
+                    
                     <p class="trendingnewssection__detail_footer_timeago" >
+
                         {{\Carbon\Carbon::parse($trendingNews->created_at)->isoFormat('MMM D')}}
+
                     </p>
 
                     <p class="trendingnewssection__detail_footer_author">
-                       by siraj yesuf <span>| {{$trendingNews->readingTime()}} min read </span>
+
+                       by {{$trendingNews->author->name}} <span>| {{$trendingNews->readingTime()}} min read </span>
+
                     </p>
 
                 </div>
