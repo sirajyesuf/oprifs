@@ -28,5 +28,3 @@ Route::get('donate',DonatePage::class);
 Route::get('donate/{slug}',DonateDetailPage::class)->name('donate.detail');
 Route::get('aboutus',AboutUsPage::class);
 Route::get('documents',DocumentPage::class);
-
-Route::get('coming-soon',ComingSoon::class)->name('comingsoon');
