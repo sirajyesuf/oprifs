@@ -21,11 +21,14 @@ class News extends Model
 
     protected $guarded = [];
 
-    protected static function booted(): void
-    {
-        static::addGlobalScope('onlyNews', function (Builder $builder) {
-            $builder->where('type', PostType::NEWS->value);
-        });
+    public function scopeNews($query){
+
+        return $query->where('type',PostType::NEWS->value);
+    }
+
+    public function scopeStory($query){
+
+        return $query->where('type',PostType::STORIES->value);
     }
 
     public function author(){
