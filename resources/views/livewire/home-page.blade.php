@@ -95,7 +95,7 @@
                         <img src="{{asset("img/volunterhand.png")}}" alt="volunterhand">
                     </div>
                     <div class="become_avolunter__heading">Become a Volunteer</div>
-                    <div class="become_avolunter__subheading">Centuries but also the leap  electtypesetting, remaining </div>
+                    <div class="become_avolunter__subheading">Volunteer Today and Make a Difference</div>
                     <div class="become_avolunter_joinustoday">
                         <a href="/#volunter_registration_section">Join Us Today</a>
                     </div>

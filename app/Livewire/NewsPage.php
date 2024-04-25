@@ -111,7 +111,6 @@ class NewsPage extends Component
 
     public function getContent(){
 
-
         $activeCategory = $this->getActiveCategory();
 
         if($activeCategory == "news"){
