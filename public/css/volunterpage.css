@@ -107,7 +107,8 @@
 }
 
 .become_avolunter_joinustoday a {
-    font-size: 1.8rem;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.5rem;
     font-weight: normal;
     color: #ffffffff;
     text-decoration: none;
@@ -142,13 +143,16 @@
 }
 
 .volunter_registration_section__hero_heading {
-    font-size: 3rem;
+    font-family: "Shippori Mincho", serif;
+    font-size: 4rem;
     font-weight: bold;
     line-height: 120%;
     color: white;
     text-align: left;
 }
 .volunter_registration_section__hero_subheading {
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
     font-size: 2rem;
     line-height: 130%;
     color: white;
@@ -169,9 +173,10 @@
 }
 
 .volunter_registration_section__form_heading {
+    font-family: "Shippori Mincho", serif;
     font-size: 3.5rem;
     font-weight: bold;
-    list-style: 120%;
+    line-height: 120%;
     text-align: center;
     text-transform: capitalize;
     color: #ffffff;

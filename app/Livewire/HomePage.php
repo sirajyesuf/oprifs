@@ -17,26 +17,24 @@ class HomePage extends Component
 {
     use WithPagination;
 
-    #[Validate('required|string|max:255')]
     public $name = '';
 
-    #[Validate('required|email|unique:volunters')]
     public $email = '';
 
-    #[Validate('required|string|max:255')]
     public $message = '';
 
-    #[Validate('required|unique:news_letter_subscribers,email')]
     public $email_address  = '';
 
     public function becomeAVolunteer()
     {
 
-        $this->validate();
+        $validated = $this->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'required|string|max:255'
+        ]);
 
-        Volunteer::create(
-            $this->only(['name', 'email', 'message']),
-        );
+        Volunteer::create($validated);
 
         return redirect()->back()->with('volunteer_status', 'we will reach out to you soon via your email address.');
 
@@ -45,10 +43,12 @@ class HomePage extends Component
 
     public function subscribeToNewsLetter(){
 
-        $this->validate();
+        $validated = $this->validate([
+            'email_address' => 'required|email|unique:news_letter_subscribers,email',
+        ]);
 
         NewsLetterSubscriber::create([
-            'email' => $this->email_address,
+            'email' => $validated['email_address']
         ]);
 
         return redirect()->back()->with('status', 'You have successfully subscribed to our newsletter. Thank you!');

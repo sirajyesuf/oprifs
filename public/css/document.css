@@ -50,7 +50,6 @@
 }
 .document {
     flex: 1 0 100%;
-    /* background-color: #dfdfdf; */
     background-color: #ecf1f0;
     display: flex;
     justify-content: space-between;

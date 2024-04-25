@@ -97,11 +97,12 @@
                     <div class="become_avolunter__heading">Become a Volunteer</div>
                     <div class="become_avolunter__subheading">Centuries but also the leap  electtypesetting, remaining </div>
                     <div class="become_avolunter_joinustoday">
-                        <a href="#">Join Us Today</a>
+                        <a href="/#volunter_registration_section">Join Us Today</a>
                     </div>
                 </div>
 
             </div>
+
         </section>
 
         {{-- volunter section end --}}
@@ -153,14 +154,15 @@
                         </div>
                         
                         <button type="submit" class="volunter_registration_section__form_submit inputtag">
-                            Submit Now
+                            Submit
                         </button>
 
                         @if(session('volunteer_status'))
-                        <div class="success">
-                            {{ session('volunteer_status') }}
-                        </div>
+                            <div class="success">
+                                {{ session('volunteer_status') }}
+                            </div>
                         @endif
+
                     </form>
                 </div>
         </section>
@@ -195,7 +197,7 @@
 
                 <div class="homepage__gallery_section_gallery-item_info_tags">
                     <p>Education</p>
-                    <p>Safe Home</p>
+                    <p>SafeHome</p>
                 </div>
 
                 <div class="homepage__gallery_section_gallery-item_info_text">
@@ -293,7 +295,7 @@
                 <div class="newsletter__header">
                 <h1 class="actionsbuttons__newsletterbox_heading">Newsletter</h1>
                 <p class="actionsbuttons__newsletterbox_subheading">
-                    Sign up to our newsletter to get the latest news,stories and volunteer opportunities.
+                    Sign up to our newsletter to get the latest news , stories and volunteer opportunities.
                 </p>
             </div>
 
