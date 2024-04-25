@@ -2,10 +2,11 @@
 
     @if (count($contents))
 
-    <section class="newssectionbox">
+    <section class="trendingnewssection">
 
-        <div class="trendingnewssection">
-            <img src="{{asset("storage/".$trendingNews->cover_image)}}" alt="" class="trendingnewssection__img">
+            <div class="trendingnewssection__imgbox">
+                <img src="{{asset("storage/".$trendingNews->cover_image)}}" alt="" class="trendingnewssection__img">
+            </div>
             <div class="trendingnewssection__detail">
                 <div class="trendingnewssection__detail_header">
                     <p class="trendingnewssection__detail_header_trending"> trending </p>
@@ -49,11 +50,7 @@
                     </p>
 
                 </div>
-        </div>
-
-
-
-
+            </div>
     </section>
 
 
