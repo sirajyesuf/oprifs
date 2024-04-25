@@ -19,16 +19,22 @@ class BankResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-m-currency-dollar';
 
-    protected static ?string $navigationGroup = 'Settings';
+    protected static ?string $navigationGroup = 'Donation';
+
 
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('institute'),
-                Forms\Components\TextInput::make('account_number'),
-                Forms\Components\TextInput::make('account_holder'),
+                Forms\Components\TextInput::make('institute')
+                ->label('Bank')
+                ->required()
+                ->columnSpanFull(),
+                Forms\Components\TextInput::make('account_number')
+                ->required(),
+                Forms\Components\TextInput::make('account_holder')
+                ->required(),
             ]);
     }
 
@@ -36,9 +42,12 @@ class BankResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('institute'),
-                Tables\Columns\TextColumn::make('account_number'),
-                Tables\Columns\TextColumn::make('account_holder'),
+                Tables\Columns\TextColumn::make('institute')
+                ->label('Bank'),
+                Tables\Columns\TextColumn::make('account_number')
+                ->badge(),
+                Tables\Columns\TextColumn::make('account_holder')
+                ->badge(),
 
 
             ])

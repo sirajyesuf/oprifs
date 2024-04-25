@@ -17,7 +17,7 @@ class LocationResource extends Resource
 {
     protected static ?string $model = Setting::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-c-globe-alt';
 
     protected static ?string $navigationLabel = 'Location';
     protected static ?string $modelLabel = 'Location';

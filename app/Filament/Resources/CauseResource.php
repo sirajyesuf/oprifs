@@ -20,6 +20,9 @@ class CauseResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-m-exclamation-triangle';
 
+    protected static ?string $navigationGroup = 'Donation';
+
+
     public static function form(Form $form): Form
     {
         return $form
@@ -41,8 +44,6 @@ class CauseResource extends Resource
                 Forms\Components\FileUpload::make('thumbnail')
                 ->image()
                 ->imageEditor()
-                ->imageResizeTargetWidth('587')
-                ->imageResizeTargetHeight('386')
                 ->columnSpanFull()
                 ->required(),
                 Forms\Components\Textarea::make('goal')
@@ -62,13 +63,15 @@ class CauseResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\ImageColumn::make('thumbnail'),
+                Tables\Columns\TextColumn::make('title')
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+                Tables\Actions\EditAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
