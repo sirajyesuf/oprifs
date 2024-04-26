@@ -10,8 +10,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('news_and_stories', function (Blueprint $table) {
-            $table->unsignedBigInteger('author_id');
-            $table->foreign('author_id')->references('id')->on('users');
+            // $table->unsignedBigInteger('author_id');
+            // $table->foreign('author_id')->references('id')->on('users');
         });
     }
 

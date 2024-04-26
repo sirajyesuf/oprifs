@@ -3,15 +3,14 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\Setting;
-
+use App\Models\ContactUs;
 
 class HeaderSectionPage extends Component
 {
     public function render()
     {
         return view('components.headersection',[
-            'contactus' => Setting::getContactus()
+            'contactus' => ContactUs::first()
         ]);
     }
 }

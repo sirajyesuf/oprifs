@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ContactUsResource\Pages;
 
 use App\Filament\Resources\ContactUsResource;
+use App\Models\ContactUs;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use App\Models\Setting;
@@ -16,21 +17,8 @@ class ListContactUs extends ListRecords
     {
         return [
             Actions\CreateAction::make()
-            ->hidden(Setting::canCreateAboutus()),
+            ->hidden(ContactUs::first()->exists()),
         ];
-    }
-
-
-    protected function getTableQuery(): ?Builder
-    {
-        return static::getResource()::getEloquentQuery()
-        ->whereNotNull('phone_number')
-        ->whereNotNull('email')
-        ->whereNotNull('facebook')
-        ->whereNotNull('youtube')
-        ->whereNotNull('linkedin')
-        ->whereNotNull('instagram');
-
     }
 
 }

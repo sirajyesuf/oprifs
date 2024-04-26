@@ -3,10 +3,8 @@
 namespace App\Filament\Resources\ContactUsResource\Pages;
 
 use App\Filament\Resources\ContactUsResource;
-use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
-use App\Models\Setting;
-
+use App\Models\ContactUs;
 class CreateContactUs extends CreateRecord
 {
     protected static string $resource = ContactUsResource::class;
@@ -14,7 +12,7 @@ class CreateContactUs extends CreateRecord
 
     protected function authorizeAccess(): void
     {
-        abort_unless(static::getResource()::canCreate() && !Setting::canCreateContactUs(), 403);
+        abort_unless(static::getResource()::canCreate() and !ContactUs::first()->exists(), 403);
     }
 
 

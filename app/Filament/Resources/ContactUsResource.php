@@ -5,24 +5,20 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ContactUsResource\Pages;
 use App\Filament\Resources\ContactUsResource\RelationManagers;
 use App\Models\ContactUs;
-use App\Models\Setting;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ContactUsResource extends Resource
 {
-    protected static ?string $model = Setting::class;
+    protected static ?string $model = ContactUs::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-phone';
     protected static ?string $navigationLabel = 'ContactUs';
     protected static ?string $modelLabel = 'ContactUs';
     protected static ?string $pluralModelLabel = 'ContactUs';
-
     protected static ?string $navigationGroup = 'Settings';
 
 
@@ -34,14 +30,23 @@ class ContactUsResource extends Resource
                 Forms\Components\Section::make('Social media Links')
                 ->schema([
                     Forms\Components\TextInput::make('facebook')
-                    ->required(),
+                    ->required()
+                    ->url(),
+
                     Forms\Components\TextInput::make('youtube')
-                    ->required(),
+                    ->required()
+                    ->url(),
+
                     Forms\Components\TextInput::make('linkedin')
-                    ->required(),
+                    ->required()
+                    ->url(),
+
                     Forms\Components\TextInput::make('instagram')
                     ->required()
+                    ->url()
+
                 ])->columnSpan(2),
+
                 Forms\Components\Section::make('Contact Us')
                 ->schema([
                     Forms\Components\TextInput::make('phone_number')
