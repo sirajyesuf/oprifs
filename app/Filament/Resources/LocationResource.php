@@ -5,17 +5,15 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\LocationResource\Pages;
 use App\Filament\Resources\LocationResource\RelationManagers;
 use App\Models\Location;
-use App\Models\Setting;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Filament\Actions;
 
 class LocationResource extends Resource
 {
-    protected static ?string $model = Setting::class;
+    protected static ?string $model = Location::class;
 
     protected static ?string $navigationIcon = 'heroicon-c-globe-alt';
 
@@ -30,9 +28,7 @@ class LocationResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('relative_location')
-                ->label('location'),
-                Forms\Components\TextInput::make('absolute_location')
-                ->label('iframe'),
+                ->label('location')
             ]);
     }
 
@@ -41,7 +37,6 @@ class LocationResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('relative_location'),
-                Tables\Columns\TextColumn::make('absolute_location')
             ])
             ->filters([
                 //

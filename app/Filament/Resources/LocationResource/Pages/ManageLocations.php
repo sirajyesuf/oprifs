@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\LocationResource\Pages;
 
 use App\Filament\Resources\LocationResource;
+use App\Models\Location;
 use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Illuminate\Database\Eloquent\Builder;
@@ -16,20 +17,7 @@ class ManageLocations extends ManageRecords
     {
         return [
             Actions\CreateAction::make()
-            ->hidden(Setting::canCreateLocation()),
-            
+            ->hidden(Location::first() ? true : false),  
         ];
     }
-
-
-    protected function getTableQuery(): ?Builder
-    {
-        return static::getResource()::getEloquentQuery()
-        ->whereNotNull('relative_location')
-        ->whereNotNull('absolute_location');
-
-    }
-
-
-
 }
