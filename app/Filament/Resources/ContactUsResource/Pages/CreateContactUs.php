@@ -12,7 +12,7 @@ class CreateContactUs extends CreateRecord
 
     protected function authorizeAccess(): void
     {
-        abort_unless(static::getResource()::canCreate() and !ContactUs::first()->exists(), 403);
+        abort_unless(static::getResource()::canCreate() && !(ContactUs::first() ? true : false), 403);
     }
 
 

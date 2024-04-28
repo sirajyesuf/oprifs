@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\AboutusResource\Pages;
 use App\Filament\Resources\AboutusResource\RelationManagers;
+use App\Models\AboutUs;
 use App\Models\Setting;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class AboutusResource extends Resource
 {
-    protected static ?string $model = Setting::class;
+    protected static ?string $model = AboutUs::class;
 
     protected static ?string $navigationIcon = 'heroicon-s-building-office';
 

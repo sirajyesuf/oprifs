@@ -17,7 +17,7 @@ class ListContactUs extends ListRecords
     {
         return [
             Actions\CreateAction::make()
-            ->hidden(ContactUs::first()->exists()),
+            ->hidden(ContactUs::first() ? true : false),
         ];
     }
 

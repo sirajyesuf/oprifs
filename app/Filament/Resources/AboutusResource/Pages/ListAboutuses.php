@@ -3,10 +3,11 @@
 namespace App\Filament\Resources\AboutusResource\Pages;
 
 use App\Filament\Resources\AboutusResource;
-use App\Models\Setting;
+use App\Models\AboutUs;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Builder;
+use PHPUnit\Framework\Constraint\IsFalse;
 
 class ListAboutuses extends ListRecords
 {
@@ -16,19 +17,8 @@ class ListAboutuses extends ListRecords
     {
         return [
             Actions\CreateAction::make()
-            ->hidden(Setting::canCreateAboutus()),
+            ->hidden(AboutUs::first() ? true : false),
         ];
     }
-
-    protected function getTableQuery(): ?Builder
-    {
-        return static::getResource()::getEloquentQuery()
-        ->whereNotNull('aboutus')
-        ->whereNotNull('mission')
-        ->whereNotNull('vission');
-
-    }
-
-
 
 }

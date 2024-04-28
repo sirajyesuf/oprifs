@@ -3,8 +3,7 @@
 namespace App\Filament\Resources\AboutusResource\Pages;
 
 use App\Filament\Resources\AboutusResource;
-use App\Models\Setting;
-use Filament\Actions;
+use App\Models\AboutUs;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateAboutus extends CreateRecord
@@ -14,7 +13,7 @@ class CreateAboutus extends CreateRecord
 
     protected function authorizeAccess(): void
     {
-        abort_unless(static::getResource()::canCreate() && !Setting::canCreateAboutus(), 403);
+        abort_unless(static::getResource()::canCreate() && !(AboutUs::first() ? true : false), 403);
     }
 
 
