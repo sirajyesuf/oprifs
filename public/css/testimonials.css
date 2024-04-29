@@ -27,7 +27,7 @@
 
 .testimonial {
     flex: 1 0 30%;
-
+    border-radius: 10px;
     display: flex;
     padding: 3.6rem;
     gap: 3.4rem;
@@ -108,7 +108,7 @@
     cursor: pointer;
 }
 
-.not_active {
+.active_pagination {
     background-color: #2e4049;
 }
 

@@ -254,7 +254,7 @@
                     </svg>
                 </div>
             @else
-            <div class="testimonials__pagination_forward not_active">
+            <div class="testimonials__pagination_forward active_pagination">
                 <svg
                 wire:click="previousPage"
                 wire:loading.attr="disabled"                
@@ -276,7 +276,7 @@
                 </svg>
             </div>
             @else
-            <div class="testimonials__pagination_forward not_active">
+            <div class="testimonials__pagination_forward active_pagination">
                 <svg 
                 wire:click="nextPage"
                 wire:loading.attr="disabled"
