@@ -1,8 +1,6 @@
 .testimonials_section {
     width: 100%;
     margin: 10rem auto;
-    /* padding-top: 10rem;
-    padding-bottom: 10rem; */
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -62,12 +60,14 @@
 }
 
 .testimonial__name_fn {
-    font-size: 3.4rem;
+    font-family: "Shippori Mincho", serif;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: left;
     color: #2e4049;
 }
 .testimonial__name_job {
+    font-family: "Work Sans", sans-serif;
     font-size: 2.7rem;
     font-weight: bold;
     line-height: 130%;
@@ -75,11 +75,14 @@
     color: #727272;
 }
 .testimonial__quote {
+    width: 7.7rem;
+    height: 5.4rem;
     color: #d8d8d8;
 }
 
 .testimonial__content {
-    font-size: 2.7rem;
+    font-family: "Work Sans", sans-serif;
+    font-size: 2rem;
     color: #727272;
     font-weight: bold;
     line-height: 130%;
