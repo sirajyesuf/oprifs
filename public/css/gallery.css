@@ -119,7 +119,6 @@
 
 
 /* HOMEPAGE GALLER SECTION  */
-
 .homepage__gallery_section {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 48rem));
@@ -127,7 +126,7 @@
     margin-block: 10rem;
 }
 
-.homepage__gallery_section_gallery-item {}
+/* .homepage__gallery_section_gallery-item {} */
 
 .homepage__gallery_section_gallery-item-img {
     width: 100%;

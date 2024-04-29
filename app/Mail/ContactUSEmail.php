@@ -18,13 +18,14 @@ class ContactUSEmail extends Mailable
     public function __construct($data)
     {
         $this->data = $data;
+
     }
 
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address($this->data['email'], $this->data['name']),
             subject: $this->data['subject'],
+            from: new Address($this->data['email'], $this->data['name']),
         );
     }
 
@@ -32,6 +33,9 @@ class ContactUSEmail extends Mailable
     {
         return new Content(
             view: 'mail.contactus',
+            with:[
+                'data' => $this->data
+            ]
         );
     }
 }

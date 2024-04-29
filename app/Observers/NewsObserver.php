@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Mail;
 class NewsObserver
 {
     public function created(News $news): void
-    {
+    {        
         foreach(NewsLetterSubscriber::all() as $subscriber){
             Mail::to($subscriber->email)->send(new ContentPublishedNotification($news));
         }

@@ -7,6 +7,8 @@ use App\Models\Location;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Livewire\Attributes\Title;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactUSEmail;
 class ContactUs extends Component
 {
     #[Validate('required|string|max:255')]
@@ -49,6 +51,15 @@ class ContactUs extends Component
     public function sendEmail(){
 
         $this->validate();
+
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new ContactUSEmail([
+
+            'name' => $this->firstname. ' '.$this->lastname,
+            'subject' => $this->subject,
+            'email' => $this->email,
+            'message' => $this->message
+
+        ]));
 
 
         $this->firstname = '';
