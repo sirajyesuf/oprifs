@@ -28,6 +28,7 @@ class TestimonialResource extends Resource
                     ->required(),
                 Forms\Components\Textarea::make('content')
                     ->rows(3)
+                    ->columnSpanFull()
                     ->required()
             ]);
     }
