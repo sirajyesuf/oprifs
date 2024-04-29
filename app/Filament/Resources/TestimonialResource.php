@@ -28,14 +28,7 @@ class TestimonialResource extends Resource
                     ->required(),
                 Forms\Components\Textarea::make('content')
                     ->rows(3)
-                    ->required(),
-
-                Forms\Components\FileUpload::make('path')
-                    ->label('Picture')
-                    ->directory('testimonials')
-                    ->image()
-                    ->required(),
-
+                    ->required()
             ]);
     }
 
@@ -43,8 +36,6 @@ class TestimonialResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('path')
-                    ->label('Picture'),
                 Tables\Columns\TextColumn::make('name')
                     ->label('Full Name'),
                 Tables\Columns\TextColumn::make('job'),

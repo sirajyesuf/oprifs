@@ -227,7 +227,7 @@
         /* 3) Hide it from screen readers */
         visibility: hidden;
     }
-
+    
     .header__footer {
         /* Hide navigation */
         /* Allows NO transitions at all */

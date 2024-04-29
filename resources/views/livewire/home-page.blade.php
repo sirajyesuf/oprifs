@@ -219,7 +219,7 @@
             <div class="testimonials">
                 @foreach ($testimonials as $testimonial)
                 <div class="testimonial">
-                    <img src="{{asset('storage/'.$testimonial->path)}}" alt="" class="testimonial__image">
+                    {{-- <img src="{{asset('storage/'.$testimonial->path)}}" alt="" class="testimonial__image"> --}}
                     <div class="testimonial__body">
                         <div class="testimonial__header">
                             <div class="testimonial__name">
