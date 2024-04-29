@@ -242,6 +242,9 @@
 
             </div>
 
+            @if ($testimonials->hasPages())
+                
+
             <div class="testimonials__pagination">
 
             @if ($testimonials->onFirstPage())
@@ -251,7 +254,7 @@
                     </svg>
                 </div>
             @else
-            <div class="testimonials__pagination_forward">
+            <div class="testimonials__pagination_forward not_active">
                 <svg
                 wire:click="previousPage"
                 wire:loading.attr="disabled"                
@@ -273,7 +276,7 @@
                 </svg>
             </div>
             @else
-            <div class="testimonials__pagination_forward">
+            <div class="testimonials__pagination_forward not_active">
                 <svg 
                 wire:click="nextPage"
                 wire:loading.attr="disabled"
@@ -283,6 +286,10 @@
             </div>
             @endif
             </div> 
+
+            @endif
+
+
         </section>
 
         <!-- testimonials section end -->
