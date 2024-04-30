@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 
 use Google\Client;
 use Google\Service\YouTube;
+use App\Models\Youtube as YoutubeModel;
 
 class YtVideo extends Command
 {
@@ -14,44 +15,52 @@ class YtVideo extends Command
 
     protected $description = 'Command description';
 
-    // public $ytchannelId;
-    // public $ytservice;
+    public $ytchannelId;
+    public $ytservice;
 
 
     public function __construct(){
 
         parent::__construct();
-        // $this->ytchannelId  = env('YOUTUBE_CHANNEL_ID');
 
-        // $client = new Client();
-        // $client->setDeveloperKey(env('YOUTUBE_API_KEY'));
-        // $this->ytservice = new YouTube($client);
+        $this->ytchannelId  = config('app.YOUTUBE_CHANNEL_ID');
+        $client = new Client();
+        $client->setDeveloperKey(config('app.YOUTUBE_API_KEY'));
+
+        $this->ytservice = new YouTube($client);
 
     }
 
     public function handle()
     {
-        // $nextPageToken = null;
-        // $videos = [];
+        $nextPageToken = null;
+        $videos = [];
+
+        while(!isset($response) || $nextPageToken != null) {
         
-        // while(!isset($response) || $nextPageToken != null) {
+            $response = $this->ytservice->playlistItems->listPlaylistItems(
+                'snippet',
+                [
+                    'playlistId' => $this->ytchannelId,
+                    'pageToken' => $nextPageToken,
+                    'maxResults' => 50,
+                ]
+            );
         
-        //     $response = $this->ytservice->playlistItems->listPlaylistItems(
-        //         'snippet',
-        //         [
-        //             'playlistId' => $this->ytchannelId,
-        //             'pageToken' => $nextPageToken,
-        //             'maxResults' => 50,
-        //         ]
-        //     );
+            $nextPageToken = $response->nextPageToken ?? null;
         
-        //     $nextPageToken = $response->nextPageToken ?? null;
-        
-        //     $videos = array_merge($videos, $response->items);
-        // }
+            $videos = array_merge($videos, $response->items);
+        }
 
 
-        // dd($videos);
-        
+        foreach ($videos as $video) {
+
+            YoutubeModel::firstOrCreate([
+                'video_id' => $video->snippet->resourceId->videoId,
+                'title'  => $video->snippet->title
+            ]);
+        }
+
+        $this->info('successfully done');
     }
 }
