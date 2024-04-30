@@ -43,12 +43,12 @@
                     </div>
                 </div>
                 
-                <button 
+                {{-- <button 
                 type="button"
                 wire:click="download({{$document->id}})"
                 class="document__downloadbtn">
                     Download
-                </button>
+                </button> --}}
                 
             </div>
         
