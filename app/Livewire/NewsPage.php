@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\News;
 use App\Models\Story;
+use App\Models\Youtube;
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Title;
@@ -16,7 +17,7 @@ class NewsPage extends Component
 
     public $categories = [
 
-        ['id' => 1,
+        [   'id' => 1,
             'name' => 'News',
             'status' => true,
         ],
@@ -111,13 +112,23 @@ class NewsPage extends Component
 
     public function getContent(){
 
-        $activeCategory = $this->getActiveCategory();
+        $activeCategory = $this->getActiveCategoryID();
 
-        if($activeCategory == "news"){
+        if($activeCategory == 1){
             
             return News::paginate($this->amount);
         }
-        return Story::paginate($this->amount);
+
+        elseif($activeCategory == 2) {
+            
+            return Story::paginate($this->amount);
+        }
+
+        elseif ($activeCategory == 3){
+
+            return Youtube::paginate($this->amount);
+
+        }
     }
 
 
@@ -130,7 +141,7 @@ class NewsPage extends Component
             ->with([
                 'categories' => $this->categories,
                 'contents'  => $this->getContent(),
-                'trendingNews' => $this->getTrendingNews()
+                'trendingNews' => $this->getTrendingNews(),
             ]);
     }
 }

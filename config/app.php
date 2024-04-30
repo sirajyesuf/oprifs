@@ -186,4 +186,7 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'YOUTUBE_API_KEY' => env('YOUTUBE_API_KEY'),
+    'YOUTUBE_CHANNEL_ID' => env('YOUTUBE_CHANNEL_ID')
+
 ];
