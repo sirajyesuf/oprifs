@@ -28,9 +28,13 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name'),
-                Forms\Components\TextInput::make('email'),
+                Forms\Components\TextInput::make('name')
+                ->required(),
+                Forms\Components\TextInput::make('email')
+                ->required()
+                ->unique(User::class, 'email', ignoreRecord: true),
                 Forms\Components\Select::make('role')
+                ->required()
                 ->options(Role::class)
             ]);
     }

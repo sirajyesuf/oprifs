@@ -31,6 +31,7 @@ class GalleryResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\Textarea::make('description')
                     ->rows(2)
+                    ->maxLength(600)
                     ->required()
                     ->columnSpanFull()
             ]);

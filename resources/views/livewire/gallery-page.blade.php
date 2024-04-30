@@ -1,7 +1,7 @@
 <div>
 
         <section class="gallery_hero">
-            <p>Explore123</p>
+            <p>Explore</p>
             <img
                 src="{{ asset('img/gallery_hero.jpg') }}"
                 alt="oprifs gallery hero"
@@ -14,20 +14,28 @@
             <div class="galleries">
 
                 @foreach ($galleries as  $gallery)
+
                     <div class="gallery_item">
 
-                        <img src="{{asset('storage/'.$gallery->path)}}" alt="picture" class="gallery_item__img"/>
+                        <div class="gallery_item__imgbox">
 
+                            <img src="{{asset('storage/'.$gallery->path)}}" alt="picture" class="gallery_item__img"/>
 
-                        <div class="gallery_item__overlay">  
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam distinctio quas, itaque obcaecati dolor dolore quae nihil vitae veniam. Adipisci fuga laboriosam totam eaque! Nemo sequi enim cum minus molestiae.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias porro iure, vitae totam excepturi expedita sapiente reiciendis hic sequi, ea dicta eos distinctio ipsa voluptatum fugiat! Accusantium saepe odit cumque?
-                            
-                            </p>                     
                         </div>
 
+
+                        <div class="gallery_item__overlay">
+                            {{\Illuminate\Support\Str::limit($gallery->description,50)}}
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias placeat dolorum odio aliquam saepe alias voluptates sequi similique reiciendis ut molestiae aspernatur, hic, odit laudantium? Tempora facere debitis iusto odio.
+                        </div>
+
+                        <div class="gallery_item__description">  
+                            {{$gallery->description}}
+                           
                     </div>
+
+                    </div>
+
                 @endforeach
 
 
