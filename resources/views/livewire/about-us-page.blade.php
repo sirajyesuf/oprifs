@@ -55,8 +55,54 @@
                 <h1 class="aboutus__text_heading">Our Vission</h1>
                 <p class="aboutus__text_subheading">
                     {{$aboutus->vission}}
-
                 </p>
+                <div class="oprifs_corevalues">
+                    <h1 class="aboutus__text_heading">Core Values</h1>
+                    <ul class="oprifs_corevalues_list">
+                        <li class="aboutus__text_subheading">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>                              
+                            Accountability
+                        </li>
+                        <li class="aboutus__text_subheading">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg> 
+                            Confidentiality
+                        </li>
+                        <li class="aboutus__text_subheading">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg> 
+                            Commitment
+                        </li>
+                        <li class="aboutus__text_subheading">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg> 
+                            Partnership
+                        </li>
+                        <li class="aboutus__text_subheading">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg> 
+                            Respect
+                        </li>
+                        <li class="aboutus__text_subheading">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg> 
+                            Sympathy
+                        </li>
+                        <li class="aboutus__text_subheading">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg> 
+                            Transparency
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="mission">
