@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="bank_detail">
-                        <p class="bank_subheading_title">Acount Number:</p>
+                        <p class="bank_subheading_title">Account Number:</p>
                         <p class="bank_subheading">{{$bank->account_number}}</p>
                     </div>
 

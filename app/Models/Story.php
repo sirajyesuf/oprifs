@@ -21,6 +21,7 @@ class Story extends Model
     protected static function booted(): void
     {
         static::addGlobalScope('onlyStories', function (Builder $builder) {
+            
             $builder->where('type', PostType::STORIES->value);
         });
     }

@@ -96,7 +96,12 @@ class NewsPage extends Component
         $this->categories = $categories;        
     }
 
-    public function getTrendingNews(){
+    public function getTrendingContent(){
+
+        return $this->getTrendingNews() ?? $this->getTrendingStory();
+    }
+
+    protected function getTrendingNews(){
 
         $newsWithMaxViews = News::where('views', News::max('views'))->get();
 
@@ -110,21 +115,35 @@ class NewsPage extends Component
         }
     }
 
+    protected function getTrendingStory(){
+
+        $newsWithMaxViews = Story::where('views', News::max('views'))->get();
+
+        if ($newsWithMaxViews->count() == 1) {
+
+            return $newsWithMaxViews->first();
+        }
+        else {
+            
+            return Story::inRandomOrder()->first();
+        }
+    }
+
     public function getContent(){
 
-        $activeCategory = $this->getActiveCategoryID();
+        $activeCategoryID = $this->getActiveCategoryID();
 
-        if($activeCategory == 1){
+        if($activeCategoryID == 1){
             
             return News::paginate($this->amount);
         }
 
-        elseif($activeCategory == 2) {
+        elseif($activeCategoryID == 2) {
             
             return Story::paginate($this->amount);
         }
 
-        elseif ($activeCategory == 3){
+        elseif ($activeCategoryID == 3){
 
             return Youtube::paginate($this->amount);
 
@@ -141,7 +160,7 @@ class NewsPage extends Component
             ->with([
                 'categories' => $this->categories,
                 'contents'  => $this->getContent(),
-                'trendingNews' => $this->getTrendingNews(),
+                'trendingContent' => $this->getTrendingContent(),
             ]);
     }
 }

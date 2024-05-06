@@ -51,6 +51,11 @@ class StoryResource extends Resource
                                     ->maxLength(255)
                                     ->unique(Story::class, 'slug', ignoreRecord: true),
 
+                                Forms\Components\Textarea::make('excerpt')
+                                ->required()
+                                ->maxLength(300)
+                                ->columnSpan('full'),
+
                                 Forms\Components\MarkdownEditor::make('content')
                                     ->required()
                                     ->columnSpan('full'),
