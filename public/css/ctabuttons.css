@@ -6,6 +6,7 @@
 
 .actionsbuttons__newsletterbox {
     flex: 1 1 50%;
+    max-width: 100%;
     padding: 11.2rem;
     background-color: #f06c51;
     display: flex;
@@ -32,7 +33,6 @@
 }
 
 .actionsbuttons__newsletterbox__form {
-    /* background-color: aqua; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -76,7 +76,7 @@
 
 .actionsbuttons__blogbox {
     flex: 1 1 50%;
-
+    max-width: 100%;
     padding: 6rem;
     background-color: #d5dca2;
     background-image: linear-gradient(
@@ -110,16 +110,3 @@
     align-self: flex-start;
     text-decoration: none;
 }
-
-/* MEDIA QUERIES */
-
-/**************************/
-/* BELOW 944px (Tablets) */
-/**************************/
-/* 
-@media (max-width: 59em) {
-    .actionsbuttons {
-        grid-template-columns: 1fr;
-    }
-
-} */
