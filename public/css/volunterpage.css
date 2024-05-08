@@ -276,6 +276,16 @@
         flex: 1 0 50%;
     }
 
+}
+
+
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+
     .volunter_registration_section__hero_heading {
         font-size: 3rem;
     }
@@ -283,5 +293,4 @@
     .volunter_registration_section__hero_subheading {
         font-size: 1.5rem;
     }
-
 }
