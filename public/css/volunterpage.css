@@ -123,12 +123,6 @@
 .volunter_registration_section {
     padding: 5%;
     background-color: #2e4049;
-    /* background-image: linear-gradient(
-            to right bottom,
-            rgba(46, 64, 73, 0.9),
-            rgba(46, 64, 73, 0.9)
-        ); */
-    /* background-size: cover; */
     display: flex;
     flex-wrap: wrap;
     gap: 5.6rem;
@@ -156,6 +150,7 @@
     font-size: 2rem;
     line-height: 130%;
     color: white;
+    text-align: left;
 }
 
 .volunter_registration_section__hero_img {
@@ -279,6 +274,14 @@
     }
     .voluntersection__volunters_volunter {
         flex: 1 0 50%;
+    }
+
+    .volunter_registration_section__hero_heading {
+        font-size: 3rem;
+    }
+
+    .volunter_registration_section__hero_subheading {
+        font-size: 1.5rem;
     }
 
 }
