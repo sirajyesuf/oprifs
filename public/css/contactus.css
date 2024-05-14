@@ -128,6 +128,9 @@
 /* BELOW 944px (Tablets) */
 /**************************/
 @media (max-width: 59em) {
+    .contactus__form_form {
+        width: 100%;
+    }
     .contactus__form_form__fullname,
     .contactus__form_form__subject {
         flex-direction: column;
