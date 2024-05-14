@@ -10,12 +10,17 @@ use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\DB;
 
 class DocumentResource extends Resource
 {
     protected static ?string $model = Document::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected static ?string $navigationLabel = 'Resources';
+    protected static ?string $modelLabel = 'Resource';
+    protected static ?string $pluralModelLabel = 'Resources';
 
     public static function form(Form $form): Form
     {
@@ -30,7 +35,10 @@ class DocumentResource extends Resource
                     ->preserveFilenames()
                     ->storeFileNamesIn('name')
                     ->openable()
-                    ->previewable()
+                    ->previewable(),
+                Forms\Components\Select::make('category')
+                ->options(DB::table('resource_category')->pluck('title','id'))
+                ->columnSpan('full')
             ]);
     }
 

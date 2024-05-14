@@ -52,7 +52,7 @@ class ContactUs extends Component
 
         $this->validate();
 
-        Mail::to(env('MAIL_TO_ADDRESS'))->send(new ContactUSEmail([
+        Mail::send(new ContactUSEmail([
 
             'name' => $this->firstname. ' '.$this->lastname,
             'subject' => $this->subject,

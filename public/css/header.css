@@ -272,6 +272,21 @@
 
 }
 
+/* MEDIA QUERIES */
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+    .herosection__info_text {
+        font-size: 4rem;
+        line-height: normal;
+    }
+}
+
+
+
 /* 
 BELOW 544px  (Phones) 
 */

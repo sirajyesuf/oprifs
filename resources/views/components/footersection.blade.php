@@ -15,7 +15,7 @@
                         <a href="/aboutus">About us</a>
                     </li>
                     <li class="footer__link_list_item">
-                        <a href="/documents">Documents</a>
+                        <a href="/resources">Resources</a>
                     </li>
                     <li class="footer__link_list_item">
                         <a href="/gallery">Gallery</a>

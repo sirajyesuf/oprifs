@@ -33,9 +33,9 @@
             <div class="aboutus__text">
 
                 <p class="aboutus__text_title">AboutUs</p>
-                <h2 class="aboutus__text_heading">working for the benefit and 
+                {{-- <h2 class="aboutus__text_heading">working for the benefit and 
                     welfare of female street children and other vulnerable girls and women in different areas.
-                </h2>
+                </h2> --}}
                 <p class="aboutus__text_subheading">
                     {{$aboutus->aboutus}}
                 </p>

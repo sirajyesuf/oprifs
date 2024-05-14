@@ -93,7 +93,7 @@ class NewsPage extends Component
 
         }
 
-        $this->categories = $categories;        
+        $this->categories = $categories;       
     }
 
     public function getTrendingContent(){

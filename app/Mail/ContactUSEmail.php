@@ -24,6 +24,7 @@ class ContactUSEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+            to: env('MAIL_TO_ADDRESS'),
             subject: $this->data['subject'],
             from: new Address($this->data['email'], $this->data['name']),
         );

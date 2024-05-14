@@ -32,12 +32,13 @@ Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail')
 Route::get('donate',DonatePage::class);
 Route::get('donate/{slug}',DonateDetailPage::class)->name('donate.detail');
 Route::get('aboutus',AboutUsPage::class);
-Route::get('documents',DocumentPage::class);
+Route::get('resources',DocumentPage::class);
 
 
 route::get('/email',function(){
           
     foreach(NewsLetterSubscriber::all() as $subscriber){
+        
         Mail::to($subscriber->email)->send(new ContentPublishedNotification(News::first()));
     }
 });

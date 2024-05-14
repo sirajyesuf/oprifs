@@ -100,7 +100,7 @@
             <a href="/aboutus">AboutUS</a>
             <a href="/gallery">Gallery</a>
             <a href="/contents">Blog</a>
-            <a href="/documents">Documents</a>
+            <a href="/resources">Resources</a>
             <a href="/contactus">ContactUS</a>
             <button class="donate">
                 <a href="/donate">

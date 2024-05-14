@@ -2,14 +2,36 @@
 
     <section class="document__hero">
         <div class="document__hero_title">
-            <h1 class="document__hero_heading">Documentation</h1>
-            <h2 class="document__hero_subheading">Everything You Need To Get A Documents</h2>
+            <h1 class="document__hero_heading">Resources</h1>
+            <h2 class="document__hero_subheading">Everything You Need to Access Resources</h2>
         </div>
         <input type="text" name="search" placeholder="Search" class="search_input_tag"
         wire:model.live="search">
     </section>
 
-    <section class="documents">
+<section class="resource">
+
+    <div class="documents_filter">
+        @foreach ($categories as $category )
+
+            @if ($category['status'])
+            
+                <p class="documents_filter_tag documents_filter_tag_active"
+                wire:click="updateCategory({{$category['id']}})"
+                >{{$category['title']}}</p>
+                
+            @else
+
+                <p class="documents_filter_tag"
+                wire:click="updateCategory({{$category['id']}})"
+                >{{$category['title']}}</p>
+
+            @endif
+        @endforeach
+    </div>
+
+
+    <div class="documents">
 
         @if(count($documents))
 
@@ -50,20 +72,27 @@
                 class="document__downloadbtn">
                     Download
                 </button> --}}
-                
+
             </div>
         
         @endforeach
+
         <button class="newslistsection_loadmorebtn"  wire:click="loadMoreDocuments">
             view more
         </button>
+
         @else
+
         <div class="document documents_zerosearchresult">
             Sorry, no matching documents found. Try different keywords.
         </div>
+
         @endif
 
-    </section>
+    </div>
+
+</section>
+
 
     
 </div>
