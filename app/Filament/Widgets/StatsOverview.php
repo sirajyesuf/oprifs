@@ -8,6 +8,7 @@ use App\Models\Document;
 use App\Models\Gallery;
 use App\Models\News;
 use App\Models\Program;
+use App\Models\Story;
 
 class StatsOverview extends BaseWidget
 {
@@ -18,9 +19,9 @@ class StatsOverview extends BaseWidget
             ->description('our documentes'),
             Stat::make('Total Gallery', Gallery::count())
             ->description('our photos'),
-            Stat::make('Total News', News::News()->count())
+            Stat::make('Total News', News::count())
             ->description('our news'),
-            Stat::make('Total Story', News::Story()->count())
+            Stat::make('Total Story', Story::count())
             ->description('our stories'),
         ];
     }
