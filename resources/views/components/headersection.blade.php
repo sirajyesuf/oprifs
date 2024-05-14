@@ -97,11 +97,11 @@
 
         <div class="header__navigation__menu">
             <a href="/">Home</a>
-            <a href="/aboutus">AboutUS</a>
+            <a href="/aboutus">About US</a>
             <a href="/gallery">Gallery</a>
             <a href="/contents">Blog</a>
             <a href="/resources">Resources</a>
-            <a href="/contactus">ContactUS</a>
+            <a href="/contactus">Contact US</a>
             <button class="donate">
                 <a href="/donate">
                     Donate
