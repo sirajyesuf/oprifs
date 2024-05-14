@@ -29,6 +29,7 @@ class LocationResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('relative_location')
                 ->label('location')
+                ->columnSpanFull()
             ]);
     }
 
