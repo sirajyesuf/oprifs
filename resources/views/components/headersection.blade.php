@@ -89,11 +89,17 @@
 
 
     <div class="header__navigation">
-        <img
-            src="{{asset("img/oprifs_logo.jpg")}}"
-            alt="oprifs logo"
-            class="header_logo"
-        />
+
+        <div class="header_navigation__logobox">
+
+            <img
+                src="{{asset("img/oprifs_logo.jpg")}}"
+                alt="oprifs logo"
+                class="header_logo"
+            />
+
+        </div>
+
 
         <div class="header__navigation__menu">
             <a href="/">Home</a>

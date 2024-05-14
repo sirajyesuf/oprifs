@@ -74,9 +74,16 @@
     align-items: center;
 }
 
+.header_navigation__logobox{
+    width: 203px;
+    height: 138px;
+    /* background-color: red; */
+}
+
 .header_logo {
     padding: 2rem;
-    width: 200px;
+    width: 100%;
+    height: 100%;
     border: none;
 }
 
