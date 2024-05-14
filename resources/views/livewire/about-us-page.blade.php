@@ -24,8 +24,7 @@
                 <div class="aboutus__hero_caption">
                     <img src="{{asset("img/quote.png")}}" alt="quote image" class="aboutus__hero_caption_quote">
                     <p class="aboutus__hero_caption_text">
-                        They are truly great who
-                        has a great charity.
+                        They are truly great who have great charity.
                     </p>
                 </div>
             </div>
