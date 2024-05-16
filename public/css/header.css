@@ -137,7 +137,7 @@
 .herosection__info_text {
     font-family: "Shippori Mincho", serif;
     font-weight: 700;
-    font-size: 7.3rem;
+    font-size: 5rem;
     line-height: 100%;
     font-weight: 600;
     text-align: left;
@@ -287,7 +287,7 @@
 
 @media (max-width: 59em) {
     .herosection__info_text {
-        font-size: 4rem;
+        font-size: 3rem;
         line-height: normal;
     }
 }
@@ -304,7 +304,7 @@ BELOW 544px  (Phones)
     }
 
     .herosection__info_text {
-        font-size: 4rem;
+        font-size: 3rem;
         line-height: normal;
 
     }
