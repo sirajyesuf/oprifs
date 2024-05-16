@@ -187,6 +187,7 @@
 
 .newscard {
     flex: 1 0 30%;
+    max-width: 30%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -375,7 +376,9 @@
 
 @media (max-width: 59em) {
 
-
+    .newscard {
+        max-width: none;
+    }
  
     .trendingnewssection {
 
