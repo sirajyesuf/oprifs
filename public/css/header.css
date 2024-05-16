@@ -265,15 +265,13 @@
         display: none;
     }
 
-
-   
-    .gallery_hero__title {
-
-        opacity: 0.2;
-    }
-    .gallery_hero_img  {
+    .gallery_hero_img {
         z-index: -1;
 
+    }
+
+    .newsdetailpagesection__titlebox {
+        z-index: -1;
     }
 
 

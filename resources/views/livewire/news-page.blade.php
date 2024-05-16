@@ -8,7 +8,9 @@
                     <img src="{{asset("storage/".$trendingContent->cover_image)}}" alt="" class="trendingnewssection__img">
                 </div>
                 <div class="trendingnewssection__detail">
+
                     <div class="trendingnewssection__detail_header">
+                        
                         <p class="trendingnewssection__detail_header_trending"> trending </p>
 
                         <div class="trendingnewssection__detail_header_icon" onclick="copyLink('{{route('content_detail',['slug' => $trendingContent->slug])}}')">
