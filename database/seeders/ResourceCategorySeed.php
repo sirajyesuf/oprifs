@@ -12,18 +12,28 @@ class ResourceCategorySeed extends Seeder
     public function run(): void
     {
         $categories = [
-
-            [
-                'title' => 'policy'
-            ],
             [
                 'title' => 'human resource'
             ],
             [
-                'title' => 'strategy'
+                'title' => 'strategy plan'
+            ],
+            [
+                'title' => 'monitoring and evaluation'
+            ],
+            [
+                'title' => 'financial plan'
+            ],
+            [
+                'title' => 'reports'
+            ],
+            [
+                'title' => 'gender advocacy manual'
             ]
 
         ];
+
+        DB::table('resource_category')->truncate();
 
         DB::table('resource_category')
         ->insert($categories);
