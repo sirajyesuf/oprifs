@@ -7,11 +7,16 @@
 
                 <div class="herosection__info">
 
-                    <p class="herosection__info_text">
-                        Organization for Prevention
-                        Rehabilitation & Integration
-                        of Female Street Children.
-                    </p>
+                    <div class="herosection__info_text">
+                        <p class="herosection__info_text_name">
+                            Organization for Prevention
+                            Rehabilitation & Integration
+                            of Female Street Children.
+                        </p>
+                        <span class="herosection__info_text_abbrevation">
+                        (OPRIFS)
+                        </span>
+                    </div>
 
                     <button class="herosection__info_cta">
                         <a href="/donate">
