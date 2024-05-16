@@ -74,7 +74,7 @@
     align-items: center;
 }
 
-.header_navigation__logobox{
+.header_navigation__logobox {
     width: 203px;
     height: 138px;
     /* background-color: red; */
@@ -135,6 +135,12 @@
 }
 
 .herosection__info_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.herosection__info_text_name,.herosection__info_text_abbrevation {
     font-family: "Shippori Mincho", serif;
     font-weight: 700;
     font-size: 5rem;
@@ -143,6 +149,10 @@
     text-align: left;
     color: #515050;
     height: auto;
+}
+
+.herosection__info_text_abbrevation {
+    color: #f06c51;
 }
 
 .herosection__info_cta {
@@ -234,7 +244,7 @@
         /* 3) Hide it from screen readers */
         visibility: hidden;
     }
-    
+
     .header__footer {
         /* Hide navigation */
         /* Allows NO transitions at all */
@@ -267,14 +277,11 @@
 
     .gallery_hero_img {
         z-index: -1;
-
     }
 
     .newsdetailpagesection__titlebox {
         z-index: -1;
     }
-
-
 }
 
 /* MEDIA QUERIES */
@@ -290,8 +297,6 @@
     }
 }
 
-
-
 /* 
 BELOW 544px  (Phones) 
 */
@@ -304,7 +309,5 @@ BELOW 544px  (Phones)
     .herosection__info_text {
         font-size: 3rem;
         line-height: normal;
-
     }
-    
 }
