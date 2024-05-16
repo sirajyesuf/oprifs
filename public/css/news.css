@@ -360,6 +360,11 @@
     padding-bottom: 10rem;
 }
 
+.newsdetailpagesection__main_content_article img {
+    
+    max-width: 100%;
+}
+
 
 
 
