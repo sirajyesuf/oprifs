@@ -13,7 +13,6 @@
                 />
 
             </div>
-
         </section>
 
         <section class="gallery">
@@ -36,10 +35,11 @@
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias placeat dolorum odio aliquam saepe alias voluptates sequi similique reiciendis ut molestiae aspernatur, hic, odit laudantium? Tempora facere debitis iusto odio.
                         </div>
 
-                        <div class="gallery_item__description">  
+                        <div class="gallery_item__description">
+                            
                             {{$gallery->description}}
                            
-                    </div>
+                        </div>
 
                     </div>
 

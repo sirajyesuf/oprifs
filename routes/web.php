@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', HomePage::class);
 Route::get('/contactus', ContactUs::class);
-// Route::post('contactus_via_email',[ContactUsController::class,'sendEmail']);
 Route::get('/gallery', GalleryPage::class);
 Route::get('/volunter', VolunterPage::class);
 
@@ -31,14 +30,6 @@ Route::get('/contents/{slug}', NewsDetailPage::class)->name('content_detail')
 
 Route::get('donate',DonatePage::class);
 Route::get('donate/{slug}',DonateDetailPage::class)->name('donate.detail');
+
 Route::get('aboutus',AboutUsPage::class);
 Route::get('resources',DocumentPage::class);
-
-
-route::get('/email',function(){
-          
-    foreach(NewsLetterSubscriber::all() as $subscriber){
-        
-        Mail::to($subscriber->email)->send(new ContentPublishedNotification(News::first()));
-    }
-});

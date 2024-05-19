@@ -60,7 +60,7 @@ class NewsResource extends Resource
 
                                 Forms\Components\MarkdownEditor::make('content')
                                     ->required()
-                                    ->columnSpan('full'),
+                                    ->columnSpan('full')
 
                             ])->columns(2),
 
