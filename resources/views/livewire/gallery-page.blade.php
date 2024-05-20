@@ -31,8 +31,7 @@
 
 
                         <div class="gallery_item__overlay">
-                            {{\Illuminate\Support\Str::limit($gallery->description,10)}}
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias placeat dolorum odio aliquam saepe alias voluptates sequi similique reiciendis ut molestiae aspernatur, hic, odit laudantium? Tempora facere debitis iusto odio.
+                            {{\Illuminate\Support\Str::limit($gallery->description,80)}}
                         </div>
 
                         <div class="gallery_item__description">
