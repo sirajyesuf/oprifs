@@ -41,7 +41,8 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('description')
+                ->limit(70),
                 Tables\Columns\ImageColumn::make('path')
                     ->label('Picture')
             ])

@@ -45,8 +45,10 @@ class ProgramResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('icon'),
+                Tables\Columns\TextColumn::make('icon')
+                ->limit(10),
                 Tables\Columns\TextColumn::make('description')
+                ->limit(70)
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
