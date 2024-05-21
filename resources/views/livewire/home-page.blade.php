@@ -206,8 +206,7 @@
                 </div>
 
                 <div class="homepage__gallery_section_gallery-item_info_text">
-                    More than one  life
-                    changed.
+                    Impacting Countless Lives.
                 </div>
             </div>
 
