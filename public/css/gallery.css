@@ -64,6 +64,7 @@
     align-items: center; /* Center the image vertically */
     justify-content: center; /* Center the image horizontally */
     background-color: #f7f7f8;
+    padding: 1rem;
 
 
 }
