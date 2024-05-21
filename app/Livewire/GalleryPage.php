@@ -25,7 +25,7 @@ class GalleryPage extends Component
     {
         return view('livewire.gallery-page')
             ->with([
-                'galleries' => Gallery::simplePaginate(9),
+                'galleries' => Gallery::latest()->simplePaginate(9),
                 'paginationLength' => $this->paginationLength
             ]);
     }

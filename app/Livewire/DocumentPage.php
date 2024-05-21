@@ -108,7 +108,7 @@ class DocumentPage extends Component
         }
 
 
-        return $query->take($this->amount)->get();
+        return $query->latest()->take($this->amount)->get();
 
     }
 }
