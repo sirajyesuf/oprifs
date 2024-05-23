@@ -32,7 +32,9 @@
 
 }
 .contactus__form_info_item {
+
     flex: 1 0 30%;
+    max-width: 100%;
     height: auto;
     background-color: #f1f1f1;
     display: flex;
@@ -130,11 +132,12 @@
     }
 
     .contactus__form_info {
+
         flex-direction: column;
     }
 
     .contactus__form_info_item {
-        width: 100%;
+        /* width: 100%; */
         padding: 1.5rem;
     }
 

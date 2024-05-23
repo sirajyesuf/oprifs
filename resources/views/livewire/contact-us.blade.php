@@ -13,9 +13,7 @@
                     <p>
                         call now 
                         <br>
-                        <span>
-                            {{$phone_number}}
-                        </span>
+                        {{$phone_number}}
                     </p>
                       
                 </div>
@@ -26,11 +24,9 @@
                     </svg>
 
                     <p>
-                    mail your queries 
-                    <br>
-                    <span>
+                        mail your queries 
+                        <br>
                         {{$email_address}}
-                    </span>
                     </p>
                       
                 </div>
