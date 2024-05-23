@@ -17,42 +17,44 @@
 
     <section class="causes_section">
 
+        @if (count($causes))
 
-        <div class="causes">
+            <div class="causes">
 
-            @if (count($causes))
-                
+                @foreach ($causes as $cause )
+                    
 
-            @foreach ($causes as $cause )
-                
+                    <div class="cause">
 
-            <div class="cause">
+                        <div class="cause_imgbox">
+                            <img src="{{asset("storage/".$cause->thumbnail)}}" alt="cause picture" class="cause_img">
+                        </div>
 
-                <div class="cause_imgbox">
-                    <img src="{{asset("storage/".$cause->thumbnail)}}" alt="cause picture" class="cause_img">
-                </div>
+                        <div class="cause_footer">
 
-                <div class="cause_footer">
+                            <div class="cause_heading">
+                                {{$cause->title}}
+                            </div>
 
-                    <div class="cause_heading">
-                        {{$cause->title}}
+                            <a href="{{route('donate.detail',['slug' => $cause->slug])}}">
+                            donate
+                            </a>
+                        
+                        </div>
+
                     </div>
 
-                    <a href="{{route('donate.detail',['slug' => $cause->slug])}}">
-                    donate
-                    </a>
-                
-                </div>
+                @endforeach
 
             </div>
 
-            @endforeach
+        @else
 
-            @else
             <div class="zero_cause_text">
-                Thank you for your interest. Currently, we do not have any ongoing causes that require your charitable support. Please feel free to check back with us in the future.            </div>
-            @endif
-        </div>
+                Thank you for your Generocity. Currently, we do not have any ongoing causes that require your charitable support. Please feel free to check back with us in the future.
+            </div>
+
+        @endif
 
     </section>
     
