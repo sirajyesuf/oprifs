@@ -105,20 +105,27 @@
             </div>
 
             <div class="mission">
+                
                 <h1 class="aboutus__text_heading">Our Mission</h1>
                 <p class="aboutus__text_subheading">
                     {{$aboutus->mission}}
                 </p>
-                <div class="mission_img">
-                    <img src="{{asset('img/oprifs_mission.png')}}" alt="two girls stand together">
-                </div>
-                <div class="mission_caption">
-                    <div class="number_children_helped">
-                        <p>12,000+</p>
+
+                <div class="mission__footer">
+
+                    <div class="mission_img">
+                        <img src="{{asset('img/oprifs_mission.png')}}" alt="two girls stand together">
                     </div>
-                    <div class="mission_text">
-                        Thousand women, girls, and vulnerable children Helped
+
+                    <div class="mission_caption">
+                        <div class="number_children_helped">
+                            <p>12,000+</p>
+                        </div>
+                        <div class="mission_text">
+                            Thousand women, girls, and vulnerable children Helped
+                        </div>
                     </div>
+
                 </div>
 
             </div>
