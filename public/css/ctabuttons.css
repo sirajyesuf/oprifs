@@ -110,3 +110,25 @@
     align-self: flex-start;
     text-decoration: none;
 }
+
+
+
+/* MEDIA QUERIES */
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+
+    .actionsbuttons__newsletterbox,.actionsbuttons__blogbox{
+        padding: 2rem;
+    }
+
+}
