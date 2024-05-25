@@ -140,12 +140,12 @@ class NewsPage extends Component
 
         elseif($activeCategoryID == 2) {
             
-            return Story::latest()->paginate($this->amount)->latest();
+            return Story::latest()->paginate($this->amount);
         }
 
         elseif ($activeCategoryID == 3){
 
-            return Youtube::latest()->paginate($this->amount)->latest();
+            return Youtube::latest()->paginate($this->amount);
 
         }
     }
