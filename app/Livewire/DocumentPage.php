@@ -104,7 +104,7 @@ class DocumentPage extends Component
 
         if($activeCategories){
 
-            $query->whereIn('category',$this->getActiveCategories());
+            $query->whereIn('category',$activeCategories);
         }
 
 

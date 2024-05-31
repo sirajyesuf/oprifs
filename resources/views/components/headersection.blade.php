@@ -105,6 +105,7 @@
             <a href="/">Home</a>
             <a href="/contents">Blog</a>
             <a href="/gallery">Gallery</a>
+            <a href="/projects">Projects</a>
             <a href="/resources">Resources</a>
             <a href="/aboutus">About US</a>
             <a href="/contactus">Contact US</a>

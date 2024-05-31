@@ -66,6 +66,11 @@ class ProjectResource extends Resource
                                     ->directory('projects')
                                     ->image()
                                     ->required(),
+                                Forms\Components\Select::make('status')
+                                ->options([
+                                    'ongoing' => 'ONGOING',
+                                    'completed' => 'COMPLETED'
+                                ])
                             ]),
                     ]),
             ])

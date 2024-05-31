@@ -1,0 +1,106 @@
+
+.project_hero_section{
+
+    background-color: #81d47e;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Work Sans", sans-serif;
+    font-weight: bold;
+    font-size: 6rem;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+
+.project_filters {
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 2rem;
+    align-self: flex-start;
+
+}
+
+.project_filter {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    align-self: flex-start;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #2b4555;
+    color: #ffffff;
+    cursor: pointer;    
+}
+
+
+.projects__section {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.project {
+    height: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    background-color: #f1f1f1;
+}
+.project__imgbox {
+    width: 40rem;
+    height: 30rem;
+    padding: 1rem;
+    background-color: #f7f7f8;
+}
+
+.project__img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+.project__description {
+    font-family: "Shippori Mincho", serif;
+    font-style: normal;
+    line-height: 120%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project__description__title {
+    line-height: 120%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: left;
+    color: #2e4049;
+    font-family: "Shippori Mincho", serif;
+    font-style: normal;
+}
+
+.project__description__content {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 130%;
+    color: #696969;
+}

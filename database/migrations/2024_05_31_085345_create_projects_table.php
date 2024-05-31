@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('cover_image');
             $table->longText('description');
+            $table->string("status");
             $table->timestamps();
         });
     }

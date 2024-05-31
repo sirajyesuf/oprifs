@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="{{asset('css/donation.css')}}" />
         <link rel="stylesheet" href="{{asset('css/aboutus.css')}}" />
         <link rel="stylesheet" href="{{asset('css/document.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/project.css')}}" />
+
 
 
 
