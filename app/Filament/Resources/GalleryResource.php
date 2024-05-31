@@ -28,7 +28,12 @@ class GalleryResource extends Resource
                     ->image()
                     ->required()
                     ->directory('gallery')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->imageEditor()
+                    ->imageEditorAspectRatios([
+                        '4:3',
+                    ]),
+
                 Forms\Components\Textarea::make('description')
                     ->rows(2)
                     ->maxLength(600)
