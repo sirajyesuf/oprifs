@@ -42,3 +42,23 @@
     font-style: normal;
     text-transform: capitalize;
 }
+
+
+
+/* MEDIA QUERIES */
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+    .donor_partners {
+
+        grid-template-columns: repeat(2,15rem);
+
+    }
+
+    .donor_partners__title {
+        font-size: 2rem;
+    }
+}
