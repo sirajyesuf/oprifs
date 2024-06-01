@@ -4,15 +4,13 @@ namespace App\Filament\Resources;
 
 use App\Enums\PartnerType;
 use App\Filament\Resources\PartnerResource\Pages;
-use App\Filament\Resources\PartnerResource\RelationManagers;
 use App\Models\Partner;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Resources\Pages\Page;
 
 class PartnerResource extends Resource
 {
@@ -27,6 +25,7 @@ class PartnerResource extends Resource
                 Forms\Components\FileUpload::make('logo')
                 ->required()
                 ->image()
+                ->directory('partners')
                 ->columnSpanFull(),
                 Forms\Components\TextInput::make('website')
                 ->url()
@@ -51,13 +50,21 @@ class PartnerResource extends Resource
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
+    }
+
+
+    public static function getRecordSubNavigation(Page $page): array
+    {
+        return $page->generateNavigationItems([
+            Pages\ViewPartner::class,
+            Pages\EditPartner::class
+        ]);
     }
 
     public static function getRelations(): array
