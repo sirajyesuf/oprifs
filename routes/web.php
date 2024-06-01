@@ -11,6 +11,9 @@ use App\Livewire\GalleryPage;
 use App\Livewire\HomePage;
 use App\Livewire\NewsDetailPage;
 use App\Livewire\NewsPage;
+use App\Livewire\PartnersPage;
+use App\Livewire\ProjectPage;
+use App\Livewire\Projects;
 use App\Livewire\VolunterPage;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +36,7 @@ Route::get('donate/{slug}',DonateDetailPage::class)->name('donate.detail');
 
 Route::get('aboutus',AboutUsPage::class);
 Route::get('resources',DocumentPage::class);
+
+
+Route::get('/projects',ProjectPage::class);
+Route::get('/partners',PartnersPage::class);

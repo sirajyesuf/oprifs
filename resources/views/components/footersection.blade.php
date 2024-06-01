@@ -20,6 +20,10 @@
                     <li class="footer__link_list_item">
                         <a href="/gallery">Gallery</a>
                     </li>
+
+                    <li class="footer__link_list_item">
+                        <a href="/partners">Partners</a>
+                    </li>
                 </ul>
             </div>
 
