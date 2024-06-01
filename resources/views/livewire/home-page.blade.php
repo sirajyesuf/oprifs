@@ -39,7 +39,7 @@
 
 
 
-        <section class="programs_section" id="#programs_section">
+        {{-- <section class="programs_section" id="#programs_section">
 
             <div class="programs_section__heading">
                 our programs
@@ -66,7 +66,7 @@
                 </div>
 
             @endforeach
-        </section>
+        </section> --}}
         
         {{-- volunter section start --}}
         <section class="voluntersection">
@@ -334,6 +334,7 @@
             @endif
             
             </div>
+
             <div class="actionsbuttons__blogbox">
                 <h1 class="actionsbuttons__blogbox_heading">
                     Take Look At Recent News
@@ -343,6 +344,7 @@
                     NEWS
                 </a>
             </div>
+            
         </section>
 
         {{-- cta end --}}
