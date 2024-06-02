@@ -31,45 +31,53 @@
 
         </div>
 
-        <div class="projects">
-
-            @foreach ($projects as $project)
-                
-
-                <div class="project">
-
-                    <div class="project__imgbox">
-
-                        <img src="{{asset("storage/".$project->cover_image)}}" alt="project image" class="project__img">
-
-                    </div>
-
-                    <div class="project__description">
-                        <h1 class="project__description__title">
-                            Project : {{$project->title}}
-                        </h1>
-
-
-
-                        <x-markdown class="project__description__content">
-
-                            {{ $project->description }}
+        @if (count($projects))
             
-                        </x-markdown>
+            <div class="projects">
+
+                @foreach ($projects as $project)
+                    
+
+                    <div class="project">
+
+                        <div class="project__imgbox">
+
+                            <img src="{{asset("storage/".$project->cover_image)}}" alt="project image" class="project__img">
+
+                        </div>
+
+                        <div class="project__description">
+                            <h1 class="project__description__title">
+                                Project : {{$project->title}}
+                            </h1>
+
+
+
+                            <x-markdown class="project__description__content">
+
+                                {{ $project->description }}
+                
+                            </x-markdown>
+
+                        </div>
+
 
                     </div>
 
 
-                </div>
+                @endforeach
 
+            </div>
 
-            @endforeach
+            <button class="newslistsection_loadmorebtn"  wire:click="loadMoreProjects">
+                view more
+            </button>
+        @else
+            <div class="zero_contents">
+                we don't have any project under this category.
+            </div>
+        @endif
 
-        </div>
-
-        <button class="newslistsection_loadmorebtn"  wire:click="loadMoreProjects">
-            view more
-        </button>
 
     </section>
 
