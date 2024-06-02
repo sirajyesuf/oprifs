@@ -15,12 +15,7 @@ class ProjectPage extends Component
 
     private $amount = 3;
     
-    public $filters = [
-        [
-            'title' => 'All',
-            'status' => false
-        ],
-    ];
+    public $filters = [];
 
 
 
@@ -53,7 +48,7 @@ class ProjectPage extends Component
 
             if ($filter['status']) {
 
-                array_push($activeFilter,$filter);
+                array_push($activeFilter,$filter['title']);
             }
 
         }
@@ -75,9 +70,10 @@ class ProjectPage extends Component
         $activeFilter = $this->getActiveFilter();
         $query = Project::query();
 
+
         if($activeFilter){
 
-            $query->whereIn('category',$activeFilter);
+            $query->whereIn('status',$activeFilter);
 
         }
 
@@ -87,8 +83,6 @@ class ProjectPage extends Component
     }
 
     public function updateFilter($filterTitle){
-
-        dd($filterTitle);
 
         $filters = array();
 

@@ -104,3 +104,18 @@
     line-height: 130%;
     color: #696969;
 }
+
+
+
+
+/* MEDIA QUERIES */
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+    .project{
+        flex-direction: column;
+    }
+}

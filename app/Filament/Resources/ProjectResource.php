@@ -50,6 +50,16 @@ class ProjectResource extends Resource
                                 Forms\Components\MarkdownEditor::make('description')
                                     ->required()
                                     ->columnSpan('full')
+                                    ->toolbarButtons([
+                                        'bold',
+                                        'bulletList',
+                                        'heading',
+                                        'italic',
+                                        'link',
+                                        'orderedList',
+                                        'redo',
+                                        'undo',
+                                    ])
 
                             ])->columns(2),
 
@@ -85,6 +95,9 @@ class ProjectResource extends Resource
                 ->label('Thumbnail'),
             Tables\Columns\TextColumn::make('title')
                 ->searchable(),
+            Tables\Columns\TextColumn::make('status')
+            ->badge()
+            
             ])
             ->filters([
                 //

@@ -16,13 +16,13 @@
                 @if ($filter['status'])
                 
                     <p class="documents_filter_tag documents_filter_tag_active"
-                    wire:click="updateFilter({{$filter['title']}})"
+                    wire:click="updateFilter('{{$filter['title']}}')"
                     >{{$filter['title']}}</p>
                 
                 @else
 
                     <p class="documents_filter_tag"
-                    wire:click="updateFilter({{$filter['title']}})"
+                    wire:click="updateFilter('{{$filter['title']}}')"
                     >{{$filter['title']}}</p>
 
                 @endif
