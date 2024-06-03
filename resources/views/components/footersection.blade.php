@@ -24,6 +24,12 @@
                     <li class="footer__link_list_item">
                         <a href="/partners">Partners</a>
                     </li>
+
+
+                    <li class="footer__link_list_item">
+                        <a href="/programs">Programs</a>
+                    </li>
+
                 </ul>
             </div>
 
