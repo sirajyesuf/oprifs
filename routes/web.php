@@ -12,6 +12,7 @@ use App\Livewire\HomePage;
 use App\Livewire\NewsDetailPage;
 use App\Livewire\NewsPage;
 use App\Livewire\PartnersPage;
+use App\Livewire\ProgramsPage;
 use App\Livewire\ProjectPage;
 use App\Livewire\Projects;
 use App\Livewire\VolunterPage;
@@ -40,3 +41,4 @@ Route::get('resources',DocumentPage::class);
 
 Route::get('/projects',ProjectPage::class);
 Route::get('/partners',PartnersPage::class);
+Route::get('/programs',ProgramsPage::class);
