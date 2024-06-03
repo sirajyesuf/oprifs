@@ -68,6 +68,55 @@
             @endforeach
         </section> --}}
         
+        
+        
+        
+        <!-- homepage gallery section start -->
+         <section class="homepage__gallery_section">
+
+            <div class="homepage__gallery_section_cta">
+                <h1>Gallery</h1>
+                <p>
+                Explore our gallery to witness the transformative power of volunteering. Each image tells a story of hope, resilience, and collective effort. Join us on this visual journey of compassion and community building.
+                </p>
+                <button>
+                    <a href="/gallery">
+                        explore
+                    </a>
+                </button>
+            </div>
+
+            @foreach ( $galleries as $gallery )
+
+            <div class="homepage__gallery_section_gallery-item">
+
+                <img src="{{ asset('storage/'.$gallery->path)}}" alt="gallery image"  class="homepage__gallery_section_gallery-item-img"/>
+                
+            </div>
+                            
+            @endforeach
+
+            <div class="homepage__gallery_section_gallery-item_info">
+
+                <div class="homepage__gallery_section_gallery-item_info_tags">
+                    <p>Education</p>
+                    <p>SafeHome</p>
+                </div>
+
+                <div class="homepage__gallery_section_gallery-item_info_text">
+                    Impacting Countless Lives.
+                </div>
+            </div>
+
+        </section> 
+        <!-- homepage gallery section end -->
+
+
+
+
+
+
+        
         {{-- volunter section start --}}
         <section class="voluntersection">
             <div class="voluntersection__heading">
@@ -171,50 +220,6 @@
                     </form>
                 </div>
         </section>
-
-
-        <!-- homepage gallery section start -->
-         <section class="homepage__gallery_section">
-
-            <div class="homepage__gallery_section_cta">
-                <h1>Gallery</h1>
-                <p>
-                Explore our gallery to witness the transformative power of volunteering. Each image tells a story of hope, resilience, and collective effort. Join us on this visual journey of compassion and community building.
-                </p>
-                <button>
-                    <a href="/gallery">
-                        explore
-                    </a>
-                </button>
-            </div>
-
-            @foreach ( $galleries as $gallery )
-
-            <div class="homepage__gallery_section_gallery-item">
-
-                <img src="{{ asset('storage/'.$gallery->path)}}" alt="gallery image"  class="homepage__gallery_section_gallery-item-img"/>
-                
-            </div>
-                            
-            @endforeach
-
-            <div class="homepage__gallery_section_gallery-item_info">
-
-                <div class="homepage__gallery_section_gallery-item_info_tags">
-                    <p>Education</p>
-                    <p>SafeHome</p>
-                </div>
-
-                <div class="homepage__gallery_section_gallery-item_info_text">
-                    Impacting Countless Lives.
-                </div>
-            </div>
-
-        </section> 
-        <!-- homepage gallery section end -->
-
-
-
 
 
         <!-- testimonials  section start-->

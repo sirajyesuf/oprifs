@@ -43,7 +43,9 @@
         
         <section class="donor_partners_section">
 
-            <h1 class="donor_partners__title">gov't dev't partners</h1>
+            <h1 class="donor_partners__title">
+                Government Development Partners
+            </h1>
 
             <div class="donor_partners" 
             style="grid-template-rows: repeat({{ ceil(count($govtpartners)/6) }}, 10rem);"
