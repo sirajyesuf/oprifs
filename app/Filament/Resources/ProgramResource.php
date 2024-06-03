@@ -29,11 +29,21 @@ class ProgramResource extends Resource
     {
         return $form
             ->schema([
+
+                // Forms\Components\Select::make("icon")
+                // ->options(HeroIcons::pluck('name','svg'))
+                // ->required(),
+
+                Forms\Components\FileUpload::make('icon')
+                ->label('Thumbnail')
+                ->image()
+                ->required()
+                ->columnSpanFull(),
+
                 Forms\Components\TextInput::make("name")
-                ->required(),
-                Forms\Components\Select::make("icon")
-                ->options(HeroIcons::pluck('name','svg'))
-                ->required(),
+                ->required()
+                ->columnSpanFull(),
+
                 Forms\Components\Textarea::make("description")
                 ->required()
                 ->columnSpan(2)
@@ -44,9 +54,9 @@ class ProgramResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('icon')
+                ->label('Thumbnail'),
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('icon')
-                ->limit(10),
                 Tables\Columns\TextColumn::make('description')
                 ->limit(70)
             ])
