@@ -15,7 +15,9 @@ class ProjectPage extends Component
 
     private $amount = 3;
     
+    public $activeFilter = 'all';
     public $filters = [];
+
 
 
 
@@ -40,23 +42,6 @@ class ProjectPage extends Component
         $this->setupFilter();
     }
 
-    protected function getActiveFilter(){
-
-        $activeFilter = array();
-
-        foreach ($this->filters as $filter) {
-
-            if ($filter['status']) {
-
-                array_push($activeFilter,$filter['title']);
-            }
-
-        }
-
-
-        return $activeFilter;
-
-    }
     
     public function loadMoreProjects(){
 
@@ -67,16 +52,16 @@ class ProjectPage extends Component
 
     public function getProjects(){
 
-        $activeFilter = $this->getActiveFilter();
+        $activeFilter = $this->activeFilter;
         $query = Project::query();
 
 
-        if($activeFilter){
-
-            $query->whereIn('status',$activeFilter);
-
+        if($activeFilter != 'all'){
+            
+            $query->where('status',$activeFilter);
         }
 
+        
         return $query->latest()->take($this->amount)->get();
 
 
@@ -84,19 +69,7 @@ class ProjectPage extends Component
 
     public function updateFilter($filterTitle){
 
-        $filters = array();
-
-        foreach($this->filters as $filter){
-
-            if($filter['title'] == $filterTitle){
-
-                $filter['status'] = !$filter['status'];
-            }
-
-            array_push($filters,$filter);
-        }
-
-        $this->filters = $filters;
+        $this->activeFilter = $filterTitle;
     }
 
     #[Title('projects-oprifs')]

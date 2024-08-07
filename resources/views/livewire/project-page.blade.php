@@ -13,7 +13,7 @@
 
             @foreach ($filters as $filter)
 
-                @if ($filter['status'])
+                @if ($filter['title'] == $activeFilter)
                 
                     <p class="documents_filter_tag documents_filter_tag_active"
                     wire:click="updateFilter('{{$filter['title']}}')"

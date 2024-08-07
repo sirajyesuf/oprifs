@@ -6,6 +6,4 @@ enum ProjectType: string
 {
     case ONGOING = 'ongoing';
     case COMPLETED = 'completed';
-
-
 }
