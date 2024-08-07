@@ -33,7 +33,7 @@
     max-width: 120rem;
     width: 100%;
     margin: 0rem auto;
-    padding: 2%;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -129,6 +129,7 @@
 }
 .aboutus__content_section_mission_vision {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
@@ -146,9 +147,10 @@
 .mission__footer {
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
+    width: 100%;
 }
 .mission_img img {
     width: 100%;
@@ -157,15 +159,15 @@
 }
 .mission_caption {
     align-self: center;
-    width: min-content;
-    position: absolute;
-    top: 90%;
 }
 .number_children_helped {
     background-color: #d7d377;
     padding-inline: 5.2rem;
     padding-block: 3.9rem;
-    width: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .number_children_helped > p {
     font-family: "Shippori Mincho", serif;
@@ -241,6 +243,6 @@
     }
     .aboutus__content_section_mission_vision {
         flex-direction: column;
-        margin-bottom: 90%;
+        /* margin-bottom: 90%; */
     }
 }

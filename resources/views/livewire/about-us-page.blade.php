@@ -119,9 +119,9 @@
 
                 <div class="mission__footer">
 
-                    <div class="mission_img">
+                    {{-- <div class="mission_img">
                         <img src="{{asset('img/oprifs_mission.png')}}" alt="two girls stand together">
-                    </div>
+                    </div> --}}
 
                     <div class="mission_caption">
                         <div class="number_children_helped">
