@@ -96,6 +96,7 @@ class ProgramResource extends Resource
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
+            ->latest()
             ->withoutGlobalScopes([
                 SoftDeletingScope::class,
             ]);
