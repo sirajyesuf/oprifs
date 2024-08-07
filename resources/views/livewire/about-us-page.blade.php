@@ -125,7 +125,7 @@
 
                     <div class="mission_caption">
                         <div class="number_children_helped">
-                            <p>12,000+</p>
+                            <p>1200+</p>
                         </div>
                         <div class="mission_text">
                             Thousand women, girls, and vulnerable children Helped
