@@ -13,6 +13,7 @@
                 />
 
             </div>
+
         </section>
 
         <section class="gallery">
