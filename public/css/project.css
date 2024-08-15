@@ -72,6 +72,7 @@
     background-color: #f7f7f8;
 }
 
+
 .project__img {
     width: 100%;
     height: 100%;
@@ -120,5 +121,10 @@
 @media (max-width: 59em) {
     .project{
         flex-direction: column;
+        
+    }
+
+    .project__imgbox {
+        width: 100%;
     }
 }
