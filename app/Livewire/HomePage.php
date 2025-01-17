@@ -61,7 +61,7 @@ class HomePage extends Component
 
         return view('livewire.home-page')
             ->with([
-                'volunteers' => OurVolunteer::take(3)->get(),
+                'volunteers' => OurVolunteer::take(40)->get(),
                 'testimonials' => Testimonial::paginate(2),
                 'galleries' => Gallery::take(5)->get(),
                 'programs' => Program::all(),

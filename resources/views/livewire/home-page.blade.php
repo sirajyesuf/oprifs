@@ -120,7 +120,7 @@
         {{-- volunter section start --}}
         <section class="voluntersection">
             <div class="voluntersection__heading">
-                Meet Our Volunteers
+                Meet Our Team
             </div>
 
             <div class="voluntersection__volunters">
@@ -144,7 +144,7 @@
 
                 @endforeach
                 
-                <div class="become_avolunter voluntersection__volunters_volunter">
+                {{-- <div class="become_avolunter voluntersection__volunters_volunter">
                     <div class="become_avolunter__imgbox">
                         <img src="{{asset("img/volunterhand.png")}}" alt="volunterhand">
                     </div>
@@ -153,7 +153,7 @@
                     <div class="become_avolunter_joinustoday">
                         <a href="/#volunter_registration_section">Join Us Today</a>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
 
