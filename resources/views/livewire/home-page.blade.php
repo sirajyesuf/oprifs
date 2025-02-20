@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="herosection_imgbox">
-                    
+
                     <img src="{{asset("img/oprifs_hero.png")}}" alt="" class="herosection_img">
 
                 </div>
@@ -45,7 +45,7 @@
                 our programs
             </div>
 
-                
+
             <div class="programs">
                 @foreach ($programs as $program )
 
@@ -67,10 +67,10 @@
 
             @endforeach
         </section> --}}
-        
-        
-        
-        
+
+
+
+
         <!-- homepage gallery section start -->
          <section class="homepage__gallery_section">
 
@@ -91,9 +91,9 @@
             <div class="homepage__gallery_section_gallery-item">
 
                 <img src="{{ asset('storage/'.$gallery->path)}}" alt="gallery image"  class="homepage__gallery_section_gallery-item-img"/>
-                
+
             </div>
-                            
+
             @endforeach
 
             <div class="homepage__gallery_section_gallery-item_info">
@@ -108,7 +108,7 @@
                 </div>
             </div>
 
-        </section> 
+        </section>
         <!-- homepage gallery section end -->
 
 
@@ -116,17 +116,17 @@
 
 
 
-        
+
         {{-- volunter section start --}}
         <section class="voluntersection">
             <div class="voluntersection__heading">
-                Meet Our Team
+                Our Volunteers
             </div>
 
             <div class="voluntersection__volunters">
 
                 @foreach ($volunteers as $volunteer )
-                    
+
                     <div class="voluntersection__volunters_volunter">
                         <div class="voluntersection__volunters_volunter_imgbox">
                             <img src="{{ asset('storage/'.$volunteer->image)}}" alt="volunter picture" class="voluntersection__volunters_volunter_img">
@@ -143,8 +143,8 @@
                     </div>
 
                 @endforeach
-                
-                {{-- <div class="become_avolunter voluntersection__volunters_volunter">
+
+                <div class="become_avolunter voluntersection__volunters_volunter">
                     <div class="become_avolunter__imgbox">
                         <img src="{{asset("img/volunterhand.png")}}" alt="volunterhand">
                     </div>
@@ -153,7 +153,7 @@
                     <div class="become_avolunter_joinustoday">
                         <a href="/#volunter_registration_section">Join Us Today</a>
                     </div>
-                </div> --}}
+                </div>
 
             </div>
 
@@ -172,7 +172,7 @@
                         Empower change by joining our community. Together, let's ensure every girl gets the education she deserves. Make an impact now.
                     </div>
                 </div>
-        
+
                 <div class="volunter_registration_section__form">
                     <div class="volunter_registration_section__form_heading">
                         become  a volunteer
@@ -184,7 +184,7 @@
                                 class="inputtag__name"
                                 >
                                 <div>
-                                    @error('name') <span class="error">{{ $message }}</span> @enderror 
+                                    @error('name') <span class="error">{{ $message }}</span> @enderror
                                 </div>
                             </div>
                             <div class="inputtag">
@@ -192,7 +192,7 @@
                                 class="inputtag__email"
                                 >
                                 <div>
-                                    @error('email') <span class="error">{{ $message }}</span> @enderror 
+                                    @error('email') <span class="error">{{ $message }}</span> @enderror
                                 </div>
                             </div>
 
@@ -203,10 +203,10 @@
                             <textarea name="message" cols="" rows="5"  placeholder="Message" wire:model="message"
                             ></textarea>
                             <div>
-                                @error('message') <span class="error">{{ $message }}</span> @enderror 
+                                @error('message') <span class="error">{{ $message }}</span> @enderror
                             </div>
                         </div>
-                        
+
                         <button type="submit" class="volunter_registration_section__form_submit inputtag">
                             Submit
                         </button>
@@ -252,7 +252,7 @@
             </div>
 
             @if ($testimonials->hasPages())
-                
+
 
             <div class="testimonials__pagination">
 
@@ -266,16 +266,16 @@
             <div class="testimonials__pagination_forward active_pagination">
                 <svg
                 wire:click="previousPage"
-                wire:loading.attr="disabled"                
+                wire:loading.attr="disabled"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pagination_icon">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
-                  
+
             </div>
 
 
             @endif
-            
+
             <div class="testimonials__pagination_line"></div>
 
             @if($testimonials->onLastPage())
@@ -286,7 +286,7 @@
             </div>
             @else
             <div class="testimonials__pagination_forward active_pagination">
-                <svg 
+                <svg
                 wire:click="nextPage"
                 wire:loading.attr="disabled"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pagination_icon">
@@ -294,7 +294,7 @@
                 </svg>
             </div>
             @endif
-            </div> 
+            </div>
 
             @endif
 
@@ -337,7 +337,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-            
+
             </div>
 
             <div class="actionsbuttons__blogbox">
@@ -349,7 +349,7 @@
                     NEWS
                 </a>
             </div>
-            
+
         </section>
 
         {{-- cta end --}}

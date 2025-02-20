@@ -32,7 +32,7 @@
             <div class="aboutus__text">
 
                 <p class="aboutus__text_title">AboutUs</p>
-                {{-- <h2 class="aboutus__text_heading">working for the benefit and 
+                {{-- <h2 class="aboutus__text_heading">working for the benefit and
                     welfare of female street children and other vulnerable girls and women in different areas.
                 </h2> --}}
                 <p class="aboutus__text_subheading">
@@ -61,7 +61,7 @@
                         <li class="aboutus__text_subheading">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>                             
+                            </svg>
                             Accountability
                         </li>
                         <li class="aboutus__text_subheading">
@@ -102,7 +102,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
-                              
+
 
                             Transparency
                         </li>
@@ -111,7 +111,7 @@
             </div>
 
             <div class="mission">
-                
+
                 <h1 class="aboutus__text_heading">Our Mission</h1>
                 <p class="aboutus__text_subheading">
                     {{$aboutus->mission}}
@@ -140,5 +140,61 @@
         {{-- MISSION AND VISSION END --}}
     </section>
 
-    
+
+    <section class="staff-section">
+        <div class="staff-container">
+            <div class="staff-header">
+                <h2>Meet Our Team</h2>
+                <p>Get to know the dedicated professionals behind our success.</p>
+            </div>
+
+            @php
+                $teamMembers = $staffs;
+                $topMembers = array_slice($teamMembers, 0, 2);
+                $bottomMembers = array_slice($teamMembers, 2);
+            @endphp
+
+            @if(count($teamMembers) > 0)
+
+            <div class="top-row">
+                @foreach ($topMembers as $member)
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="{{ asset('storage/'.$member['picture'] ) }}" alt="{{ $member['full_name'] }}">
+                        </div>
+                        <div class="card-content">
+                            <h3>{{ $member['full_name'] }}</h3>
+                            <p>{{ $member['position'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="bottom-row">
+                @foreach ($bottomMembers as $member)
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="{{ asset('storage/'.$member['picture'] ) }}" alt="{{ $member['full_name'] }}">
+                        </div>
+                        <div class="card-content">
+                            <h3>{{ $member['full_name'] }}</h3>
+                            <p>{{ $member['position'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            @else
+            <div class="empty-message">
+                <p>No team members found.</p>
+            </div>
+            @endif
+        </div>
+    </section>
+
+
+
+
+
+
 </div>

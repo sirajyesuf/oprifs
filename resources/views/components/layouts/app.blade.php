@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="{{asset('css/document.css')}}" />
         <link rel="stylesheet" href="{{asset('css/project.css')}}" />
         <link rel="stylesheet" href="{{asset('css/partners.css')}}" />
+        <link rel="stylesheet" href="{{asset('css/staff.css')}}" />
 
 
 
@@ -60,13 +61,15 @@
         <title>{{ $title ?? 'Page Title' }}</title>
 
 
+
+
     </head>
 
     <body>
         @livewire('header-section-page')
 
         {{ $slot }}
-        
+
         @livewire('footer-section-page')
         <script src="{{asset("js/script.js")}}"></script>
     </body>
