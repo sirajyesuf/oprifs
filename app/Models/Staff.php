@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Staff extends Model
 {
-    use HasFactory;
+   use HasFactory;
+
+   const MANAGEMENT_MEMBER =  'management';
+   const BOARD_MEMBER = 'board';
+
+   
     protected $guarded = [];
 }

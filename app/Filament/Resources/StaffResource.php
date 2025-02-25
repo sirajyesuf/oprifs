@@ -13,6 +13,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+
 class StaffResource extends Resource
 {
     protected static ?string $model = Staff::class;
@@ -27,17 +28,26 @@ class StaffResource extends Resource
         return $form->schema([
             Forms\Components\TextInput::make("full_name")
                 ->required()
-                ->maxLength(255),
+                ->maxLength(255)
+                ->columnSpan(2),
             Forms\Components\TextInput::make("position")
                 ->required()
-                ->maxLength(255),
-            Forms\Components\FileUpload::make("picture")
-                ->required()
-                ->image()
-                ->directory("staff")
-                ->image()
-                ->imageEditor()
+                ->maxLength(255)
                 ->columnSpan(2),
+            Forms\Components\Select::make('category')
+            ->options([
+                Staff::BOARD_MEMBER => 'Board Member',
+                Staff::MANAGEMENT_MEMBER => 'Management Member'
+            ])
+            ->columnSpan(2),
+   
+            Forms\Components\FileUpload::make("picture")
+            ->required()
+            ->image()
+            ->directory("staff")
+            ->image()
+            ->imageEditor()
+            ->columnSpan(2),
         ]);
     }
 
@@ -47,11 +57,10 @@ class StaffResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make("full_name")->searchable(),
                 Tables\Columns\TextColumn::make("position")->searchable(),
+                Tables\Columns\TextColumn::make("category")->searchable(),
                 Tables\Columns\ImageColumn::make("picture")->searchable(),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([Tables\Actions\EditAction::make()])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

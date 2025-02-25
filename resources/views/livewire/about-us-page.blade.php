@@ -144,12 +144,12 @@
     <section class="staff-section">
         <div class="staff-container">
             <div class="staff-header">
-                <h2>Meet Our Team</h2>
-                <p>Get to know the dedicated professionals behind our success.</p>
+                <h2>Meet Our Board Members</h2>
+                {{-- <p>Get to know the dedicated professionals behind our success.</p> --}}
             </div>
 
             @php
-                $teamMembers = $staffs;
+                $teamMembers = $board_members;
                 $topMembers = array_slice($teamMembers, 0, 2);
                 $bottomMembers = array_slice($teamMembers, 2);
             @endphp
@@ -191,6 +191,59 @@
             @endif
         </div>
     </section>
+
+
+    <section class="staff-section">
+        <div class="staff-container">
+            <div class="staff-header">
+                <h2>Meet Our Management Members</h2>
+                {{-- <p>Get to know the dedicated professionals behind our success.</p> --}}
+            </div>
+
+            @php
+                $teamMembers = $board_members;
+                $topMembers = array_slice($teamMembers, 0, 2);
+                $bottomMembers = array_slice($teamMembers, 2);
+            @endphp
+
+            @if(count($teamMembers) > 0)
+
+            <div class="top-row">
+                @foreach ($topMembers as $member)
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="{{ asset('storage/'.$member['picture'] ) }}" alt="{{ $member['full_name'] }}">
+                        </div>
+                        <div class="card-content">
+                            <h3>{{ $member['full_name'] }}</h3>
+                            <p>{{ $member['position'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="bottom-row">
+                @foreach ($bottomMembers as $member)
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="{{ asset('storage/'.$member['picture'] ) }}" alt="{{ $member['full_name'] }}">
+                        </div>
+                        <div class="card-content">
+                            <h3>{{ $member['full_name'] }}</h3>
+                            <p>{{ $member['position'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            @else
+            <div class="empty-message">
+                <p>No team members found.</p>
+            </div>
+            @endif
+        </div>
+    </section>
+
 
 
 
