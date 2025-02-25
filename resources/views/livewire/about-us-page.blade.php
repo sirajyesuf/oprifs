@@ -201,7 +201,7 @@
             </div>
 
             @php
-                $teamMembers = $board_members;
+                $teamMembers = $management_members;
                 $topMembers = array_slice($teamMembers, 0, 2);
                 $bottomMembers = array_slice($teamMembers, 2);
             @endphp
