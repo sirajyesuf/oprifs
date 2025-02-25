@@ -39,7 +39,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
+    width: 500px;
     height: 400px; /* Ensure all cards have the same height */
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@
 .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .card-content {
@@ -83,4 +83,18 @@
     font-size: 1.2rem;
     color: #dbeafe;
     text-transform: capitalize;
+}
+
+
+/* MEDIA QUERIES */
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+
+    .staff-header h2 {
+        font-size: 2rem
+    }
 }
