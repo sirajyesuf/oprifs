@@ -192,11 +192,10 @@
         </div>
     </section>
 
-
     <section class="staff-section">
         <div class="staff-container">
             <div class="staff-header">
-                <h2>Meet Our Management Members</h2>
+                <h2>Meet Our Management Team</h2>
                 {{-- <p>Get to know the dedicated professionals behind our success.</p> --}}
             </div>
 
