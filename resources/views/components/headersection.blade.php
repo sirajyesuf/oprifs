@@ -104,7 +104,7 @@
         <div class="header__navigation__menu">
             <a href="/">Home</a>
             <a href="/programs">Programs</a>
-            <a href="/contents">Blog</a>
+            <a href="/partners">Donor Partners</a>
             <a href="/gallery">Gallery</a>
             <a href="/projects">Projects</a>
             <a href="/resources">Resources</a>
