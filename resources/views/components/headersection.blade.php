@@ -102,14 +102,14 @@
 
 
         <div class="header__navigation__menu">
-            <a href="/">Home</a>
-            <a href="/programs">Programs</a>
-            <a href="/partners">Donor Partners</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/projects">Projects</a>
-            <a href="/resources">Resources</a>
-            <a href="/aboutus">About US</a>
-            <a href="/contactus">Contact US</a>
+            <a href="/" class="outline-btn">Home</a>
+            <a href="/programs" class="outline-btn">Programs</a>
+            <a href="/partners" class="outline-btn">Donor Partners</a>
+            <a href="/gallery" class="outline-btn">Gallery</a>
+            <a href="/projects" class="outline-btn">Projects</a>
+            {{-- <a href="/resources" class="outline-btn">Resources</a> --}}
+            <a href="/aboutus" class="outline-btn">About US</a>
+            <a href="/contactus" class="outline-btn">Contact US</a>
             <button class="donate">
                 <a href="/donate">
                     Donate

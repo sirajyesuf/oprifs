@@ -91,15 +91,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 .header__navigation__menu a {
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 500;
     color: #2e4049;
     text-transform: capitalize;
+}
+
+.outline-btn {
+    padding: 8px 15px;
+    border: 2px solid var(--color-primary1);
+    border-radius: 34px;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.outline-btn:hover {
+    background-color: var(--color-primary1);
+    color: white;
 }
 
 .donate {
