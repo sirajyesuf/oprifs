@@ -7,7 +7,7 @@
             <div class="gallery_hero__imgbox">
                 
                 <img
-                    src="{{ asset('img/gallery_hero_img.jpg') }}"
+                    src="{{ asset('img/gallery_hero_img.png') }}"
                     alt="oprifs gallery hero"
                     class="gallery_hero_img"
                 />
